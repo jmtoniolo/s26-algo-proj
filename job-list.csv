@@ -1,0 +1,16 @@
+job_id,repair_type,repair_time_hours,priority
+J1,Brake inspection,2,9
+J2,Oil change,1,4
+J3,Battery replacement,2,8
+J4,Tire replacement,2,7
+J5,Engine diagnostic scan,1,6
+J6,Transmission inspection,4,9
+J7,Coolant system service,2,5
+J8,ABS warning light diagnosis,3,10
+J9,Wheel alignment,2,5
+J10,Alternator inspection,2,7
+J11,Brake pad replacement,3,10
+J12,Spark plug replacement,2,4
+J13,Suspension noise diagnosis,3,7
+J14,Check engine light diagnosis,2,8
+J15,Tire pressure sensor reset,1,3
