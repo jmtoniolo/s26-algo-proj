@@ -36,11 +36,30 @@ def schedule_shortest_job_first(jobs: pd.DataFrame) -> pd.DataFrame:
     print(f"[SJF] Elapsed: {elapsed:.6f}s")
     return scheduled
 
+def schedule_greedy(jobs: pd.DataFrame) -> pd.DataFrame:
+    """Greedy scheduling: schedule jobs based on a combined score of priority and repair time."""
+    start = time.perf_counter()
+
+    # Example scoring: higher priority and shorter repair time get higher scores
+    jobs = jobs.copy()
+    if(jobs["repair_time_hours"].min() <= 0):
+        print("Warning: Found job(s) with zero (or negative) repair time. Please check your data. Exiting...")
+        exit(1)
+
+    jobs["score"] = jobs["priority"] / (jobs["repair_time_hours"]) 
+    scheduled = jobs.sort_values("score", ascending=False).drop(columns="score")
+
+    elapsed = time.perf_counter() - start
+    print(f"[Greedy] Elapsed: {elapsed:.6f}s")
+    return scheduled
+
+
 
 ALGORITHMS = {
     "fifo": schedule_fifo,
     "priority": schedule_priority,
     "sjf": schedule_shortest_job_first,
+    "greedy": schedule_greedy,
 }
 
 
