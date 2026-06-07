@@ -1,5 +1,3 @@
-# This is the first cell, the double percent '%%' marks the second cell.
-# %%
 import numpy as np
 import pandas as pd
 from dataclasses import dataclass, field
@@ -32,6 +30,12 @@ class FieldDistribution:
                 self.mean = (self.min + self.max) / 2 # Gets center of your min/max
             if self.std is None:
                 self.std = (self.max - self.min) / 6  # ~99.7% within [min, max] because dividing by 6 is getting us 3 standard deviations from the mean
+
+    def describe(self) -> str:
+        if self.distribution == "uniform":
+            return f"uniform(min={self.min}, max={self.max})"
+        else:
+            return f"normal(min={self.min}, max={self.max}, mean={self.mean}, std={round(self.std, 4)})"
 
     def sample(self, n: int, rng: np.random.Generator) -> np.ndarray:
         if self.distribution == "uniform":
@@ -72,32 +76,47 @@ def generate_synthetic_data(
     })
 
 
-def write_synthetic_data(df: pd.DataFrame, base_filename: str = "synthetic_job_list") -> str:
+def write_synthetic_data(
+    df: pd.DataFrame,
+    base_filename: str = "synthetic_job_list",
+    repair_time_dist: FieldDistribution = FieldDistribution("uniform", min=1, max=4),
+    priority_dist: FieldDistribution = FieldDistribution("uniform", min=1, max=10),
+) -> str:
     """Write dataframe to CSV with timestamp in filename (yyyymmddhhss format).
-    
+    If distributions are provided, their parameters are recorded in a
+    'generation_params' column on the first row.
+
     Args:
         df: DataFrame to write
         base_filename: Base name without extension (default: "synthetic_job_list")
-    
+        repair_time_dist: Distribution used for repair_time_hours (optional)
+        priority_dist: Distribution used for priority (optional)
+
     Returns:
         The filename that was written
     """
+    out = df.copy()
+    parts = [
+        f"repair_time: {repair_time_dist.describe()}",
+        f"priority: {priority_dist.describe()}",
+    ]
+    out["generation_params"] = ""
+    out.at[0, "generation_params"] = " | ".join(parts)
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
     filename = f"{base_filename}.{timestamp}.csv"
-    df.to_csv(filename, index=False)
+    out.to_csv(filename, index=False)
     return filename
 
-# This is the second cell, the double percent '%%' marks the second cell.
-# %%
+
 def main():
-    dataframe = read_data("synthetic_job_list.20260606175452.csv")
+    dataframe = read_data("synthetic_job_list.20260607110941.csv")
     print(dataframe.head())
 
     # Example setup to generate fresh synthetic data
     # df = generate_synthetic_data()
     # filename = write_synthetic_data(df)
     # print(f"Wrote {len(df)} rows to {filename}") 
-    # print(df.head()) # Uncomment to see first few rows of data
+    # print(df.head())
 
 
 if __name__ == "__main__":
