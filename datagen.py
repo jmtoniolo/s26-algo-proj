@@ -51,7 +51,7 @@ def read_data(filepath: str = "job-list.csv") -> pd.DataFrame:
     """Read the job list CSV into a DataFrame.
     This is wrapped just to abstract the csv read.
     """
-    df = pd.read_csv(filepath)
+    df = pd.read_csv(filepath, comment="#")
     return df
 
 
@@ -83,8 +83,9 @@ def write_synthetic_data(
     priority_dist: FieldDistribution = FieldDistribution("uniform", min=1, max=10),
 ) -> str:
     """Write dataframe to CSV with timestamp in filename (yyyymmddhhss format).
-    If distributions are provided, their parameters are recorded in a
-    'generation_params' column on the first row.
+    The distribution parameters used to generate the data are recorded in a
+    '#'-prefixed comment line above the CSV header so they don't show up as
+    a data column. read_data() skips comment lines when reading the file back.
 
     Args:
         df: DataFrame to write
@@ -95,21 +96,21 @@ def write_synthetic_data(
     Returns:
         The filename that was written
     """
-    out = df.copy()
     parts = [
         f"repair_time: {repair_time_dist.describe()}",
         f"priority: {priority_dist.describe()}",
     ]
-    out["generation_params"] = ""
-    out.at[0, "generation_params"] = " | ".join(parts)
+    metadata_line = f"# generation_params: {' | '.join(parts)}"
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
     filename = f"{base_filename}.{timestamp}.csv"
-    out.to_csv(filename, index=False)
+    with open(filename, "w") as f:
+        f.write(metadata_line + "\n")
+        df.to_csv(f, index=False)
     return filename
 
 
 def main():
-    dataframe = read_data("synthetic_job_list.20260607110941.csv")
+    dataframe = read_data("synthetic_job_list.20260607134425.csv")
     print(dataframe.head())
 
     # Example setup to generate fresh synthetic data
