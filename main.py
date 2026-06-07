@@ -65,25 +65,31 @@ def main():
     results_dir = f"results{now.strftime('%Y%m%d%H%M%S')}"
     os.makedirs(results_dir, exist_ok=True)
 
-    log_dir = os.path.join(results_dir, "log")
-    os.makedirs(log_dir, exist_ok=True)
-    with open(os.path.join(log_dir, "run.log"), "w") as f:
-        f.write(f"Timestamp: {now.strftime('%Y-%m-%d %H:%M:%S')}\n")
-        f.write(f"Algorithm: {args.algorithm}\n")
-        f.write(f"Input: {args.input}\n")
-        f.write(f"Elapsed: {elapsed:.6f}s\n")
-
     output = result.assign(wait_time=compute_wait_times(result))
     output.to_csv(os.path.join(results_dir, "scheduled_jobs.csv"), index=False)
 
     avg_wait_by_priority = output.groupby("priority")["wait_time"].mean().sort_index()
+    total_time = output["repair_time_hours"].sum()
+    avg_wait_time = output["wait_time"].mean()
+
+    with open(os.path.join(results_dir, "run.log"), "w") as f:
+        f.write(f"Timestamp: {now.strftime('%Y-%m-%d %H:%M:%S')}\n")
+        f.write(f"Algorithm: {args.algorithm}\n")
+        f.write(f"Input: {args.input}\n")
+        f.write(f"Elapsed: {elapsed:.6f}s\n")
+        f.write(f"Total queue time: {total_time}h\n")
+        f.write(f"Average wait time: {avg_wait_time:.4f}h\n")
 
     plt.figure()
     plt.plot(avg_wait_by_priority.index, avg_wait_by_priority.values, marker="o")
     plt.xlabel("Priority")
     plt.ylabel("Average wait time (hours)")
-    plt.title(f"Priority vs. Average Wait Time ({args.algorithm})")
+    plt.title(
+        f"Priority vs. Average Wait Time ({args.algorithm})\n"
+        f"Total queue time: {total_time}h | Average wait time: {avg_wait_time:.2f}h"
+    )
     plt.grid(True)
+    plt.ylim(0, total_time)
     plt.savefig(os.path.join(results_dir, "priority_vs_wait_time.png"))
     plt.close()
 

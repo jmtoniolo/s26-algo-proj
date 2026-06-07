@@ -1,6 +1,7 @@
-# datagen.py
+# s26-algo-proj
 
-A script for reading and generating synthetic vehicle repair job data.
+Tools for generating synthetic vehicle repair job data and comparing job
+scheduling algorithms against it.
 
 ## Setup
 
@@ -31,7 +32,48 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Usage
+## Running the scheduler (`main.py`)
+
+Run an algorithm against a job list CSV:
+
+```bash
+python main.py <algorithm> <input.csv>
+```
+
+`<algorithm>` is one of:
+
+| Algorithm | Description |
+|---|---|
+| `fifo` | First In, First Out — schedules jobs in the order they appear |
+| `priority` | Schedules highest-priority jobs first |
+| `sjf` | Shortest Job First — schedules jobs with the lowest `repair_time_hours` first |
+| `greedy` | Scores jobs by `priority / repair_time_hours` and schedules the highest scores first |
+
+Example:
+
+```bash
+python main.py priority job-list.csv
+```
+
+Each run computes a `wait_time` for every job (the cumulative `repair_time_hours`
+of all jobs scheduled before it, assuming jobs run one at a time) and creates a
+timestamped `results<yyyymmddhhmmss>/` directory containing:
+
+- `scheduled_jobs.csv` — the job list in scheduled order with the added `wait_time` column
+- `priority_vs_wait_time.png` — a plot of average wait time per priority, with the
+  total queue time and overall average wait time shown in the title (the y-axis is
+  fixed to `[0, total queue time]` so plots from different algorithms on the same
+  dataset are directly comparable)
+- `run.log` — a record of the run: timestamp, algorithm, input file, elapsed
+  scheduling time, total queue time, and average wait time
+
+The only thing printed to the terminal is the name of the results directory, e.g.:
+
+```
+Results created: results20260607182109
+```
+
+## Generating & reading data (`datagen.py`)
 
 Run the script directly:
 
@@ -111,7 +153,7 @@ filename = write_synthetic_data(df, base_filename="high_priority_jobs")
 # e.g. high_priority_jobs.20260607120000.csv
 ```
 
-To embed generation parameters in the CSV, pass the distributions to `write_synthetic_data()`:
+To record the generation parameters used, pass the distributions to `write_synthetic_data()`:
 
 ```python
 def main():
@@ -121,13 +163,13 @@ def main():
     filename = write_synthetic_data(df, repair_time_dist=rt_dist, priority_dist=p_dist)
 ```
 
-This adds a `generation_params` column populated only on the first row, e.g.:
+This writes the parameters as a `#`-prefixed comment line above the CSV header, e.g.:
 
 ```
-repair_time: uniform(min=1, max=4) | priority: normal(min=1, max=10, mean=7.0, std=1.5)
+# generation_params: repair_time: uniform(min=1, max=4) | priority: normal(min=1, max=10, mean=7.0, std=1.5)
 ```
 
-All other rows leave the column blank so it does not affect data processing.
+`read_data()` skips comment lines automatically, so the parameters don't show up as a data column when the file is read back.
 
 ## Data Schema
 
@@ -137,4 +179,3 @@ All other rows leave the column blank so it does not affect data processing.
 | `repair_type` | string | Type of repair |
 | `repair_time_hours` | int | Estimated time to complete |
 | `priority` | int | Job priority score |
-| `generation_params` | string | *(synthetic files only)* Distribution parameters used to generate the data. Populated on the first row only; blank for all other rows. |
