@@ -48,12 +48,21 @@ python main.py <algorithm> <input.csv>
 | `priority` | Schedules highest-priority jobs first |
 | `sjf` | Shortest Job First — schedules jobs with the lowest `repair_time_hours` first |
 | `greedy` | Scores jobs by `priority / repair_time_hours` and schedules the highest scores first |
+| `dp` | Solves a 0/1 knapsack-style selection problem: maximize total priority within available technician time |
 
 Example:
 
 ```bash
 python main.py priority job-list.csv
 ```
+
+For the `dp` algorithm, you can optionally specify available technician time:
+
+```bash
+python main.py dp job-list.csv --capacity 12
+```
+
+If `--capacity` is omitted, the dynamic programming scheduler assumes enough time to include all jobs.
 
 Each run computes a `wait_time` for every job (the cumulative `repair_time_hours`
 of all jobs scheduled before it, assuming jobs run one at a time) and creates a
