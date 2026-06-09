@@ -110,6 +110,7 @@ def main():
     parser = argparse.ArgumentParser(description="Job scheduling algorithm runner")
     parser.add_argument("algorithm", choices=ALGORITHMS.keys(), help="Scheduling algorithm to run")
     parser.add_argument("input", help="Path to job list CSV file")
+    parser.add_argument("--capacity", "-c", type=int, default=None, help="Available technician time in integer hours for dp scheduling")
     parser.add_argument(
         "--label",
         default=None,
