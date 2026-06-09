@@ -39,11 +39,14 @@ def schedule_greedy(jobs: pd.DataFrame) -> pd.DataFrame:
     return jobs.sort_values("score", ascending=False).drop(columns="score")
 
 
-def schedule_optimal(jobs: pd.DataFrame, capacity: float | None = None) -> pd.DataFrame:
+def schedule_optimal(jobs: pd.DataFrame, capacity: int | None = None) -> pd.DataFrame:
     """Optimal scheduling via 0/1 knapsack dynamic programming.
 
     Selects the subset of jobs that maximizes total priority score while
     respecting available technician time.
+
+    Args:
+        capacity: Available technician time in integer hours.
     """
     jobs = jobs.reset_index(drop=True)
     n = len(jobs)
@@ -59,7 +62,6 @@ def schedule_optimal(jobs: pd.DataFrame, capacity: float | None = None) -> pd.Da
     if capacity <= 0:
         return jobs.iloc[[]].reset_index(drop=True)
 
-    capacity = int(capacity)
     capacity = min(capacity, total_time)
 
     dp = [[0] * (capacity + 1) for _ in range(n + 1)]
@@ -102,7 +104,7 @@ def main():
     parser = argparse.ArgumentParser(description="Job scheduling algorithm runner")
     parser.add_argument("algorithm", choices=ALGORITHMS.keys(), help="Scheduling algorithm to run")
     parser.add_argument("input", help="Path to job list CSV file")
-    parser.add_argument("--capacity", "-c", type=float, default=None, help="Available technician time in hours for dp scheduling")
+    parser.add_argument("--capacity", "-c", type=int, default=None, help="Available technician time in integer hours for dp scheduling")
     args = parser.parse_args()
 
     jobs = read_data(args.input)
