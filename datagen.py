@@ -82,7 +82,7 @@ def write_synthetic_data(
     repair_time_dist: FieldDistribution = FieldDistribution("uniform", min=1, max=4),
     priority_dist: FieldDistribution = FieldDistribution("uniform", min=1, max=10),
 ) -> str:
-    """Write dataframe to CSV with timestamp in filename (yyyymmddhhss format).
+    """Write dataframe to CSV with timestamp in filename (yyyymmddhhmmssffffff format).
     The distribution parameters used to generate the data are recorded in a
     '#'-prefixed comment line above the CSV header so they don't show up as
     a data column. read_data() skips comment lines when reading the file back.
@@ -101,7 +101,7 @@ def write_synthetic_data(
         f"priority: {priority_dist.describe()}",
     ]
     metadata_line = f"# generation_params: {' | '.join(parts)}"
-    timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+    timestamp = datetime.now().strftime("%Y%m%d%H%M%S%f")
     filename = f"{base_filename}.{timestamp}.csv"
     with open(filename, "w") as f:
         f.write(metadata_line + "\n")
@@ -110,14 +110,34 @@ def write_synthetic_data(
 
 
 def main():
-    dataframe = read_data("synthetic_job_list.20260607134425.csv")
-    print(dataframe.head())
+    num_rows = 5000
 
-    # Example setup to generate fresh synthetic data
-    # df = generate_synthetic_data()
-    # filename = write_synthetic_data(df)
-    # print(f"Wrote {len(df)} rows to {filename}") 
-    # print(df.head())
+    # Repair time is the same across all three datasets: uniform between 1 and 4 hours.
+    repair_time_dist = FieldDistribution("uniform", min=1, max=4)
+
+    # The three datasets differ only in how priority (1-10) is distributed.
+    datasets = [
+        ("synthetic_job_list_priority_uniform",
+         FieldDistribution("uniform", min=1, max=10)),
+        ("synthetic_job_list_priority_normal_mean5",
+         FieldDistribution("normal", min=1, max=10, mean=5)),
+        ("synthetic_job_list_priority_normal_mean8",
+         FieldDistribution("normal", min=1, max=10, mean=8)),
+    ]
+
+    for base_filename, priority_dist in datasets:
+        df = generate_synthetic_data(
+            num_rows=num_rows,
+            repair_time_dist=repair_time_dist,
+            priority_dist=priority_dist,
+        )
+        filename = write_synthetic_data(
+            df,
+            base_filename=base_filename,
+            repair_time_dist=repair_time_dist,
+            priority_dist=priority_dist,
+        )
+        print(f"Wrote {len(df)} rows to {filename}")
 
 
 if __name__ == "__main__":
