@@ -39,12 +39,64 @@ def schedule_greedy(jobs: pd.DataFrame) -> pd.DataFrame:
     return jobs.sort_values("score", ascending=False).drop(columns="score")
 
 
+def schedule_optimal(jobs: pd.DataFrame, capacity: int | None = None) -> pd.DataFrame:
+    """Optimal scheduling via 0/1 knapsack dynamic programming.
+
+    Selects the subset of jobs that maximizes total priority score while
+    respecting available technician time.
+
+    Args:
+        capacity: Available technician time in integer hours.
+    """
+    jobs = jobs.reset_index(drop=True)
+    n = len(jobs)
+    if n == 0:
+        return jobs
+
+    weights = jobs["repair_time_hours"].astype(int).tolist()
+    values = jobs["priority"].astype(int).tolist()
+    total_time = sum(weights)
+
+    if capacity is None:
+        capacity = total_time
+    if capacity <= 0:
+        return jobs.iloc[[]].reset_index(drop=True)
+
+    capacity = min(capacity, total_time)
+
+    dp = [[0] * (capacity + 1) for _ in range(n + 1)]
+    take = [[False] * (capacity + 1) for _ in range(n + 1)]
+
+    for i in range(1, n + 1):
+        w = weights[i - 1]
+        v = values[i - 1]
+        for t in range(capacity + 1):
+            if w <= t:
+                if dp[i - 1][t - w] + v > dp[i - 1][t]:
+                    dp[i][t] = dp[i - 1][t - w] + v
+                    take[i][t] = True
+                else:
+                    dp[i][t] = dp[i - 1][t]
+            else:
+                dp[i][t] = dp[i - 1][t]
+
+    selected_indices = []
+    t = capacity
+    for i in range(n, 0, -1):
+        if take[i][t]:
+            selected_indices.append(i - 1)
+            t -= weights[i - 1]
+
+    selected_indices.reverse()
+    return jobs.iloc[selected_indices].reset_index(drop=True)
+
 
 ALGORITHMS = {
     "fifo": schedule_fifo,
     "priority": schedule_priority,
     "sjf": schedule_shortest_job_first,
     "greedy": schedule_greedy,
+    "dp": schedule_optimal,
 }
 
 
@@ -52,13 +104,17 @@ def main():
     parser = argparse.ArgumentParser(description="Job scheduling algorithm runner")
     parser.add_argument("algorithm", choices=ALGORITHMS.keys(), help="Scheduling algorithm to run")
     parser.add_argument("input", help="Path to job list CSV file")
+    parser.add_argument("--capacity", "-c", type=int, default=None, help="Available technician time in integer hours for dp scheduling")
     args = parser.parse_args()
 
     jobs = read_data(args.input)
     schedule_fn = ALGORITHMS[args.algorithm]
 
     start = time.perf_counter()
-    result = schedule_fn(jobs)
+    if args.algorithm == "dp":
+        result = schedule_fn(jobs, args.capacity)
+    else:
+        result = schedule_fn(jobs)
     elapsed = time.perf_counter() - start
 
     now = datetime.now()
@@ -76,6 +132,8 @@ def main():
         f.write(f"Timestamp: {now.strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write(f"Algorithm: {args.algorithm}\n")
         f.write(f"Input: {args.input}\n")
+        if args.capacity is not None:
+            f.write(f"Capacity: {args.capacity}h\n")
         f.write(f"Elapsed: {elapsed:.6f}s\n")
         f.write(f"Total queue time: {total_time}h\n")
         f.write(f"Average wait time: {avg_wait_time:.4f}h\n")
