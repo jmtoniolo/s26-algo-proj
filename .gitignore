@@ -1,3 +1,6 @@
 *.log
 *.png
 *.csv
+*.pyc
+__pycache__/
+results*/

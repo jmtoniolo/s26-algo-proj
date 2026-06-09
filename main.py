@@ -18,13 +18,19 @@ def schedule_fifo(jobs: pd.DataFrame) -> pd.DataFrame:
 
 
 def schedule_priority(jobs: pd.DataFrame) -> pd.DataFrame:
-    """Priority scheduling: schedule highest priority jobs first."""
-    return jobs.sort_values("priority", ascending=False)
+    """Priority scheduling: schedule highest priority jobs first.
+
+    Ties (same priority) keep their original submission order via a stable sort.
+    """
+    return jobs.sort_values("priority", ascending=False, kind="stable")
 
 
 def schedule_shortest_job_first(jobs: pd.DataFrame) -> pd.DataFrame:
-    """Shortest Job First: schedule jobs with the lowest repair time first."""
-    return jobs.sort_values("repair_time_hours", ascending=True)
+    """Shortest Job First: schedule jobs with the lowest repair time first.
+
+    Ties (same repair time) keep their original submission order via a stable sort.
+    """
+    return jobs.sort_values("repair_time_hours", ascending=True, kind="stable")
 
 
 def schedule_greedy(jobs: pd.DataFrame) -> pd.DataFrame:
