@@ -104,7 +104,11 @@ def main():
     parser = argparse.ArgumentParser(description="Job scheduling algorithm runner")
     parser.add_argument("algorithm", choices=ALGORITHMS.keys(), help="Scheduling algorithm to run")
     parser.add_argument("input", help="Path to job list CSV file")
-    parser.add_argument("--capacity", "-c", type=int, default=None, help="Available technician time in integer hours for dp scheduling")
+    parser.add_argument(
+        "--label",
+        default=None,
+        help="Optional label inserted into the results dir name: results-<label>-YYYYMMDDHHMMSS",
+    )
     args = parser.parse_args()
 
     jobs = read_data(args.input)
@@ -118,7 +122,8 @@ def main():
     elapsed = time.perf_counter() - start
 
     now = datetime.now()
-    results_dir = f"results{now.strftime('%Y%m%d%H%M%S')}"
+    timestamp = now.strftime('%Y%m%d%H%M%S')
+    results_dir = f"results-{args.label}-{timestamp}" if args.label else f"results-{timestamp}"
     os.makedirs(results_dir, exist_ok=True)
 
     output = result.assign(wait_time=compute_wait_times(result))
