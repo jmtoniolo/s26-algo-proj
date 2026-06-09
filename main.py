@@ -12,22 +12,22 @@ def compute_wait_times(scheduled: pd.DataFrame) -> pd.Series:
     return scheduled["repair_time_hours"].cumsum() - scheduled["repair_time_hours"]
 
 
-def schedule_fifo(jobs: pd.DataFrame, capacity: float | None = None) -> pd.DataFrame:
+def schedule_fifo(jobs: pd.DataFrame) -> pd.DataFrame:
     """First In, First Out: schedule jobs in the order they appear."""
     return jobs
 
 
-def schedule_priority(jobs: pd.DataFrame, capacity: float | None = None) -> pd.DataFrame:
+def schedule_priority(jobs: pd.DataFrame) -> pd.DataFrame:
     """Priority scheduling: schedule highest priority jobs first."""
     return jobs.sort_values("priority", ascending=False)
 
 
-def schedule_shortest_job_first(jobs: pd.DataFrame, capacity: float | None = None) -> pd.DataFrame:
+def schedule_shortest_job_first(jobs: pd.DataFrame) -> pd.DataFrame:
     """Shortest Job First: schedule jobs with the lowest repair time first."""
     return jobs.sort_values("repair_time_hours", ascending=True)
 
 
-def schedule_greedy(jobs: pd.DataFrame, capacity: float | None = None) -> pd.DataFrame:
+def schedule_greedy(jobs: pd.DataFrame) -> pd.DataFrame:
     """Greedy scheduling: schedule jobs based on a combined score of priority and repair time."""
     # Example scoring: higher priority and shorter repair time get higher scores
     jobs = jobs.copy()
@@ -95,7 +95,6 @@ ALGORITHMS = {
     "sjf": schedule_shortest_job_first,
     "greedy": schedule_greedy,
     "dp": schedule_optimal,
-    "optimal": schedule_optimal,
 }
 
 
@@ -103,14 +102,17 @@ def main():
     parser = argparse.ArgumentParser(description="Job scheduling algorithm runner")
     parser.add_argument("algorithm", choices=ALGORITHMS.keys(), help="Scheduling algorithm to run")
     parser.add_argument("input", help="Path to job list CSV file")
-    parser.add_argument("--capacity", "-c", type=float, default=None, help="Available technician time in hours for dp/optimal scheduling")
+    parser.add_argument("--capacity", "-c", type=float, default=None, help="Available technician time in hours for dp scheduling")
     args = parser.parse_args()
 
     jobs = read_data(args.input)
     schedule_fn = ALGORITHMS[args.algorithm]
 
     start = time.perf_counter()
-    result = schedule_fn(jobs, args.capacity)
+    if args.algorithm == "dp":
+        result = schedule_fn(jobs, args.capacity)
+    else:
+        result = schedule_fn(jobs)
     elapsed = time.perf_counter() - start
 
     now = datetime.now()
