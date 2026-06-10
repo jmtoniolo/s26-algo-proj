@@ -12,6 +12,26 @@ def compute_wait_times(scheduled: pd.DataFrame) -> pd.Series:
     return scheduled["repair_time_hours"].cumsum() - scheduled["repair_time_hours"]
 
 
+def normalize_scheduled_flag(series: pd.Series) -> pd.Series:
+    return series.astype("string").fillna("").str.strip().str.upper().eq("TRUE")
+
+
+def read_job_list_with_comments(filepath: str) -> tuple[pd.DataFrame, list[str]]:
+    comment_lines: list[str] = []
+    with open(filepath, "r", newline="", encoding="utf-8") as f:
+        while True:
+            pos = f.tell()
+            line = f.readline()
+            if not line or not line.startswith("#"):
+                f.seek(pos)
+                break
+            comment_lines.append(line)
+
+    jobs = read_data(filepath)
+    jobs["scheduled"] = jobs["scheduled"].astype("string").fillna("")
+    return jobs, comment_lines
+
+
 def schedule_fifo(jobs: pd.DataFrame) -> pd.DataFrame:
     """First In, First Out: schedule jobs in the order they appear."""
     return jobs
@@ -118,15 +138,25 @@ def main():
     )
     args = parser.parse_args()
 
-    jobs = read_data(args.input)
+    jobs, comment_lines = read_job_list_with_comments(args.input)
     schedule_fn = ALGORITHMS[args.algorithm]
+
+    unscheduled = jobs[~normalize_scheduled_flag(jobs["scheduled"])].copy()
 
     start = time.perf_counter()
     if args.algorithm == "dp":
-        result = schedule_fn(jobs, args.capacity)
+        result = schedule_fn(unscheduled, args.capacity)
     else:
-        result = schedule_fn(jobs)
+        result = schedule_fn(unscheduled)
     elapsed = time.perf_counter() - start
+
+    if not result.empty:
+        jobs.loc[jobs["job_id"].isin(result["job_id"]), "scheduled"] = "TRUE"
+
+    with open(args.input, "w", newline="", encoding="utf-8") as f:
+        for line in comment_lines:
+            f.write(line)
+        jobs.to_csv(f, index=False)
 
     now = datetime.now()
     timestamp = now.strftime('%Y%m%d%H%M%S')

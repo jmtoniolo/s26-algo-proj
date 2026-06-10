@@ -39,7 +39,7 @@ Run an algorithm against a job list CSV:
 ```bash
 python main.py <algorithm> <input.csv>
 ```
-
+Jobs already marked `TRUE` in the CSV `scheduled` column are skipped on subsequent runs. Newly scheduled jobs are written back to the source CSV with `scheduled=TRUE` so the next run ignores them.
 `<algorithm>` is one of:
 
 | Algorithm | Description |
@@ -188,3 +188,4 @@ This writes the parameters as a `#`-prefixed comment line above the CSV header, 
 | `repair_type` | string | Type of repair |
 | `repair_time_hours` | int | Estimated time to complete |
 | `priority` | int | Job priority score |
+| `scheduled` | string | `TRUE` when the job has been scheduled; empty when unscheduled |
