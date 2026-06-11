@@ -56,13 +56,14 @@ Example:
 python main.py priority job-list.csv
 ```
 
-For the `dp` algorithm, you can optionally specify available technician time:
+For any algorithm, specify the number of technicians available to constrain the schedule to the daily capacity.
+Each technician contributes 8 hours per day:
 
 ```bash
-python main.py dp job-list.csv --capacity 12
+python main.py dp job-list.csv --technicians 3
 ```
 
-If `--capacity` is omitted, the dynamic programming scheduler assumes enough time to include all jobs.
+If the technician count is omitted, algorithms schedule all unscheduled jobs in the chosen order and do not enforce a total daily capacity limit.
 
 Each run computes a `wait_time` for every job (the cumulative `repair_time_hours`
 of all jobs scheduled before it, assuming jobs run one at a time) and creates a

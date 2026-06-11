@@ -16,6 +16,29 @@ def normalize_scheduled_flag(series: pd.Series) -> pd.Series:
     return series.astype("string").fillna("").str.strip().str.upper().eq("TRUE")
 
 
+def filter_jobs_by_technician_daily_limit(jobs: pd.DataFrame, daily_limit: int = 8) -> tuple[pd.DataFrame, pd.DataFrame]:
+    jobs = jobs.copy()
+    jobs["repair_time_hours"] = jobs["repair_time_hours"].astype(int)
+    can_schedule = jobs[jobs["repair_time_hours"] <= daily_limit].reset_index(drop=True)
+    over_limit = jobs[jobs["repair_time_hours"] > daily_limit].reset_index(drop=True)
+    return can_schedule, over_limit
+
+
+def apply_capacity_limit(jobs: pd.DataFrame, capacity: int) -> pd.DataFrame:
+    accepted_rows = []
+    total = 0
+    for _, row in jobs.iterrows():
+        duration = int(row["repair_time_hours"])
+        if total + duration <= capacity:
+            accepted_rows.append(row)
+            total += duration
+        else:
+            break
+    if accepted_rows:
+        return pd.DataFrame(accepted_rows).reset_index(drop=True)
+    return jobs.iloc[[]].copy()
+
+
 def read_job_list_with_comments(filepath: str) -> tuple[pd.DataFrame, list[str]]:
     comment_lines: list[str] = []
     with open(filepath, "r", newline="", encoding="utf-8") as f:
@@ -65,14 +88,14 @@ def schedule_greedy(jobs: pd.DataFrame) -> pd.DataFrame:
     return jobs.sort_values("score", ascending=False).drop(columns="score")
 
 
-def schedule_optimal(jobs: pd.DataFrame, capacity: int | None = None) -> pd.DataFrame:
+def schedule_optimal(jobs: pd.DataFrame, technicians: int | None = None) -> pd.DataFrame:
     """Optimal scheduling via 0/1 knapsack dynamic programming.
 
     Selects the subset of jobs that maximizes total priority score while
-    respecting available technician time.
+    respecting available technician capacity per day.
 
     Args:
-        capacity: Available technician time in integer hours.
+        technicians: Number of technicians available. Each technician has 8 hours per day.
     """
     jobs = jobs.reset_index(drop=True)
     n = len(jobs)
@@ -83,10 +106,12 @@ def schedule_optimal(jobs: pd.DataFrame, capacity: int | None = None) -> pd.Data
     values = jobs["priority"].astype(int).tolist()
     total_time = sum(weights)
 
-    if capacity is None:
+    if technicians is None:
         capacity = total_time
-    if capacity <= 0:
-        return jobs.iloc[[]].reset_index(drop=True)
+    else:
+        if technicians <= 0:
+            return jobs.iloc[[]].reset_index(drop=True)
+        capacity = technicians * 8
 
     capacity = min(capacity, total_time)
 
@@ -130,7 +155,14 @@ def main():
     parser = argparse.ArgumentParser(description="Job scheduling algorithm runner")
     parser.add_argument("algorithm", choices=ALGORITHMS.keys(), help="Scheduling algorithm to run")
     parser.add_argument("input", help="Path to job list CSV file")
-    parser.add_argument("--capacity", "-c", type=int, default=None, help="Available technician time in integer hours for dp scheduling")
+    parser.add_argument(
+        "--technicians",
+        "-t",
+        dest="technicians",
+        type=int,
+        default=None,
+        help="Number of technicians available; each technician contributes 8 hours/day",
+    )
     parser.add_argument(
         "--label",
         default=None,
@@ -142,12 +174,23 @@ def main():
     schedule_fn = ALGORITHMS[args.algorithm]
 
     unscheduled = jobs[~normalize_scheduled_flag(jobs["scheduled"])].copy()
+    unscheduled_fit, unscheduled_overlimit = filter_jobs_by_technician_daily_limit(unscheduled)
+
+    if not unscheduled_overlimit.empty:
+        print(
+            f"Skipping {len(unscheduled_overlimit)} job(s) with repair_time_hours > 8h "
+            "because they cannot fit within one technician day."
+        )
+
+    total_capacity = None if args.technicians is None else args.technicians * 8
 
     start = time.perf_counter()
     if args.algorithm == "dp":
-        result = schedule_fn(unscheduled, args.capacity)
+        result = schedule_fn(unscheduled_fit, args.technicians)
     else:
-        result = schedule_fn(unscheduled)
+        result = schedule_fn(unscheduled_fit)
+        if total_capacity is not None:
+            result = apply_capacity_limit(result, total_capacity)
     elapsed = time.perf_counter() - start
 
     if not result.empty:
@@ -174,8 +217,8 @@ def main():
         f.write(f"Timestamp: {now.strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write(f"Algorithm: {args.algorithm}\n")
         f.write(f"Input: {args.input}\n")
-        if args.capacity is not None:
-            f.write(f"Capacity: {args.capacity}h\n")
+        if args.technicians is not None:
+            f.write(f"Technicians: {args.technicians} (total {args.technicians * 8}h/day)\n")
         f.write(f"Elapsed: {elapsed:.6f}s\n")
         f.write(f"Total queue time: {total_time}h\n")
         f.write(f"Average wait time: {avg_wait_time:.4f}h\n")
