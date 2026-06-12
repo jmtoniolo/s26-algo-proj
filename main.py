@@ -1,4 +1,5 @@
 import argparse
+import math
 import os
 import time
 from datetime import datetime
@@ -12,8 +13,72 @@ def compute_wait_times(scheduled: pd.DataFrame) -> pd.Series:
     return scheduled["repair_time_hours"].cumsum() - scheduled["repair_time_hours"]
 
 
-def normalize_scheduled_flag(series: pd.Series) -> pd.Series:
-    return series.astype("string").fillna("").str.strip().str.upper().eq("TRUE")
+def pack_into_technicians(
+    scheduled: pd.DataFrame, technicians: int | None, daily_hours: int = 8
+) -> tuple[pd.DataFrame, list[int]]:
+    """
+    Pack jobs into each technician. Putting one job in each technician in round-robin order.
+    """
+    scheduled = scheduled.reset_index(drop=True)
+    repair_hours = scheduled["repair_time_hours"].astype(int).tolist()
+
+    # Decide how many technicians we start with.
+    if technicians is not None:
+        fixed = True
+        count = technicians
+    else:
+        fixed = False
+        total_hours = sum(repair_hours)
+        count = math.ceil(total_hours / daily_hours)
+        if count < 1:
+            count = 1
+
+    loads = [0] * count                            # hours already assigned to each technician
+    technician_jobs = [[] for _ in range(count)]   # row indices of the jobs each technician got
+
+    current = 0  # whose turn it is in the rotation
+    for row_index in range(len(repair_hours)):
+        hours = repair_hours[row_index]
+
+        if not loads:
+            # There are no technicians at all, so nothing can be scheduled.
+            break
+
+        if loads[current] + hours > daily_hours:
+            if fixed:
+                # The technician whose turn it is cannot take this job, so we stop here.
+                # This job and every job after it stay unscheduled.
+                break
+            # There is no fixed limit, so open a brand new technician for this job.
+            loads.append(0)
+            technician_jobs.append([])
+            current = len(loads) - 1
+
+        loads[current] += hours
+        technician_jobs[current].append(row_index)
+        current = (current + 1) % len(loads)
+
+    # Flatten the per-technician job lists back into one ordered table, remembering which
+    # technician each job was given to.
+    ordered_rows = []
+    technician_of_row = []
+    for technician_id in range(len(technician_jobs)):
+        for row_index in technician_jobs[technician_id]:
+            ordered_rows.append(row_index)
+            technician_of_row.append(technician_id)
+
+    packed = scheduled.iloc[ordered_rows].copy()
+    packed["technician"] = technician_of_row
+
+    # A job's wait time is the total repair time of the earlier jobs on its technician.
+    if packed.empty:
+        packed["wait_time"] = packed["repair_time_hours"]
+    else:
+        job_hours = packed["repair_time_hours"]
+        hours_through_this_job = job_hours.groupby(packed["technician"]).cumsum()
+        packed["wait_time"] = hours_through_this_job - job_hours
+
+    return packed.reset_index(drop=True), loads
 
 
 def filter_jobs_by_technician_daily_limit(jobs: pd.DataFrame, daily_limit: int = 8) -> tuple[pd.DataFrame, pd.DataFrame]:
@@ -22,37 +87,6 @@ def filter_jobs_by_technician_daily_limit(jobs: pd.DataFrame, daily_limit: int =
     can_schedule = jobs[jobs["repair_time_hours"] <= daily_limit].reset_index(drop=True)
     over_limit = jobs[jobs["repair_time_hours"] > daily_limit].reset_index(drop=True)
     return can_schedule, over_limit
-
-
-def apply_capacity_limit(jobs: pd.DataFrame, capacity: int) -> pd.DataFrame:
-    accepted_rows = []
-    total = 0
-    for _, row in jobs.iterrows():
-        duration = int(row["repair_time_hours"])
-        if total + duration <= capacity:
-            accepted_rows.append(row)
-            total += duration
-        else:
-            break
-    if accepted_rows:
-        return pd.DataFrame(accepted_rows).reset_index(drop=True)
-    return jobs.iloc[[]].copy()
-
-
-def read_job_list_with_comments(filepath: str) -> tuple[pd.DataFrame, list[str]]:
-    comment_lines: list[str] = []
-    with open(filepath, "r", newline="", encoding="utf-8") as f:
-        while True:
-            pos = f.tell()
-            line = f.readline()
-            if not line or not line.startswith("#"):
-                f.seek(pos)
-                break
-            comment_lines.append(line)
-
-    jobs = read_data(filepath)
-    jobs["scheduled"] = jobs["scheduled"].astype("string").fillna("")
-    return jobs, comment_lines
 
 
 def schedule_fifo(jobs: pd.DataFrame) -> pd.DataFrame:
@@ -170,58 +204,82 @@ def main():
     )
     args = parser.parse_args()
 
-    jobs, comment_lines = read_job_list_with_comments(args.input)
+    jobs = read_data(args.input)
     schedule_fn = ALGORITHMS[args.algorithm]
 
-    unscheduled = jobs[~normalize_scheduled_flag(jobs["scheduled"])].copy()
-    unscheduled_fit, unscheduled_overlimit = filter_jobs_by_technician_daily_limit(unscheduled)
+    jobs_fit, jobs_overlimit = filter_jobs_by_technician_daily_limit(jobs)
 
-    if not unscheduled_overlimit.empty:
+    if not jobs_overlimit.empty:
         print(
-            f"Skipping {len(unscheduled_overlimit)} job(s) with repair_time_hours > 8h "
+            f"Skipping {len(jobs_overlimit)} job(s) with repair_time_hours > 8h "
             "because they cannot fit within one technician day."
         )
 
-    total_capacity = None if args.technicians is None else args.technicians * 8
+    # Resolve technician count. When --technicians is omitted, use as many as needed to
+    # cover all fitting work at 8h per technician.
+    fit_hours = int(jobs_fit["repair_time_hours"].astype(int).sum())
+    if args.technicians is None:
+        technicians = math.ceil(fit_hours / 8) if fit_hours > 0 else 0
+    else:
+        technicians = args.technicians
 
     start = time.perf_counter()
     if args.algorithm == "dp":
-        result = schedule_fn(unscheduled_fit, args.technicians)
+        # Optimal scheduling stays a single-queue knapsack and is not distributed.
+        result = schedule_fn(jobs_fit, args.technicians)
+        output = result.assign(wait_time=compute_wait_times(result))
+        loads = None
+        unscheduled = jobs_fit.iloc[0:0]
     else:
-        result = schedule_fn(unscheduled_fit)
-        if total_capacity is not None:
-            result = apply_capacity_limit(result, total_capacity)
+        ordered = schedule_fn(jobs_fit)
+        output, loads = pack_into_technicians(ordered, args.technicians)
+        technicians = len(loads)
+        scheduled_ids = set(output["job_id"])
+        unscheduled = jobs_fit[~jobs_fit["job_id"].isin(scheduled_ids)]
     elapsed = time.perf_counter() - start
-
-    if not result.empty:
-        jobs.loc[jobs["job_id"].isin(result["job_id"]), "scheduled"] = "TRUE"
-
-    with open(args.input, "w", newline="", encoding="utf-8") as f:
-        for line in comment_lines:
-            f.write(line)
-        jobs.to_csv(f, index=False)
 
     now = datetime.now()
     timestamp = now.strftime('%Y%m%d%H%M%S')
     results_dir = f"results-{args.label}-{timestamp}" if args.label else f"results-{timestamp}"
     os.makedirs(results_dir, exist_ok=True)
 
-    output = result.assign(wait_time=compute_wait_times(result))
     output.to_csv(os.path.join(results_dir, "scheduled_jobs.csv"), index=False)
 
     avg_wait_by_priority = output.groupby("priority")["wait_time"].mean().sort_index()
     total_time = output["repair_time_hours"].sum()
-    avg_wait_time = output["wait_time"].mean()
+    avg_wait_time = output["wait_time"].mean() if not output.empty else 0.0
+    max_wait_time = output["wait_time"].max() if not output.empty else 0.0
 
     with open(os.path.join(results_dir, "run.log"), "w") as f:
         f.write(f"Timestamp: {now.strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write(f"Algorithm: {args.algorithm}\n")
         f.write(f"Input: {args.input}\n")
-        if args.technicians is not None:
-            f.write(f"Technicians: {args.technicians} (total {args.technicians * 8}h/day)\n")
+        if args.technicians is None:
+            f.write(f"Technicians: {technicians} (auto, opened as needed to fit every job in an 8h day)\n")
+        else:
+            f.write(f"Technicians: {technicians} (fixed, {technicians * 8}h total capacity at 8h/day)\n")
         f.write(f"Elapsed: {elapsed:.6f}s\n")
-        f.write(f"Total queue time: {total_time}h\n")
+        f.write(f"Total scheduled hours: {total_time}h\n")
+        if loads is not None:
+            total_idle_hours = 0
+            technician_summaries = []
+            for technician_id in range(len(loads)):
+                used_hours = loads[technician_id]
+                idle_hours = 8 - used_hours
+                total_idle_hours += idle_hours
+                technician_summaries.append(f"#{technician_id}:{used_hours}h/{idle_hours}h")
+            f.write("Per-technician (used/idle of 8h): " + ", ".join(technician_summaries) + "\n")
+            f.write(f"Total idle technician hours: {total_idle_hours}h\n")
+            if not unscheduled.empty:
+                f.write(
+                    f"Unscheduled (did not fit in {technicians} technician-day(s)): "
+                    f"{len(unscheduled)} job(s)\n"
+                )
         f.write(f"Average wait time: {avg_wait_time:.4f}h\n")
+        f.write(f"Max wait time: {max_wait_time:.4f}h\n")
+
+    if not unscheduled.empty:
+        print(f"{len(unscheduled)} job(s) could not be scheduled within {technicians} technician-day(s).")
 
     plt.figure()
     plt.plot(avg_wait_by_priority.index, avg_wait_by_priority.values, marker="o")
@@ -229,10 +287,10 @@ def main():
     plt.ylabel("Average wait time (hours)")
     plt.title(
         f"Priority vs. Average Wait Time ({args.algorithm})\n"
-        f"Total queue time: {total_time}h | Average wait time: {avg_wait_time:.2f}h"
+        f"Avg wait: {avg_wait_time:.2f}h | Max wait: {max_wait_time:.2f}h | Technicians: {technicians}"
     )
     plt.grid(True)
-    plt.ylim(0, total_time)
+    plt.ylim(0, max_wait_time if max_wait_time > 0 else 1)
     plt.savefig(os.path.join(results_dir, "priority_vs_wait_time.png"))
     plt.close()
 
