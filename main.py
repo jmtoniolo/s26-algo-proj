@@ -1,5 +1,4 @@
 import argparse
-import math
 import os
 import time
 from datetime import datetime
@@ -13,72 +12,48 @@ def compute_wait_times(scheduled: pd.DataFrame) -> pd.Series:
     return scheduled["repair_time_hours"].cumsum() - scheduled["repair_time_hours"]
 
 
+def compute_wait_times_per_technician(assigned: pd.DataFrame) -> pd.Series:
+    """A job's wait time is the total repair time of the earlier jobs on its technician."""
+    if assigned.empty:
+        return assigned["repair_time_hours"]
+    job_hours = assigned["repair_time_hours"]
+    hours_through_this_job = job_hours.groupby(assigned["assigned_technician"]).cumsum()
+    return hours_through_this_job - job_hours
+
+
 def pack_into_technicians(
     scheduled: pd.DataFrame, technicians: int | None, daily_hours: int = 8
 ) -> tuple[pd.DataFrame, list[int]]:
     """
     Pack jobs into each technician. Putting one job in each technician in round-robin order.
     """
-    scheduled = scheduled.reset_index(drop=True)
-    repair_hours = scheduled["repair_time_hours"].astype(int).tolist()
+    scheduled = scheduled.copy()
+    scheduled["assigned_technician"] = -1
+    tech_loads = [0] * technicians # Hold the current hours a tech has scheduled for the day
+    
+    current_technician = 0 # Just an index for us to iterate with
+    for row in scheduled.itertuples(): # For each job
+        # If the current tech can fit it, assign it there
+        if tech_loads[current_technician] + row.repair_time_hours <= daily_hours:
+            tech_loads[current_technician] += row.repair_time_hours
+            scheduled.at[row.Index, "assigned_technician"] = current_technician
+            # Move to the next technician for the next job
+            current_technician = (current_technician + 1) % technicians 
+        else:
+            # Try to fit this job into any other technician
+            alt_tech = (current_technician + 1) % technicians
+            while (alt_tech != current_technician):
+                if tech_loads[alt_tech] + row.repair_time_hours <= daily_hours:
+                    tech_loads[alt_tech] += row.repair_time_hours
+                    scheduled.at[row.Index, "assigned_technician"] = alt_tech
+                    break
+                alt_tech = (alt_tech + 1) % technicians
 
-    # Decide how many technicians we start with.
-    if technicians is not None:
-        fixed = True
-        count = technicians
-    else:
-        fixed = False
-        total_hours = sum(repair_hours)
-        count = math.ceil(total_hours / daily_hours)
-        if count < 1:
-            count = 1
+    # Keep only the jobs that actually landed on a technician; the rest stay unscheduled.
+    assigned = scheduled[scheduled["assigned_technician"] != -1].copy()
+    assigned["wait_time"] = compute_wait_times_per_technician(assigned)
 
-    loads = [0] * count                            # hours already assigned to each technician
-    technician_jobs = [[] for _ in range(count)]   # row indices of the jobs each technician got
-
-    current = 0  # whose turn it is in the rotation
-    for row_index in range(len(repair_hours)):
-        hours = repair_hours[row_index]
-
-        if not loads:
-            # There are no technicians at all, so nothing can be scheduled.
-            break
-
-        if loads[current] + hours > daily_hours:
-            if fixed:
-                # The technician whose turn it is cannot take this job, so we stop here.
-                # This job and every job after it stay unscheduled.
-                break
-            # There is no fixed limit, so open a brand new technician for this job.
-            loads.append(0)
-            technician_jobs.append([])
-            current = len(loads) - 1
-
-        loads[current] += hours
-        technician_jobs[current].append(row_index)
-        current = (current + 1) % len(loads)
-
-    # Flatten the per-technician job lists back into one ordered table, remembering which
-    # technician each job was given to.
-    ordered_rows = []
-    technician_of_row = []
-    for technician_id in range(len(technician_jobs)):
-        for row_index in technician_jobs[technician_id]:
-            ordered_rows.append(row_index)
-            technician_of_row.append(technician_id)
-
-    packed = scheduled.iloc[ordered_rows].copy()
-    packed["technician"] = technician_of_row
-
-    # A job's wait time is the total repair time of the earlier jobs on its technician.
-    if packed.empty:
-        packed["wait_time"] = packed["repair_time_hours"]
-    else:
-        job_hours = packed["repair_time_hours"]
-        hours_through_this_job = job_hours.groupby(packed["technician"]).cumsum()
-        packed["wait_time"] = hours_through_this_job - job_hours
-
-    return packed.reset_index(drop=True), loads
+    return assigned.reset_index(drop=True), tech_loads
 
 
 def filter_jobs_by_technician_daily_limit(jobs: pd.DataFrame, daily_limit: int = 8) -> tuple[pd.DataFrame, pd.DataFrame]:
@@ -99,7 +74,7 @@ def schedule_priority(jobs: pd.DataFrame) -> pd.DataFrame:
 
     Ties (same priority) keep their original submission order via a stable sort.
     """
-    return jobs.sort_values("priority", ascending=False, kind="stable")
+    return jobs.sort_values("priority", ascending=False, kind="mergesort")
 
 
 def schedule_shortest_job_first(jobs: pd.DataFrame) -> pd.DataFrame:
@@ -107,7 +82,7 @@ def schedule_shortest_job_first(jobs: pd.DataFrame) -> pd.DataFrame:
 
     Ties (same repair time) keep their original submission order via a stable sort.
     """
-    return jobs.sort_values("repair_time_hours", ascending=True, kind="stable")
+    return jobs.sort_values("repair_time_hours", ascending=True, kind="mergesort")
 
 
 def schedule_greedy(jobs: pd.DataFrame) -> pd.DataFrame:
@@ -119,7 +94,7 @@ def schedule_greedy(jobs: pd.DataFrame) -> pd.DataFrame:
         exit(1)
 
     jobs["score"] = jobs["priority"] / (jobs["repair_time_hours"])
-    return jobs.sort_values("score", ascending=False).drop(columns="score")
+    return jobs.sort_values("score", ascending=False, kind="mergesort").drop(columns="score")
 
 
 def schedule_optimal(jobs: pd.DataFrame, technicians: int | None = None) -> pd.DataFrame:
@@ -194,7 +169,7 @@ def main():
         "-t",
         dest="technicians",
         type=int,
-        default=None,
+        required=True,
         help="Number of technicians available; each technician contributes 8 hours/day",
     )
     parser.add_argument(
@@ -215,14 +190,6 @@ def main():
             "because they cannot fit within one technician day."
         )
 
-    # Resolve technician count. When --technicians is omitted, use as many as needed to
-    # cover all fitting work at 8h per technician.
-    fit_hours = int(jobs_fit["repair_time_hours"].astype(int).sum())
-    if args.technicians is None:
-        technicians = math.ceil(fit_hours / 8) if fit_hours > 0 else 0
-    else:
-        technicians = args.technicians
-
     start = time.perf_counter()
     if args.algorithm == "dp":
         # Optimal scheduling stays a single-queue knapsack and is not distributed.
@@ -233,7 +200,7 @@ def main():
     else:
         ordered = schedule_fn(jobs_fit)
         output, loads = pack_into_technicians(ordered, args.technicians)
-        technicians = len(loads)
+        args.technicians = len(loads)
         scheduled_ids = set(output["job_id"])
         unscheduled = jobs_fit[~jobs_fit["job_id"].isin(scheduled_ids)]
     elapsed = time.perf_counter() - start
@@ -254,10 +221,7 @@ def main():
         f.write(f"Timestamp: {now.strftime('%Y-%m-%d %H:%M:%S')}\n")
         f.write(f"Algorithm: {args.algorithm}\n")
         f.write(f"Input: {args.input}\n")
-        if args.technicians is None:
-            f.write(f"Technicians: {technicians} (auto, opened as needed to fit every job in an 8h day)\n")
-        else:
-            f.write(f"Technicians: {technicians} (fixed, {technicians * 8}h total capacity at 8h/day)\n")
+        f.write(f"Technicians: {args.technicians} ({args.technicians * 8}h total capacity at 8h/day)\n")
         f.write(f"Elapsed: {elapsed:.6f}s\n")
         f.write(f"Total scheduled hours: {total_time}h\n")
         if loads is not None:
