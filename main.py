@@ -13,27 +13,54 @@ def compute_wait_times(scheduled: pd.DataFrame) -> pd.Series:
     return scheduled["repair_time_hours"].cumsum() - scheduled["repair_time_hours"]
 
 
-def distribute_across_technicians(scheduled: pd.DataFrame, technicians: int) -> pd.DataFrame:
-    """Deal the ordered jobs across technicians round-robin and compute per-technician wait time.
+def pack_into_technicians(
+    scheduled: pd.DataFrame, technicians: int | None, daily_hours: int = 8
+) -> tuple[pd.DataFrame, list[int]]:
+    """Pack jobs into technician-days of capacity ``daily_hours``, respecting the given order.
 
-    Jobs are handed out one slot at a time: the first job goes to technician 0's slot 0,
-    the next to technician 1's slot 0, and so on; once every technician has a job in the
-    current slot, the next job starts slot 1 back on technician 0. This keeps the top jobs
-    (which the algorithm placed first) spread across technicians instead of stacked onto
-    technician 0.
+    Each technician represents a single ``daily_hours`` day. Jobs are walked in the order the
+    scheduling algorithm produced (so higher-preference jobs are placed first) and each is
+    dropped into the first technician that still has room (first-fit). No technician is ever
+    pushed past ``daily_hours``.
 
-    Each technician is an independent single-server queue, so a job's wait time is the sum
-    of the repair times of that technician's earlier jobs. The longest any job waits is
-    therefore the longest queue among the technicians, not the whole-shop total.
+    - When ``technicians`` is a fixed number, only that many days exist; any job that fits in
+      none of them is left unscheduled ("fit as many as you can").
+    - When ``technicians`` is None, a fresh technician-day is opened whenever a job fits
+      nowhere, so every job is scheduled and the number of days used tells you how many
+      technicians a single 8h shift would need.
+
+    Returns ``(packed, loads)`` where ``packed`` carries ``technician`` and ``wait_time``
+    columns (wait time is the cumulative repair time of earlier jobs on that technician) and
+    ``loads`` is the hours assigned to each technician, including any that stayed idle.
     """
     scheduled = scheduled.reset_index(drop=True)
-    if technicians <= 0 or scheduled.empty:
-        return scheduled.iloc[[]].assign(technician=pd.Series(dtype=int), wait_time=pd.Series(dtype=float))
+    repair = scheduled["repair_time_hours"].astype(int).tolist()
 
-    technician = pd.Series([i % technicians for i in range(len(scheduled))], index=scheduled.index)
-    repair = scheduled["repair_time_hours"]
-    wait_time = repair.groupby(technician).cumsum() - repair
-    return scheduled.assign(technician=technician, wait_time=wait_time)
+    fixed = technicians is not None
+    loads: list[int] = [0] * technicians if fixed else []
+    bins: list[list[int]] = [[] for _ in range(technicians)] if fixed else []
+
+    for i, w in enumerate(repair):
+        placed = False
+        for t in range(len(loads)):
+            if loads[t] + w <= daily_hours:
+                loads[t] += w
+                bins[t].append(i)
+                placed = True
+                break
+        if not placed and not fixed:
+            loads.append(w)
+            bins.append([i])
+        # if fixed and it fit nowhere, the job is left unscheduled.
+
+    ordered_rows = [i for group in bins for i in group]
+    tech_ids = [t for t, group in enumerate(bins) for _ in group]
+
+    packed = scheduled.iloc[ordered_rows].copy()
+    packed["technician"] = tech_ids
+    rep = packed["repair_time_hours"]
+    packed["wait_time"] = (rep.groupby(packed["technician"]).cumsum() - rep) if not packed.empty else rep
+    return packed.reset_index(drop=True), loads
 
 
 def filter_jobs_by_technician_daily_limit(jobs: pd.DataFrame, daily_limit: int = 8) -> tuple[pd.DataFrame, pd.DataFrame]:
@@ -183,9 +210,14 @@ def main():
         # Optimal scheduling stays a single-queue knapsack and is not distributed.
         result = schedule_fn(jobs_fit, args.technicians)
         output = result.assign(wait_time=compute_wait_times(result))
+        loads = None
+        unscheduled = jobs_fit.iloc[0:0]
     else:
-        result = schedule_fn(jobs_fit)
-        output = distribute_across_technicians(result, technicians)
+        ordered = schedule_fn(jobs_fit)
+        output, loads = pack_into_technicians(ordered, args.technicians)
+        technicians = len(loads)
+        scheduled_ids = set(output["job_id"])
+        unscheduled = jobs_fit[~jobs_fit["job_id"].isin(scheduled_ids)]
     elapsed = time.perf_counter() - start
 
     now = datetime.now()
@@ -205,16 +237,30 @@ def main():
         f.write(f"Algorithm: {args.algorithm}\n")
         f.write(f"Input: {args.input}\n")
         if args.technicians is None:
-            f.write(f"Technicians: {technicians} (auto, enough to schedule all fitting jobs at 8h each)\n")
+            f.write(f"Technicians: {technicians} (auto, opened as needed to fit every job in an 8h day)\n")
         else:
-            f.write(f"Technicians: {technicians} (total {technicians * 8}h/day)\n")
+            f.write(f"Technicians: {technicians} (fixed, {technicians * 8}h total capacity at 8h/day)\n")
         f.write(f"Elapsed: {elapsed:.6f}s\n")
         f.write(f"Total scheduled hours: {total_time}h\n")
-        if "technician" in output.columns and not output.empty:
-            load = output.groupby("technician")["repair_time_hours"].sum().sort_index()
-            f.write("Per-technician load: " + ", ".join(f"#{tid}:{hrs}h" for tid, hrs in load.items()) + "\n")
+        if loads is not None:
+            idle = sum(8 - load for load in loads)
+            f.write(
+                "Per-technician (used/idle of 8h): "
+                + ", ".join(f"#{t}:{load}h/{8 - load}h" for t, load in enumerate(loads))
+                + "\n"
+            )
+            f.write(f"Total idle technician hours: {idle}h\n")
+            if not unscheduled.empty:
+                ids = ", ".join(unscheduled["job_id"].astype(str))
+                f.write(
+                    f"Unscheduled (did not fit in {technicians} technician-day(s)): "
+                    f"{len(unscheduled)} job(s) [{ids}]\n"
+                )
         f.write(f"Average wait time: {avg_wait_time:.4f}h\n")
         f.write(f"Max wait time: {max_wait_time:.4f}h\n")
+
+    if not unscheduled.empty:
+        print(f"{len(unscheduled)} job(s) could not be scheduled within {technicians} technician-day(s).")
 
     plt.figure()
     plt.plot(avg_wait_by_priority.index, avg_wait_by_priority.values, marker="o")
