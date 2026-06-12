@@ -52,8 +52,6 @@ def read_data(filepath: str = "job-list.csv") -> pd.DataFrame:
     This is wrapped just to abstract the csv read.
     """
     df = pd.read_csv(filepath, comment="#")
-    if "scheduled" not in df.columns:
-        df["scheduled"] = ""
     return df
 
 
@@ -75,7 +73,6 @@ def generate_synthetic_data(
         "repair_type": repair_types,
         "repair_time_hours": repair_times,
         "priority": priorities,
-        "scheduled": [""] * num_rows,
     })
 
 

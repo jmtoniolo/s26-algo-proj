@@ -1,0 +1,5002 @@
+# generation_params: repair_time: uniform(min=1, max=4) | priority: normal(min=1, max=10, mean=5, std=1.5)
+job_id,repair_type,repair_time_hours,priority
+J1,Battery replacement,2,5
+J2,Wheel alignment,2,5
+J3,Battery replacement,2,2
+J4,ABS warning light diagnosis,1,7
+J5,Tire pressure sensor reset,4,4
+J6,Tire pressure sensor reset,4,5
+J7,Spark plug replacement,3,4
+J8,Oil change,2,4
+J9,Brake inspection,4,5
+J10,ABS warning light diagnosis,2,4
+J11,Alternator inspection,3,5
+J12,Engine diagnostic scan,1,3
+J13,Transmission inspection,4,3
+J14,Brake inspection,3,5
+J15,Brake inspection,3,4
+J16,Check engine light diagnosis,1,6
+J17,Oil change,4,4
+J18,Alternator inspection,3,7
+J19,Brake pad replacement,3,6
+J20,Battery replacement,3,6
+J21,Spark plug replacement,3,5
+J22,Tire pressure sensor reset,2,4
+J23,Tire pressure sensor reset,3,6
+J24,Transmission inspection,4,4
+J25,ABS warning light diagnosis,2,6
+J26,Brake inspection,1,5
+J27,Spark plug replacement,2,3
+J28,Oil change,2,5
+J29,Transmission inspection,2,5
+J30,Check engine light diagnosis,3,5
+J31,Oil change,2,3
+J32,Tire pressure sensor reset,2,5
+J33,Engine diagnostic scan,1,7
+J34,ABS warning light diagnosis,3,4
+J35,Tire replacement,3,2
+J36,Tire replacement,2,4
+J37,Engine diagnostic scan,4,4
+J38,Tire pressure sensor reset,3,3
+J39,Brake inspection,2,5
+J40,Transmission inspection,4,8
+J41,Battery replacement,3,6
+J42,Suspension noise diagnosis,2,4
+J43,ABS warning light diagnosis,3,5
+J44,Brake pad replacement,2,3
+J45,Tire pressure sensor reset,3,6
+J46,Battery replacement,1,4
+J47,Alternator inspection,1,4
+J48,Coolant system service,2,5
+J49,Wheel alignment,1,7
+J50,Wheel alignment,1,5
+J51,Wheel alignment,3,3
+J52,Transmission inspection,4,4
+J53,Tire pressure sensor reset,2,4
+J54,Spark plug replacement,3,4
+J55,Battery replacement,2,6
+J56,Brake pad replacement,3,7
+J57,Battery replacement,1,4
+J58,Tire replacement,1,6
+J59,Coolant system service,4,5
+J60,Oil change,4,5
+J61,Coolant system service,2,3
+J62,Check engine light diagnosis,4,4
+J63,Coolant system service,4,5
+J64,Tire replacement,2,9
+J65,Spark plug replacement,3,5
+J66,Suspension noise diagnosis,4,4
+J67,Coolant system service,1,6
+J68,Brake pad replacement,4,4
+J69,Tire replacement,3,5
+J70,Engine diagnostic scan,3,4
+J71,Alternator inspection,3,6
+J72,Coolant system service,3,5
+J73,ABS warning light diagnosis,1,6
+J74,Spark plug replacement,3,4
+J75,Alternator inspection,3,5
+J76,Suspension noise diagnosis,2,3
+J77,Alternator inspection,2,6
+J78,Oil change,4,6
+J79,Brake inspection,2,7
+J80,Check engine light diagnosis,3,5
+J81,Spark plug replacement,3,3
+J82,Spark plug replacement,1,6
+J83,ABS warning light diagnosis,1,5
+J84,Brake pad replacement,2,4
+J85,Tire replacement,3,5
+J86,Spark plug replacement,4,4
+J87,Coolant system service,4,3
+J88,Coolant system service,3,2
+J89,ABS warning light diagnosis,3,9
+J90,Oil change,2,6
+J91,Battery replacement,3,5
+J92,Alternator inspection,4,6
+J93,Suspension noise diagnosis,3,1
+J94,Wheel alignment,4,3
+J95,Check engine light diagnosis,2,5
+J96,Engine diagnostic scan,2,4
+J97,Wheel alignment,2,5
+J98,Alternator inspection,2,5
+J99,Wheel alignment,2,6
+J100,Tire replacement,3,7
+J101,Tire pressure sensor reset,2,5
+J102,Brake pad replacement,3,6
+J103,Brake inspection,2,3
+J104,Check engine light diagnosis,4,6
+J105,ABS warning light diagnosis,2,6
+J106,Brake pad replacement,4,6
+J107,Check engine light diagnosis,2,8
+J108,ABS warning light diagnosis,1,6
+J109,Alternator inspection,2,4
+J110,Battery replacement,3,6
+J111,Brake pad replacement,1,6
+J112,Engine diagnostic scan,1,3
+J113,Tire replacement,2,5
+J114,Oil change,1,6
+J115,Coolant system service,1,3
+J116,Brake inspection,3,4
+J117,Spark plug replacement,4,6
+J118,Suspension noise diagnosis,1,3
+J119,Suspension noise diagnosis,1,1
+J120,Check engine light diagnosis,2,6
+J121,Tire pressure sensor reset,2,5
+J122,Check engine light diagnosis,1,6
+J123,Suspension noise diagnosis,3,4
+J124,Engine diagnostic scan,4,6
+J125,Oil change,2,3
+J126,ABS warning light diagnosis,2,5
+J127,Alternator inspection,4,5
+J128,Battery replacement,2,6
+J129,Coolant system service,3,7
+J130,Oil change,3,5
+J131,Tire replacement,3,7
+J132,Transmission inspection,2,6
+J133,Oil change,3,4
+J134,Spark plug replacement,3,5
+J135,ABS warning light diagnosis,3,6
+J136,Engine diagnostic scan,4,5
+J137,Tire pressure sensor reset,3,4
+J138,Transmission inspection,3,7
+J139,Tire replacement,4,4
+J140,Suspension noise diagnosis,4,6
+J141,Coolant system service,3,6
+J142,Battery replacement,4,5
+J143,Brake inspection,1,6
+J144,Oil change,2,4
+J145,Battery replacement,4,6
+J146,Brake inspection,3,2
+J147,Tire replacement,4,6
+J148,Coolant system service,4,3
+J149,Tire replacement,4,5
+J150,Battery replacement,3,6
+J151,Spark plug replacement,4,4
+J152,Battery replacement,2,5
+J153,Battery replacement,3,5
+J154,Brake inspection,2,6
+J155,Engine diagnostic scan,4,5
+J156,Transmission inspection,3,6
+J157,Brake pad replacement,3,7
+J158,Oil change,3,6
+J159,Alternator inspection,3,5
+J160,ABS warning light diagnosis,1,6
+J161,Brake pad replacement,2,3
+J162,Oil change,1,5
+J163,ABS warning light diagnosis,2,4
+J164,Brake inspection,4,7
+J165,Engine diagnostic scan,3,9
+J166,Brake inspection,2,7
+J167,Brake inspection,4,7
+J168,Brake pad replacement,3,3
+J169,Transmission inspection,2,6
+J170,Tire pressure sensor reset,1,3
+J171,Check engine light diagnosis,3,6
+J172,Alternator inspection,2,7
+J173,Engine diagnostic scan,1,5
+J174,Alternator inspection,2,7
+J175,Brake inspection,2,8
+J176,Oil change,2,4
+J177,Transmission inspection,1,5
+J178,Transmission inspection,3,3
+J179,Engine diagnostic scan,2,6
+J180,Alternator inspection,2,5
+J181,ABS warning light diagnosis,3,5
+J182,Coolant system service,3,7
+J183,Coolant system service,4,3
+J184,Brake pad replacement,3,2
+J185,Engine diagnostic scan,4,6
+J186,Engine diagnostic scan,3,6
+J187,Tire replacement,1,6
+J188,Coolant system service,3,6
+J189,Transmission inspection,3,5
+J190,ABS warning light diagnosis,3,5
+J191,Wheel alignment,4,5
+J192,Coolant system service,3,3
+J193,Coolant system service,3,7
+J194,Transmission inspection,2,5
+J195,Tire replacement,1,3
+J196,Coolant system service,2,5
+J197,Suspension noise diagnosis,3,6
+J198,Check engine light diagnosis,4,7
+J199,ABS warning light diagnosis,1,5
+J200,ABS warning light diagnosis,4,2
+J201,Engine diagnostic scan,3,5
+J202,Alternator inspection,3,4
+J203,Oil change,2,3
+J204,Coolant system service,1,4
+J205,Suspension noise diagnosis,3,5
+J206,Transmission inspection,1,5
+J207,Transmission inspection,2,5
+J208,ABS warning light diagnosis,2,2
+J209,Brake pad replacement,2,2
+J210,Alternator inspection,2,4
+J211,Engine diagnostic scan,3,7
+J212,Coolant system service,4,7
+J213,Brake pad replacement,3,4
+J214,ABS warning light diagnosis,2,4
+J215,Tire pressure sensor reset,4,5
+J216,Coolant system service,3,8
+J217,Alternator inspection,1,5
+J218,Check engine light diagnosis,2,6
+J219,Transmission inspection,2,3
+J220,Alternator inspection,2,8
+J221,Brake inspection,2,7
+J222,Alternator inspection,1,7
+J223,Suspension noise diagnosis,4,4
+J224,Battery replacement,2,5
+J225,Oil change,3,4
+J226,Suspension noise diagnosis,3,8
+J227,Suspension noise diagnosis,4,4
+J228,Brake pad replacement,3,5
+J229,Tire pressure sensor reset,2,5
+J230,Brake inspection,3,4
+J231,Tire replacement,2,4
+J232,Coolant system service,2,5
+J233,Tire pressure sensor reset,2,7
+J234,Spark plug replacement,2,7
+J235,Transmission inspection,3,5
+J236,Spark plug replacement,3,5
+J237,Wheel alignment,1,5
+J238,Suspension noise diagnosis,4,6
+J239,Check engine light diagnosis,3,6
+J240,Battery replacement,2,6
+J241,Battery replacement,1,5
+J242,Engine diagnostic scan,3,4
+J243,Coolant system service,3,5
+J244,Suspension noise diagnosis,3,6
+J245,Spark plug replacement,2,6
+J246,Engine diagnostic scan,2,6
+J247,Wheel alignment,1,5
+J248,Brake inspection,2,4
+J249,Alternator inspection,3,6
+J250,Suspension noise diagnosis,1,7
+J251,Brake pad replacement,2,7
+J252,Oil change,2,2
+J253,Wheel alignment,1,3
+J254,ABS warning light diagnosis,2,7
+J255,Spark plug replacement,2,4
+J256,Brake inspection,2,6
+J257,Battery replacement,1,3
+J258,Transmission inspection,1,4
+J259,Tire replacement,1,5
+J260,Coolant system service,3,6
+J261,Spark plug replacement,2,7
+J262,ABS warning light diagnosis,4,4
+J263,Brake inspection,3,4
+J264,Tire pressure sensor reset,3,6
+J265,Spark plug replacement,3,5
+J266,Check engine light diagnosis,3,3
+J267,Suspension noise diagnosis,2,6
+J268,Coolant system service,2,6
+J269,Transmission inspection,2,6
+J270,Wheel alignment,1,7
+J271,ABS warning light diagnosis,2,4
+J272,Alternator inspection,1,4
+J273,Alternator inspection,4,6
+J274,Battery replacement,3,5
+J275,Coolant system service,3,5
+J276,Spark plug replacement,1,6
+J277,Engine diagnostic scan,3,4
+J278,Transmission inspection,2,5
+J279,Alternator inspection,2,6
+J280,Transmission inspection,4,4
+J281,Wheel alignment,3,6
+J282,Transmission inspection,3,4
+J283,Transmission inspection,3,5
+J284,Alternator inspection,1,6
+J285,Spark plug replacement,3,6
+J286,Check engine light diagnosis,2,7
+J287,Spark plug replacement,3,5
+J288,Engine diagnostic scan,2,6
+J289,Alternator inspection,2,4
+J290,Engine diagnostic scan,1,4
+J291,Tire pressure sensor reset,2,7
+J292,ABS warning light diagnosis,3,3
+J293,Alternator inspection,2,6
+J294,Tire replacement,2,5
+J295,Oil change,4,4
+J296,Coolant system service,1,7
+J297,Engine diagnostic scan,3,4
+J298,ABS warning light diagnosis,2,6
+J299,Alternator inspection,2,4
+J300,Tire replacement,1,6
+J301,Engine diagnostic scan,2,5
+J302,Wheel alignment,3,4
+J303,Coolant system service,2,4
+J304,Brake inspection,3,7
+J305,Engine diagnostic scan,1,7
+J306,Coolant system service,1,5
+J307,Engine diagnostic scan,2,6
+J308,Check engine light diagnosis,2,5
+J309,Check engine light diagnosis,2,4
+J310,Check engine light diagnosis,4,8
+J311,Alternator inspection,2,5
+J312,Brake inspection,3,5
+J313,Tire replacement,1,6
+J314,Transmission inspection,1,6
+J315,Transmission inspection,2,6
+J316,Oil change,3,6
+J317,Brake inspection,2,6
+J318,Battery replacement,1,8
+J319,Alternator inspection,2,5
+J320,ABS warning light diagnosis,3,6
+J321,Spark plug replacement,2,5
+J322,Transmission inspection,1,3
+J323,Spark plug replacement,3,5
+J324,ABS warning light diagnosis,2,4
+J325,Brake inspection,2,3
+J326,Alternator inspection,4,5
+J327,Engine diagnostic scan,4,3
+J328,Brake inspection,3,4
+J329,Alternator inspection,2,5
+J330,Alternator inspection,2,5
+J331,Tire pressure sensor reset,1,3
+J332,Engine diagnostic scan,2,6
+J333,Suspension noise diagnosis,3,3
+J334,Brake inspection,2,5
+J335,Oil change,1,4
+J336,Alternator inspection,1,6
+J337,Wheel alignment,2,7
+J338,Alternator inspection,2,6
+J339,Oil change,4,5
+J340,Tire replacement,4,5
+J341,Oil change,4,5
+J342,Transmission inspection,1,4
+J343,Brake inspection,1,5
+J344,Tire pressure sensor reset,2,5
+J345,Suspension noise diagnosis,1,6
+J346,Alternator inspection,4,4
+J347,Spark plug replacement,2,7
+J348,Tire replacement,3,4
+J349,Tire pressure sensor reset,1,6
+J350,Spark plug replacement,3,2
+J351,Spark plug replacement,3,7
+J352,Wheel alignment,4,7
+J353,Check engine light diagnosis,1,5
+J354,Coolant system service,3,4
+J355,Check engine light diagnosis,3,6
+J356,Oil change,1,6
+J357,Engine diagnostic scan,2,5
+J358,Check engine light diagnosis,3,1
+J359,Suspension noise diagnosis,3,3
+J360,Spark plug replacement,2,5
+J361,Suspension noise diagnosis,1,7
+J362,Spark plug replacement,3,6
+J363,Alternator inspection,4,5
+J364,Tire pressure sensor reset,2,5
+J365,Transmission inspection,3,5
+J366,Engine diagnostic scan,3,4
+J367,Spark plug replacement,3,5
+J368,Battery replacement,1,6
+J369,Brake inspection,3,5
+J370,Tire pressure sensor reset,4,3
+J371,Engine diagnostic scan,1,7
+J372,Transmission inspection,3,3
+J373,ABS warning light diagnosis,4,7
+J374,Brake inspection,3,7
+J375,Engine diagnostic scan,2,4
+J376,Check engine light diagnosis,3,6
+J377,Tire pressure sensor reset,3,6
+J378,Suspension noise diagnosis,3,6
+J379,Transmission inspection,2,4
+J380,Transmission inspection,3,7
+J381,Engine diagnostic scan,2,5
+J382,Check engine light diagnosis,1,7
+J383,ABS warning light diagnosis,3,4
+J384,Engine diagnostic scan,3,3
+J385,Oil change,2,7
+J386,Wheel alignment,3,6
+J387,Tire replacement,3,5
+J388,Tire pressure sensor reset,3,7
+J389,ABS warning light diagnosis,4,3
+J390,ABS warning light diagnosis,4,6
+J391,ABS warning light diagnosis,3,8
+J392,Wheel alignment,2,4
+J393,Brake pad replacement,1,6
+J394,Wheel alignment,4,3
+J395,Engine diagnostic scan,2,3
+J396,Alternator inspection,4,6
+J397,Transmission inspection,1,3
+J398,Spark plug replacement,3,6
+J399,Tire pressure sensor reset,3,6
+J400,Oil change,3,6
+J401,Battery replacement,3,6
+J402,Transmission inspection,3,4
+J403,Tire pressure sensor reset,3,5
+J404,Battery replacement,2,8
+J405,Engine diagnostic scan,1,5
+J406,Battery replacement,4,5
+J407,ABS warning light diagnosis,2,2
+J408,Brake pad replacement,1,7
+J409,Battery replacement,3,5
+J410,Brake pad replacement,2,6
+J411,Alternator inspection,4,5
+J412,Tire pressure sensor reset,3,8
+J413,Tire replacement,4,4
+J414,Tire replacement,3,4
+J415,Spark plug replacement,4,4
+J416,Brake inspection,2,4
+J417,Tire replacement,3,5
+J418,Transmission inspection,2,4
+J419,Coolant system service,1,5
+J420,ABS warning light diagnosis,4,4
+J421,ABS warning light diagnosis,4,8
+J422,Coolant system service,2,5
+J423,Tire replacement,3,3
+J424,Oil change,2,7
+J425,Check engine light diagnosis,3,4
+J426,Suspension noise diagnosis,3,4
+J427,Engine diagnostic scan,1,6
+J428,Oil change,2,4
+J429,Spark plug replacement,2,6
+J430,Transmission inspection,3,5
+J431,Spark plug replacement,4,6
+J432,Check engine light diagnosis,2,4
+J433,Spark plug replacement,3,6
+J434,Brake inspection,3,5
+J435,Transmission inspection,2,3
+J436,Brake inspection,3,6
+J437,Engine diagnostic scan,2,5
+J438,Check engine light diagnosis,2,7
+J439,Brake pad replacement,2,4
+J440,Coolant system service,2,5
+J441,Tire replacement,3,4
+J442,Coolant system service,1,6
+J443,Coolant system service,2,6
+J444,Check engine light diagnosis,3,6
+J445,Tire pressure sensor reset,1,5
+J446,ABS warning light diagnosis,3,6
+J447,Transmission inspection,4,7
+J448,Tire pressure sensor reset,3,6
+J449,ABS warning light diagnosis,2,6
+J450,Check engine light diagnosis,2,4
+J451,Tire replacement,2,6
+J452,Tire replacement,4,2
+J453,Tire replacement,1,5
+J454,Wheel alignment,2,4
+J455,Brake inspection,1,4
+J456,Engine diagnostic scan,2,7
+J457,Suspension noise diagnosis,4,5
+J458,Tire pressure sensor reset,2,8
+J459,Spark plug replacement,2,4
+J460,Tire replacement,4,3
+J461,Suspension noise diagnosis,3,5
+J462,Coolant system service,4,6
+J463,Transmission inspection,2,6
+J464,Alternator inspection,2,4
+J465,Coolant system service,2,6
+J466,Coolant system service,1,5
+J467,Tire pressure sensor reset,2,7
+J468,Engine diagnostic scan,3,5
+J469,Brake inspection,2,5
+J470,Engine diagnostic scan,2,3
+J471,Brake inspection,2,7
+J472,Brake inspection,3,6
+J473,Spark plug replacement,3,4
+J474,Transmission inspection,3,4
+J475,ABS warning light diagnosis,2,6
+J476,Alternator inspection,1,6
+J477,Oil change,2,4
+J478,Wheel alignment,1,5
+J479,Alternator inspection,3,4
+J480,Battery replacement,2,5
+J481,Brake pad replacement,3,5
+J482,Battery replacement,2,4
+J483,ABS warning light diagnosis,2,7
+J484,Engine diagnostic scan,3,8
+J485,Oil change,2,6
+J486,Brake pad replacement,2,7
+J487,Engine diagnostic scan,3,5
+J488,Tire replacement,4,4
+J489,ABS warning light diagnosis,4,9
+J490,Check engine light diagnosis,3,3
+J491,Tire pressure sensor reset,2,2
+J492,Check engine light diagnosis,2,6
+J493,Engine diagnostic scan,2,4
+J494,Check engine light diagnosis,1,5
+J495,Brake inspection,3,7
+J496,Engine diagnostic scan,1,5
+J497,Check engine light diagnosis,4,4
+J498,Tire pressure sensor reset,2,6
+J499,Brake pad replacement,4,4
+J500,Suspension noise diagnosis,2,2
+J501,Engine diagnostic scan,3,3
+J502,Wheel alignment,1,5
+J503,Brake inspection,3,8
+J504,Brake pad replacement,4,5
+J505,Coolant system service,3,3
+J506,Tire replacement,4,3
+J507,Alternator inspection,4,8
+J508,Suspension noise diagnosis,3,6
+J509,Tire pressure sensor reset,3,6
+J510,Brake pad replacement,1,6
+J511,Oil change,4,3
+J512,Brake inspection,2,6
+J513,Engine diagnostic scan,1,6
+J514,Brake pad replacement,4,6
+J515,Brake pad replacement,1,6
+J516,Wheel alignment,2,5
+J517,ABS warning light diagnosis,4,7
+J518,Coolant system service,1,6
+J519,Battery replacement,2,2
+J520,Check engine light diagnosis,2,4
+J521,Alternator inspection,1,6
+J522,Alternator inspection,2,4
+J523,Alternator inspection,4,4
+J524,Alternator inspection,2,2
+J525,Check engine light diagnosis,2,6
+J526,Oil change,3,7
+J527,Tire replacement,2,8
+J528,Brake pad replacement,4,7
+J529,Battery replacement,1,2
+J530,Wheel alignment,2,5
+J531,Check engine light diagnosis,2,2
+J532,Tire replacement,1,5
+J533,Brake inspection,1,4
+J534,Brake pad replacement,4,5
+J535,Spark plug replacement,3,6
+J536,Coolant system service,3,5
+J537,Brake pad replacement,2,4
+J538,Engine diagnostic scan,4,5
+J539,Oil change,2,5
+J540,Spark plug replacement,1,6
+J541,Check engine light diagnosis,4,5
+J542,Alternator inspection,1,6
+J543,Check engine light diagnosis,2,7
+J544,Battery replacement,4,5
+J545,Oil change,4,4
+J546,Tire replacement,1,4
+J547,Coolant system service,4,6
+J548,Tire pressure sensor reset,4,4
+J549,Oil change,2,7
+J550,ABS warning light diagnosis,2,5
+J551,ABS warning light diagnosis,1,3
+J552,ABS warning light diagnosis,3,5
+J553,Tire pressure sensor reset,3,5
+J554,Tire replacement,2,3
+J555,ABS warning light diagnosis,1,6
+J556,Suspension noise diagnosis,3,2
+J557,ABS warning light diagnosis,2,5
+J558,Engine diagnostic scan,1,4
+J559,Wheel alignment,4,2
+J560,Tire replacement,4,6
+J561,Oil change,2,3
+J562,Tire replacement,4,6
+J563,Tire replacement,2,7
+J564,Tire pressure sensor reset,2,9
+J565,Brake pad replacement,3,6
+J566,Brake inspection,4,6
+J567,Check engine light diagnosis,1,3
+J568,Battery replacement,2,6
+J569,Engine diagnostic scan,2,4
+J570,Oil change,1,4
+J571,Brake inspection,2,7
+J572,Brake pad replacement,1,6
+J573,Alternator inspection,1,5
+J574,Wheel alignment,3,4
+J575,Brake pad replacement,4,4
+J576,Alternator inspection,1,2
+J577,Brake inspection,2,6
+J578,Brake pad replacement,1,3
+J579,Brake pad replacement,3,6
+J580,Tire replacement,4,5
+J581,Alternator inspection,2,1
+J582,Transmission inspection,3,6
+J583,Check engine light diagnosis,3,6
+J584,Brake inspection,1,6
+J585,ABS warning light diagnosis,2,6
+J586,Transmission inspection,2,4
+J587,Brake pad replacement,2,6
+J588,Suspension noise diagnosis,1,5
+J589,Oil change,1,6
+J590,Suspension noise diagnosis,4,5
+J591,ABS warning light diagnosis,3,4
+J592,Wheel alignment,3,4
+J593,Coolant system service,3,6
+J594,Oil change,4,3
+J595,Suspension noise diagnosis,3,4
+J596,Wheel alignment,2,5
+J597,Suspension noise diagnosis,3,3
+J598,Suspension noise diagnosis,2,8
+J599,Oil change,2,4
+J600,ABS warning light diagnosis,3,8
+J601,Check engine light diagnosis,1,5
+J602,Engine diagnostic scan,2,6
+J603,Tire replacement,3,3
+J604,Check engine light diagnosis,3,5
+J605,Tire pressure sensor reset,3,6
+J606,Tire replacement,1,3
+J607,Suspension noise diagnosis,1,4
+J608,Tire pressure sensor reset,2,3
+J609,Suspension noise diagnosis,2,4
+J610,Alternator inspection,3,6
+J611,ABS warning light diagnosis,2,5
+J612,Oil change,4,3
+J613,ABS warning light diagnosis,4,4
+J614,Tire pressure sensor reset,4,5
+J615,Suspension noise diagnosis,2,7
+J616,Tire replacement,2,6
+J617,Spark plug replacement,3,6
+J618,Oil change,1,6
+J619,Battery replacement,3,3
+J620,Suspension noise diagnosis,3,8
+J621,Tire pressure sensor reset,2,4
+J622,Battery replacement,2,4
+J623,Wheel alignment,3,7
+J624,Transmission inspection,4,4
+J625,Wheel alignment,1,7
+J626,Brake inspection,2,4
+J627,Check engine light diagnosis,2,5
+J628,Transmission inspection,1,5
+J629,Coolant system service,3,8
+J630,Suspension noise diagnosis,4,5
+J631,Transmission inspection,3,2
+J632,ABS warning light diagnosis,3,5
+J633,Tire pressure sensor reset,2,8
+J634,Wheel alignment,2,6
+J635,ABS warning light diagnosis,2,5
+J636,Battery replacement,3,6
+J637,Suspension noise diagnosis,1,5
+J638,Spark plug replacement,4,5
+J639,Check engine light diagnosis,2,3
+J640,Tire replacement,3,7
+J641,Oil change,2,3
+J642,Battery replacement,2,6
+J643,Oil change,3,5
+J644,Wheel alignment,2,5
+J645,Tire pressure sensor reset,3,6
+J646,Wheel alignment,1,4
+J647,Battery replacement,2,5
+J648,Alternator inspection,4,5
+J649,Tire pressure sensor reset,3,5
+J650,Check engine light diagnosis,1,6
+J651,Wheel alignment,2,6
+J652,Wheel alignment,3,6
+J653,Wheel alignment,4,5
+J654,Tire replacement,2,5
+J655,Battery replacement,3,5
+J656,ABS warning light diagnosis,2,7
+J657,Tire pressure sensor reset,3,5
+J658,Engine diagnostic scan,3,5
+J659,Tire pressure sensor reset,1,6
+J660,Transmission inspection,4,8
+J661,Engine diagnostic scan,4,6
+J662,Oil change,2,5
+J663,Alternator inspection,4,3
+J664,ABS warning light diagnosis,3,3
+J665,Engine diagnostic scan,4,8
+J666,Engine diagnostic scan,2,5
+J667,Oil change,2,4
+J668,Coolant system service,3,4
+J669,Oil change,4,2
+J670,Spark plug replacement,2,7
+J671,Engine diagnostic scan,2,7
+J672,Suspension noise diagnosis,4,7
+J673,Brake pad replacement,2,6
+J674,Tire replacement,2,6
+J675,Check engine light diagnosis,2,4
+J676,Battery replacement,2,5
+J677,ABS warning light diagnosis,4,6
+J678,Coolant system service,1,5
+J679,Spark plug replacement,2,3
+J680,ABS warning light diagnosis,3,3
+J681,Oil change,3,5
+J682,Transmission inspection,3,5
+J683,Tire replacement,4,7
+J684,Brake pad replacement,3,5
+J685,Transmission inspection,1,5
+J686,Brake inspection,1,6
+J687,Alternator inspection,2,5
+J688,Tire pressure sensor reset,2,7
+J689,Suspension noise diagnosis,3,6
+J690,Transmission inspection,2,5
+J691,Wheel alignment,2,4
+J692,Oil change,2,5
+J693,Engine diagnostic scan,2,3
+J694,Tire replacement,1,4
+J695,Brake inspection,1,3
+J696,Tire pressure sensor reset,2,6
+J697,Tire pressure sensor reset,2,8
+J698,Alternator inspection,1,5
+J699,Oil change,2,7
+J700,Transmission inspection,2,1
+J701,Suspension noise diagnosis,2,8
+J702,Brake pad replacement,3,5
+J703,Suspension noise diagnosis,1,7
+J704,Brake pad replacement,4,8
+J705,Oil change,1,4
+J706,Oil change,3,4
+J707,Transmission inspection,4,4
+J708,Check engine light diagnosis,3,3
+J709,Wheel alignment,3,7
+J710,Spark plug replacement,3,6
+J711,Spark plug replacement,3,5
+J712,Tire replacement,4,6
+J713,Engine diagnostic scan,4,6
+J714,Spark plug replacement,1,6
+J715,Brake pad replacement,2,4
+J716,Battery replacement,2,5
+J717,ABS warning light diagnosis,4,5
+J718,Check engine light diagnosis,3,6
+J719,Oil change,3,5
+J720,Spark plug replacement,2,4
+J721,Brake inspection,2,5
+J722,Brake inspection,1,4
+J723,Engine diagnostic scan,1,6
+J724,Transmission inspection,2,8
+J725,Spark plug replacement,3,2
+J726,ABS warning light diagnosis,1,5
+J727,Alternator inspection,3,6
+J728,Battery replacement,3,3
+J729,Brake inspection,3,6
+J730,Battery replacement,3,4
+J731,Transmission inspection,3,3
+J732,Transmission inspection,3,5
+J733,Alternator inspection,3,6
+J734,Coolant system service,2,6
+J735,Tire pressure sensor reset,3,10
+J736,Brake pad replacement,3,6
+J737,Wheel alignment,4,6
+J738,Oil change,2,8
+J739,Check engine light diagnosis,2,6
+J740,Tire replacement,1,6
+J741,Transmission inspection,3,5
+J742,ABS warning light diagnosis,3,6
+J743,Brake pad replacement,1,9
+J744,Coolant system service,3,5
+J745,Tire replacement,2,6
+J746,Brake inspection,3,4
+J747,Engine diagnostic scan,3,5
+J748,Brake inspection,1,3
+J749,Tire replacement,3,3
+J750,Oil change,1,5
+J751,Check engine light diagnosis,3,3
+J752,Brake pad replacement,3,4
+J753,Engine diagnostic scan,2,6
+J754,Coolant system service,2,6
+J755,Oil change,3,8
+J756,Brake pad replacement,3,1
+J757,Check engine light diagnosis,4,5
+J758,Spark plug replacement,2,5
+J759,ABS warning light diagnosis,2,4
+J760,Alternator inspection,3,4
+J761,Tire replacement,4,5
+J762,Spark plug replacement,3,5
+J763,ABS warning light diagnosis,3,4
+J764,Suspension noise diagnosis,2,4
+J765,Tire replacement,3,3
+J766,Tire pressure sensor reset,3,5
+J767,Alternator inspection,3,7
+J768,Tire replacement,3,4
+J769,Suspension noise diagnosis,2,7
+J770,Suspension noise diagnosis,3,6
+J771,Tire pressure sensor reset,4,4
+J772,Spark plug replacement,4,4
+J773,Brake inspection,4,5
+J774,Tire pressure sensor reset,3,3
+J775,Suspension noise diagnosis,3,3
+J776,ABS warning light diagnosis,4,7
+J777,ABS warning light diagnosis,2,5
+J778,Tire pressure sensor reset,2,6
+J779,Brake pad replacement,3,5
+J780,Suspension noise diagnosis,2,6
+J781,Brake pad replacement,3,4
+J782,Brake inspection,4,5
+J783,Oil change,3,5
+J784,Tire replacement,3,7
+J785,Battery replacement,1,5
+J786,Brake inspection,3,6
+J787,Alternator inspection,3,4
+J788,Brake inspection,2,5
+J789,Engine diagnostic scan,3,6
+J790,Brake inspection,2,5
+J791,Wheel alignment,3,6
+J792,Engine diagnostic scan,2,5
+J793,Brake inspection,4,3
+J794,Transmission inspection,2,5
+J795,Brake inspection,3,6
+J796,Tire pressure sensor reset,3,5
+J797,Tire replacement,1,4
+J798,Spark plug replacement,3,3
+J799,Battery replacement,3,3
+J800,Engine diagnostic scan,3,4
+J801,ABS warning light diagnosis,2,3
+J802,Brake inspection,2,7
+J803,Brake inspection,4,8
+J804,Brake pad replacement,1,4
+J805,Alternator inspection,2,3
+J806,Spark plug replacement,3,6
+J807,ABS warning light diagnosis,4,3
+J808,Suspension noise diagnosis,4,6
+J809,Transmission inspection,2,5
+J810,Coolant system service,4,7
+J811,Tire pressure sensor reset,1,7
+J812,Brake inspection,4,6
+J813,Suspension noise diagnosis,2,4
+J814,Tire replacement,2,2
+J815,Spark plug replacement,2,8
+J816,Engine diagnostic scan,2,3
+J817,Check engine light diagnosis,1,4
+J818,Check engine light diagnosis,2,7
+J819,Wheel alignment,2,6
+J820,Coolant system service,2,5
+J821,Battery replacement,3,5
+J822,Tire pressure sensor reset,4,5
+J823,Tire pressure sensor reset,3,2
+J824,Engine diagnostic scan,4,5
+J825,Wheel alignment,2,4
+J826,Brake pad replacement,1,6
+J827,Wheel alignment,4,7
+J828,Tire replacement,3,4
+J829,Transmission inspection,1,2
+J830,Check engine light diagnosis,3,5
+J831,Tire pressure sensor reset,3,7
+J832,Suspension noise diagnosis,3,5
+J833,Battery replacement,3,6
+J834,Wheel alignment,4,6
+J835,ABS warning light diagnosis,3,6
+J836,Transmission inspection,3,6
+J837,Brake inspection,3,6
+J838,Check engine light diagnosis,1,4
+J839,Alternator inspection,2,6
+J840,ABS warning light diagnosis,3,6
+J841,Transmission inspection,2,3
+J842,Wheel alignment,2,5
+J843,Tire replacement,1,8
+J844,Brake pad replacement,3,4
+J845,Brake inspection,3,6
+J846,Suspension noise diagnosis,1,3
+J847,Brake pad replacement,3,2
+J848,ABS warning light diagnosis,4,7
+J849,Brake pad replacement,2,4
+J850,Wheel alignment,4,3
+J851,Tire replacement,2,4
+J852,Check engine light diagnosis,1,6
+J853,Brake inspection,2,4
+J854,Wheel alignment,1,6
+J855,Transmission inspection,1,5
+J856,ABS warning light diagnosis,3,5
+J857,Suspension noise diagnosis,4,4
+J858,Oil change,3,5
+J859,Oil change,3,6
+J860,Transmission inspection,3,5
+J861,Transmission inspection,2,5
+J862,Battery replacement,3,7
+J863,ABS warning light diagnosis,2,5
+J864,Suspension noise diagnosis,2,7
+J865,Oil change,2,7
+J866,Spark plug replacement,1,6
+J867,Transmission inspection,2,5
+J868,Spark plug replacement,3,4
+J869,Engine diagnostic scan,2,2
+J870,Brake pad replacement,2,5
+J871,Battery replacement,3,5
+J872,Brake pad replacement,1,5
+J873,Wheel alignment,3,7
+J874,Alternator inspection,1,6
+J875,ABS warning light diagnosis,2,5
+J876,ABS warning light diagnosis,2,5
+J877,Alternator inspection,2,8
+J878,Brake pad replacement,1,3
+J879,Transmission inspection,2,3
+J880,Engine diagnostic scan,2,9
+J881,Suspension noise diagnosis,3,4
+J882,Brake pad replacement,2,3
+J883,Engine diagnostic scan,1,4
+J884,Suspension noise diagnosis,2,4
+J885,Oil change,2,5
+J886,Coolant system service,3,6
+J887,Coolant system service,3,3
+J888,Tire replacement,2,4
+J889,Check engine light diagnosis,1,2
+J890,Wheel alignment,2,3
+J891,Coolant system service,1,3
+J892,Battery replacement,4,6
+J893,Check engine light diagnosis,1,4
+J894,Tire replacement,3,8
+J895,Oil change,1,4
+J896,Suspension noise diagnosis,3,5
+J897,Coolant system service,2,6
+J898,Coolant system service,2,7
+J899,Engine diagnostic scan,4,6
+J900,Tire pressure sensor reset,2,5
+J901,Engine diagnostic scan,3,3
+J902,ABS warning light diagnosis,2,4
+J903,Coolant system service,4,5
+J904,Transmission inspection,3,4
+J905,Battery replacement,2,4
+J906,Check engine light diagnosis,2,4
+J907,Coolant system service,1,6
+J908,Tire replacement,3,6
+J909,Transmission inspection,4,5
+J910,Suspension noise diagnosis,2,4
+J911,Brake inspection,3,4
+J912,Battery replacement,4,3
+J913,Transmission inspection,3,5
+J914,ABS warning light diagnosis,2,5
+J915,Spark plug replacement,2,5
+J916,Battery replacement,1,6
+J917,Tire pressure sensor reset,3,5
+J918,Tire pressure sensor reset,2,5
+J919,Spark plug replacement,2,6
+J920,Coolant system service,3,4
+J921,Check engine light diagnosis,1,5
+J922,Tire replacement,1,4
+J923,Oil change,4,5
+J924,Transmission inspection,2,4
+J925,Brake pad replacement,3,5
+J926,Tire replacement,4,5
+J927,Wheel alignment,2,5
+J928,Brake pad replacement,2,5
+J929,Battery replacement,4,8
+J930,Check engine light diagnosis,2,5
+J931,ABS warning light diagnosis,2,5
+J932,Wheel alignment,1,5
+J933,Battery replacement,3,4
+J934,Brake pad replacement,2,5
+J935,Check engine light diagnosis,2,4
+J936,Tire replacement,1,7
+J937,Battery replacement,3,5
+J938,Spark plug replacement,1,6
+J939,Oil change,3,3
+J940,Suspension noise diagnosis,4,3
+J941,Oil change,3,6
+J942,Brake pad replacement,2,4
+J943,Coolant system service,2,4
+J944,Tire replacement,3,5
+J945,Wheel alignment,3,8
+J946,Coolant system service,4,4
+J947,Transmission inspection,3,6
+J948,Alternator inspection,4,6
+J949,Coolant system service,2,4
+J950,Wheel alignment,3,3
+J951,Tire pressure sensor reset,2,5
+J952,Brake inspection,2,7
+J953,Transmission inspection,3,7
+J954,Spark plug replacement,3,5
+J955,Brake inspection,2,6
+J956,Alternator inspection,4,4
+J957,Coolant system service,4,7
+J958,Tire pressure sensor reset,4,5
+J959,Wheel alignment,3,6
+J960,Check engine light diagnosis,2,5
+J961,Brake inspection,1,5
+J962,ABS warning light diagnosis,2,6
+J963,ABS warning light diagnosis,2,4
+J964,Alternator inspection,2,5
+J965,Battery replacement,4,3
+J966,Check engine light diagnosis,3,5
+J967,Coolant system service,3,4
+J968,Engine diagnostic scan,2,5
+J969,Tire replacement,3,3
+J970,Tire replacement,4,7
+J971,Wheel alignment,1,6
+J972,Oil change,2,5
+J973,Suspension noise diagnosis,2,4
+J974,Spark plug replacement,4,6
+J975,Wheel alignment,1,8
+J976,Coolant system service,1,9
+J977,Battery replacement,4,5
+J978,Alternator inspection,3,3
+J979,Alternator inspection,2,4
+J980,Tire replacement,3,7
+J981,Battery replacement,3,5
+J982,Battery replacement,4,7
+J983,Brake pad replacement,1,6
+J984,Oil change,3,7
+J985,Engine diagnostic scan,3,4
+J986,ABS warning light diagnosis,3,6
+J987,Alternator inspection,2,4
+J988,Wheel alignment,2,6
+J989,Coolant system service,3,2
+J990,Engine diagnostic scan,2,5
+J991,Suspension noise diagnosis,3,5
+J992,Spark plug replacement,2,3
+J993,Oil change,3,7
+J994,Check engine light diagnosis,3,4
+J995,Coolant system service,4,5
+J996,Check engine light diagnosis,2,7
+J997,Check engine light diagnosis,2,3
+J998,Spark plug replacement,3,5
+J999,Spark plug replacement,3,7
+J1000,Brake pad replacement,2,7
+J1001,Oil change,3,6
+J1002,ABS warning light diagnosis,2,6
+J1003,Battery replacement,4,6
+J1004,ABS warning light diagnosis,3,3
+J1005,Oil change,4,2
+J1006,Check engine light diagnosis,2,4
+J1007,ABS warning light diagnosis,2,4
+J1008,Check engine light diagnosis,4,4
+J1009,Brake inspection,2,6
+J1010,Wheel alignment,3,4
+J1011,Brake inspection,2,3
+J1012,Wheel alignment,2,6
+J1013,Tire replacement,3,7
+J1014,Transmission inspection,1,4
+J1015,Engine diagnostic scan,4,7
+J1016,Tire pressure sensor reset,2,6
+J1017,Tire pressure sensor reset,2,6
+J1018,ABS warning light diagnosis,2,6
+J1019,Brake inspection,4,4
+J1020,ABS warning light diagnosis,4,6
+J1021,Brake inspection,3,4
+J1022,Tire replacement,4,6
+J1023,ABS warning light diagnosis,1,5
+J1024,Battery replacement,1,3
+J1025,Transmission inspection,2,5
+J1026,Coolant system service,1,4
+J1027,ABS warning light diagnosis,2,5
+J1028,Check engine light diagnosis,2,4
+J1029,ABS warning light diagnosis,2,3
+J1030,Engine diagnostic scan,3,5
+J1031,Battery replacement,4,4
+J1032,Check engine light diagnosis,4,3
+J1033,Alternator inspection,2,7
+J1034,Wheel alignment,3,6
+J1035,Tire replacement,3,5
+J1036,Tire replacement,2,5
+J1037,Engine diagnostic scan,4,5
+J1038,Tire replacement,3,8
+J1039,Tire pressure sensor reset,2,4
+J1040,ABS warning light diagnosis,4,2
+J1041,Coolant system service,4,4
+J1042,Brake pad replacement,1,6
+J1043,Wheel alignment,2,4
+J1044,Alternator inspection,3,4
+J1045,Spark plug replacement,3,5
+J1046,Spark plug replacement,4,5
+J1047,Wheel alignment,1,6
+J1048,Engine diagnostic scan,4,6
+J1049,Brake pad replacement,1,5
+J1050,Brake pad replacement,4,7
+J1051,Coolant system service,3,7
+J1052,Oil change,1,7
+J1053,Oil change,2,6
+J1054,Transmission inspection,3,4
+J1055,Brake pad replacement,4,5
+J1056,Oil change,4,5
+J1057,Coolant system service,1,4
+J1058,Tire replacement,4,5
+J1059,Suspension noise diagnosis,4,6
+J1060,Suspension noise diagnosis,2,5
+J1061,Wheel alignment,2,5
+J1062,Coolant system service,2,7
+J1063,Wheel alignment,2,8
+J1064,Spark plug replacement,2,3
+J1065,Tire pressure sensor reset,4,6
+J1066,Brake pad replacement,1,8
+J1067,Battery replacement,3,5
+J1068,Brake pad replacement,2,4
+J1069,Oil change,3,3
+J1070,Engine diagnostic scan,2,7
+J1071,Spark plug replacement,4,6
+J1072,Check engine light diagnosis,3,5
+J1073,Spark plug replacement,3,5
+J1074,Transmission inspection,4,6
+J1075,Alternator inspection,3,5
+J1076,Coolant system service,4,3
+J1077,Battery replacement,3,6
+J1078,Oil change,3,6
+J1079,Tire replacement,3,5
+J1080,Oil change,1,7
+J1081,Engine diagnostic scan,4,5
+J1082,Oil change,3,5
+J1083,Transmission inspection,3,3
+J1084,Tire pressure sensor reset,3,5
+J1085,Engine diagnostic scan,1,7
+J1086,Spark plug replacement,3,6
+J1087,Tire replacement,3,6
+J1088,Oil change,1,6
+J1089,Brake pad replacement,2,2
+J1090,Alternator inspection,3,5
+J1091,Battery replacement,1,4
+J1092,Coolant system service,2,2
+J1093,Coolant system service,3,4
+J1094,Engine diagnostic scan,2,6
+J1095,Brake inspection,3,1
+J1096,Suspension noise diagnosis,4,7
+J1097,Battery replacement,2,2
+J1098,Tire pressure sensor reset,1,4
+J1099,Transmission inspection,2,6
+J1100,Oil change,2,7
+J1101,Brake inspection,3,5
+J1102,Tire replacement,2,5
+J1103,Battery replacement,4,8
+J1104,ABS warning light diagnosis,4,3
+J1105,Suspension noise diagnosis,2,6
+J1106,Brake inspection,3,5
+J1107,Brake inspection,3,8
+J1108,Coolant system service,1,6
+J1109,Spark plug replacement,3,6
+J1110,Transmission inspection,3,8
+J1111,Battery replacement,4,5
+J1112,Spark plug replacement,1,5
+J1113,Tire replacement,2,6
+J1114,Transmission inspection,4,5
+J1115,Coolant system service,4,1
+J1116,ABS warning light diagnosis,3,5
+J1117,Check engine light diagnosis,2,7
+J1118,Brake inspection,3,6
+J1119,Spark plug replacement,1,5
+J1120,Coolant system service,2,4
+J1121,Spark plug replacement,2,6
+J1122,Check engine light diagnosis,2,6
+J1123,Oil change,3,5
+J1124,Alternator inspection,1,3
+J1125,Suspension noise diagnosis,3,4
+J1126,Spark plug replacement,4,5
+J1127,Tire replacement,3,7
+J1128,ABS warning light diagnosis,4,6
+J1129,Battery replacement,3,7
+J1130,Brake pad replacement,1,5
+J1131,Oil change,2,5
+J1132,Transmission inspection,4,6
+J1133,Alternator inspection,4,5
+J1134,Wheel alignment,2,8
+J1135,Wheel alignment,2,5
+J1136,Spark plug replacement,2,5
+J1137,Tire replacement,2,6
+J1138,Spark plug replacement,2,5
+J1139,Tire pressure sensor reset,1,5
+J1140,Oil change,1,4
+J1141,Wheel alignment,2,8
+J1142,Spark plug replacement,2,6
+J1143,Engine diagnostic scan,1,6
+J1144,Alternator inspection,2,7
+J1145,Transmission inspection,3,8
+J1146,Engine diagnostic scan,1,2
+J1147,Tire replacement,4,5
+J1148,Tire replacement,2,5
+J1149,Tire replacement,1,3
+J1150,Alternator inspection,4,5
+J1151,ABS warning light diagnosis,2,5
+J1152,Alternator inspection,3,6
+J1153,Engine diagnostic scan,2,4
+J1154,Tire replacement,2,4
+J1155,Oil change,2,5
+J1156,Alternator inspection,2,7
+J1157,ABS warning light diagnosis,3,4
+J1158,Transmission inspection,3,5
+J1159,Tire pressure sensor reset,2,3
+J1160,Tire pressure sensor reset,3,6
+J1161,Tire replacement,2,6
+J1162,Brake inspection,2,3
+J1163,Check engine light diagnosis,3,6
+J1164,Tire replacement,4,2
+J1165,Oil change,3,6
+J1166,Suspension noise diagnosis,2,6
+J1167,Battery replacement,3,6
+J1168,Battery replacement,1,3
+J1169,Tire replacement,4,6
+J1170,Brake pad replacement,2,5
+J1171,Brake pad replacement,2,4
+J1172,Transmission inspection,2,3
+J1173,Engine diagnostic scan,3,6
+J1174,Engine diagnostic scan,2,3
+J1175,Coolant system service,2,4
+J1176,Engine diagnostic scan,3,7
+J1177,Brake pad replacement,3,3
+J1178,Wheel alignment,1,7
+J1179,Wheel alignment,3,5
+J1180,Wheel alignment,4,5
+J1181,Spark plug replacement,2,4
+J1182,Transmission inspection,2,4
+J1183,Brake pad replacement,3,5
+J1184,Wheel alignment,2,5
+J1185,Tire pressure sensor reset,3,1
+J1186,Alternator inspection,2,3
+J1187,Wheel alignment,2,7
+J1188,Check engine light diagnosis,2,6
+J1189,Brake pad replacement,2,5
+J1190,Oil change,2,7
+J1191,Transmission inspection,3,4
+J1192,Coolant system service,1,3
+J1193,Coolant system service,4,5
+J1194,Alternator inspection,3,7
+J1195,Tire replacement,2,4
+J1196,Tire pressure sensor reset,1,5
+J1197,ABS warning light diagnosis,2,6
+J1198,Tire replacement,3,6
+J1199,Transmission inspection,3,4
+J1200,Brake inspection,2,5
+J1201,Suspension noise diagnosis,1,8
+J1202,Coolant system service,3,4
+J1203,Coolant system service,3,5
+J1204,Check engine light diagnosis,3,6
+J1205,Spark plug replacement,3,6
+J1206,Brake pad replacement,3,9
+J1207,Oil change,1,5
+J1208,Spark plug replacement,1,7
+J1209,Tire replacement,2,6
+J1210,Wheel alignment,2,5
+J1211,Tire pressure sensor reset,3,2
+J1212,Spark plug replacement,2,6
+J1213,Transmission inspection,2,3
+J1214,Spark plug replacement,3,7
+J1215,Battery replacement,2,3
+J1216,Brake pad replacement,3,1
+J1217,Oil change,1,6
+J1218,Tire pressure sensor reset,1,3
+J1219,Battery replacement,1,3
+J1220,Engine diagnostic scan,2,6
+J1221,Wheel alignment,4,3
+J1222,Tire pressure sensor reset,4,6
+J1223,Battery replacement,4,2
+J1224,Battery replacement,2,3
+J1225,Spark plug replacement,4,5
+J1226,Engine diagnostic scan,2,5
+J1227,Check engine light diagnosis,3,5
+J1228,Coolant system service,2,6
+J1229,Battery replacement,3,4
+J1230,Transmission inspection,2,3
+J1231,Wheel alignment,2,4
+J1232,Engine diagnostic scan,2,6
+J1233,Tire replacement,1,7
+J1234,Transmission inspection,3,5
+J1235,Tire replacement,2,6
+J1236,Coolant system service,3,5
+J1237,Spark plug replacement,3,5
+J1238,Check engine light diagnosis,1,5
+J1239,Tire replacement,2,6
+J1240,Suspension noise diagnosis,2,7
+J1241,Alternator inspection,1,7
+J1242,Oil change,3,3
+J1243,Coolant system service,4,7
+J1244,Suspension noise diagnosis,3,6
+J1245,Tire pressure sensor reset,3,4
+J1246,Tire pressure sensor reset,3,4
+J1247,Battery replacement,2,3
+J1248,Wheel alignment,3,4
+J1249,Brake pad replacement,3,6
+J1250,Battery replacement,2,5
+J1251,Oil change,2,5
+J1252,Battery replacement,4,5
+J1253,Brake inspection,2,4
+J1254,Wheel alignment,4,6
+J1255,Suspension noise diagnosis,4,3
+J1256,Coolant system service,3,7
+J1257,Transmission inspection,3,4
+J1258,Spark plug replacement,1,6
+J1259,Transmission inspection,2,6
+J1260,Spark plug replacement,2,4
+J1261,Tire pressure sensor reset,4,1
+J1262,Wheel alignment,3,5
+J1263,Tire replacement,3,2
+J1264,Brake inspection,2,6
+J1265,Spark plug replacement,4,3
+J1266,ABS warning light diagnosis,2,5
+J1267,ABS warning light diagnosis,3,5
+J1268,Coolant system service,2,7
+J1269,Battery replacement,2,7
+J1270,Check engine light diagnosis,3,6
+J1271,Alternator inspection,2,6
+J1272,ABS warning light diagnosis,3,5
+J1273,Wheel alignment,2,6
+J1274,ABS warning light diagnosis,2,3
+J1275,Wheel alignment,2,6
+J1276,Oil change,2,5
+J1277,Battery replacement,3,3
+J1278,Brake inspection,4,6
+J1279,Brake pad replacement,4,5
+J1280,Spark plug replacement,2,7
+J1281,Brake pad replacement,4,4
+J1282,Spark plug replacement,2,6
+J1283,Check engine light diagnosis,1,4
+J1284,Wheel alignment,1,6
+J1285,Brake pad replacement,3,5
+J1286,Oil change,1,5
+J1287,Battery replacement,2,6
+J1288,ABS warning light diagnosis,4,6
+J1289,Engine diagnostic scan,1,3
+J1290,ABS warning light diagnosis,3,3
+J1291,Battery replacement,1,4
+J1292,ABS warning light diagnosis,3,6
+J1293,Wheel alignment,3,5
+J1294,Wheel alignment,4,4
+J1295,Brake pad replacement,4,8
+J1296,Coolant system service,3,4
+J1297,Brake pad replacement,3,4
+J1298,Battery replacement,3,4
+J1299,Tire replacement,1,4
+J1300,Engine diagnostic scan,1,5
+J1301,Oil change,3,8
+J1302,Alternator inspection,4,5
+J1303,Suspension noise diagnosis,4,5
+J1304,Engine diagnostic scan,4,4
+J1305,Wheel alignment,2,7
+J1306,Brake pad replacement,3,5
+J1307,Engine diagnostic scan,4,5
+J1308,Engine diagnostic scan,3,4
+J1309,Spark plug replacement,1,5
+J1310,Battery replacement,4,7
+J1311,Spark plug replacement,2,5
+J1312,Engine diagnostic scan,3,6
+J1313,Oil change,3,7
+J1314,Check engine light diagnosis,4,6
+J1315,Spark plug replacement,1,4
+J1316,Battery replacement,3,2
+J1317,Suspension noise diagnosis,2,5
+J1318,Tire replacement,1,4
+J1319,Battery replacement,3,5
+J1320,Tire pressure sensor reset,3,6
+J1321,Coolant system service,3,4
+J1322,Wheel alignment,2,7
+J1323,Alternator inspection,3,3
+J1324,Tire pressure sensor reset,1,5
+J1325,Transmission inspection,2,3
+J1326,Brake pad replacement,4,6
+J1327,Spark plug replacement,3,4
+J1328,Brake pad replacement,2,5
+J1329,ABS warning light diagnosis,1,2
+J1330,ABS warning light diagnosis,2,5
+J1331,Brake pad replacement,2,4
+J1332,Transmission inspection,3,4
+J1333,Wheel alignment,2,5
+J1334,Spark plug replacement,2,5
+J1335,Alternator inspection,3,4
+J1336,Wheel alignment,2,4
+J1337,Brake inspection,3,3
+J1338,Spark plug replacement,2,5
+J1339,Alternator inspection,3,7
+J1340,Wheel alignment,3,6
+J1341,Battery replacement,3,7
+J1342,Engine diagnostic scan,2,8
+J1343,Wheel alignment,4,5
+J1344,Transmission inspection,2,6
+J1345,Coolant system service,3,6
+J1346,Transmission inspection,4,5
+J1347,ABS warning light diagnosis,3,4
+J1348,Tire replacement,2,7
+J1349,Alternator inspection,3,3
+J1350,Wheel alignment,4,2
+J1351,Battery replacement,1,7
+J1352,Wheel alignment,3,5
+J1353,Check engine light diagnosis,4,4
+J1354,Tire pressure sensor reset,2,6
+J1355,Transmission inspection,4,7
+J1356,Spark plug replacement,3,6
+J1357,Check engine light diagnosis,2,5
+J1358,Wheel alignment,3,7
+J1359,Wheel alignment,2,6
+J1360,Transmission inspection,4,4
+J1361,Wheel alignment,2,4
+J1362,Suspension noise diagnosis,3,7
+J1363,ABS warning light diagnosis,4,6
+J1364,Engine diagnostic scan,3,6
+J1365,ABS warning light diagnosis,3,7
+J1366,Wheel alignment,2,6
+J1367,Brake inspection,2,6
+J1368,Engine diagnostic scan,2,5
+J1369,Tire pressure sensor reset,2,2
+J1370,ABS warning light diagnosis,3,4
+J1371,Coolant system service,2,6
+J1372,Alternator inspection,3,6
+J1373,Engine diagnostic scan,3,5
+J1374,Tire pressure sensor reset,3,5
+J1375,ABS warning light diagnosis,3,4
+J1376,Brake pad replacement,3,5
+J1377,Tire pressure sensor reset,2,5
+J1378,Battery replacement,3,6
+J1379,Transmission inspection,2,4
+J1380,Oil change,3,5
+J1381,Brake inspection,3,7
+J1382,Alternator inspection,2,6
+J1383,Tire pressure sensor reset,3,9
+J1384,Brake inspection,2,6
+J1385,Alternator inspection,1,7
+J1386,Transmission inspection,2,5
+J1387,Engine diagnostic scan,4,6
+J1388,Oil change,3,5
+J1389,Suspension noise diagnosis,4,3
+J1390,Tire replacement,2,3
+J1391,Spark plug replacement,2,4
+J1392,Check engine light diagnosis,4,6
+J1393,Tire replacement,3,5
+J1394,Spark plug replacement,1,5
+J1395,Engine diagnostic scan,3,5
+J1396,Battery replacement,1,3
+J1397,Wheel alignment,4,6
+J1398,ABS warning light diagnosis,4,7
+J1399,Battery replacement,1,7
+J1400,Spark plug replacement,4,6
+J1401,ABS warning light diagnosis,1,5
+J1402,Oil change,1,7
+J1403,Suspension noise diagnosis,2,9
+J1404,Tire pressure sensor reset,3,4
+J1405,Wheel alignment,3,6
+J1406,Brake pad replacement,2,6
+J1407,Alternator inspection,3,5
+J1408,Spark plug replacement,3,5
+J1409,Brake inspection,1,7
+J1410,Spark plug replacement,3,7
+J1411,Brake pad replacement,2,7
+J1412,ABS warning light diagnosis,3,5
+J1413,Tire replacement,1,5
+J1414,Alternator inspection,2,2
+J1415,Oil change,3,5
+J1416,ABS warning light diagnosis,4,4
+J1417,Wheel alignment,1,5
+J1418,Check engine light diagnosis,3,7
+J1419,Tire pressure sensor reset,3,3
+J1420,Spark plug replacement,3,6
+J1421,ABS warning light diagnosis,2,3
+J1422,Brake pad replacement,2,8
+J1423,Brake pad replacement,3,5
+J1424,Check engine light diagnosis,2,2
+J1425,Alternator inspection,1,4
+J1426,Oil change,2,5
+J1427,Tire replacement,2,5
+J1428,Brake pad replacement,4,5
+J1429,Tire pressure sensor reset,4,7
+J1430,Oil change,2,5
+J1431,Suspension noise diagnosis,3,6
+J1432,Transmission inspection,3,4
+J1433,Coolant system service,1,5
+J1434,Tire pressure sensor reset,4,6
+J1435,Battery replacement,4,5
+J1436,Check engine light diagnosis,1,3
+J1437,Wheel alignment,3,6
+J1438,Check engine light diagnosis,3,3
+J1439,ABS warning light diagnosis,2,7
+J1440,Brake inspection,3,4
+J1441,Spark plug replacement,2,6
+J1442,Engine diagnostic scan,1,3
+J1443,Battery replacement,4,4
+J1444,Brake inspection,3,5
+J1445,Engine diagnostic scan,2,6
+J1446,ABS warning light diagnosis,4,7
+J1447,Brake pad replacement,3,7
+J1448,Wheel alignment,3,3
+J1449,Check engine light diagnosis,3,5
+J1450,Tire replacement,1,4
+J1451,Battery replacement,3,6
+J1452,Tire replacement,4,4
+J1453,Brake inspection,2,3
+J1454,Check engine light diagnosis,3,5
+J1455,Oil change,2,1
+J1456,Check engine light diagnosis,1,7
+J1457,Oil change,1,8
+J1458,Tire replacement,2,5
+J1459,Transmission inspection,4,6
+J1460,Suspension noise diagnosis,1,3
+J1461,Transmission inspection,2,4
+J1462,Tire replacement,3,6
+J1463,Spark plug replacement,3,5
+J1464,Tire replacement,3,6
+J1465,Alternator inspection,4,5
+J1466,Transmission inspection,3,4
+J1467,Suspension noise diagnosis,4,4
+J1468,Oil change,3,6
+J1469,Brake pad replacement,3,6
+J1470,Check engine light diagnosis,3,4
+J1471,Oil change,2,5
+J1472,ABS warning light diagnosis,1,4
+J1473,Engine diagnostic scan,2,4
+J1474,Check engine light diagnosis,3,6
+J1475,Wheel alignment,2,4
+J1476,Tire replacement,1,6
+J1477,Transmission inspection,1,6
+J1478,Battery replacement,1,7
+J1479,Tire pressure sensor reset,1,4
+J1480,Check engine light diagnosis,2,7
+J1481,Brake pad replacement,3,4
+J1482,Coolant system service,2,4
+J1483,Alternator inspection,4,6
+J1484,ABS warning light diagnosis,3,5
+J1485,Tire replacement,3,6
+J1486,Alternator inspection,4,6
+J1487,Alternator inspection,3,4
+J1488,Brake inspection,3,7
+J1489,Check engine light diagnosis,2,6
+J1490,ABS warning light diagnosis,3,4
+J1491,Brake inspection,2,4
+J1492,ABS warning light diagnosis,3,6
+J1493,Brake inspection,1,4
+J1494,ABS warning light diagnosis,1,8
+J1495,Coolant system service,3,6
+J1496,Engine diagnostic scan,3,5
+J1497,Spark plug replacement,3,8
+J1498,Battery replacement,4,6
+J1499,Oil change,3,4
+J1500,Oil change,2,4
+J1501,Check engine light diagnosis,1,5
+J1502,Tire replacement,4,6
+J1503,Brake pad replacement,4,7
+J1504,ABS warning light diagnosis,3,5
+J1505,Transmission inspection,2,5
+J1506,Battery replacement,4,5
+J1507,Tire replacement,4,5
+J1508,Battery replacement,2,5
+J1509,Battery replacement,1,6
+J1510,Suspension noise diagnosis,3,6
+J1511,ABS warning light diagnosis,3,4
+J1512,Oil change,3,6
+J1513,Alternator inspection,4,7
+J1514,Oil change,4,5
+J1515,ABS warning light diagnosis,4,4
+J1516,ABS warning light diagnosis,3,5
+J1517,Battery replacement,1,3
+J1518,Spark plug replacement,2,5
+J1519,Suspension noise diagnosis,4,6
+J1520,Spark plug replacement,1,4
+J1521,Wheel alignment,4,6
+J1522,ABS warning light diagnosis,2,2
+J1523,Suspension noise diagnosis,2,9
+J1524,Engine diagnostic scan,2,8
+J1525,Battery replacement,2,5
+J1526,Battery replacement,4,5
+J1527,Tire pressure sensor reset,2,6
+J1528,Transmission inspection,3,7
+J1529,Tire replacement,2,6
+J1530,Tire pressure sensor reset,2,4
+J1531,Transmission inspection,3,5
+J1532,Brake inspection,4,4
+J1533,ABS warning light diagnosis,1,6
+J1534,Brake pad replacement,3,4
+J1535,Tire replacement,2,3
+J1536,Wheel alignment,2,5
+J1537,Battery replacement,2,4
+J1538,Suspension noise diagnosis,3,3
+J1539,Coolant system service,2,7
+J1540,Spark plug replacement,3,4
+J1541,Oil change,3,4
+J1542,Wheel alignment,2,6
+J1543,Tire replacement,3,7
+J1544,Coolant system service,2,3
+J1545,Spark plug replacement,2,6
+J1546,Oil change,3,6
+J1547,Wheel alignment,1,7
+J1548,Brake pad replacement,2,6
+J1549,Alternator inspection,2,5
+J1550,Transmission inspection,3,5
+J1551,Spark plug replacement,4,3
+J1552,Oil change,3,5
+J1553,Transmission inspection,2,3
+J1554,Check engine light diagnosis,4,7
+J1555,Suspension noise diagnosis,2,7
+J1556,Alternator inspection,3,3
+J1557,Brake inspection,3,4
+J1558,Tire replacement,4,4
+J1559,Spark plug replacement,1,6
+J1560,Battery replacement,4,5
+J1561,Spark plug replacement,2,6
+J1562,Engine diagnostic scan,4,4
+J1563,Wheel alignment,2,3
+J1564,Alternator inspection,1,6
+J1565,Oil change,1,7
+J1566,Spark plug replacement,3,5
+J1567,Engine diagnostic scan,3,7
+J1568,Engine diagnostic scan,4,1
+J1569,Tire pressure sensor reset,3,4
+J1570,Wheel alignment,3,4
+J1571,Battery replacement,2,2
+J1572,Brake pad replacement,3,8
+J1573,Coolant system service,2,3
+J1574,Battery replacement,2,2
+J1575,Tire pressure sensor reset,4,4
+J1576,Transmission inspection,3,5
+J1577,Coolant system service,2,5
+J1578,Coolant system service,2,8
+J1579,Alternator inspection,2,8
+J1580,Wheel alignment,3,7
+J1581,Tire pressure sensor reset,4,6
+J1582,Transmission inspection,4,5
+J1583,Tire pressure sensor reset,3,5
+J1584,Suspension noise diagnosis,4,6
+J1585,Wheel alignment,2,5
+J1586,Oil change,4,6
+J1587,ABS warning light diagnosis,4,7
+J1588,Suspension noise diagnosis,4,6
+J1589,Transmission inspection,3,5
+J1590,Transmission inspection,3,4
+J1591,Spark plug replacement,4,4
+J1592,ABS warning light diagnosis,4,6
+J1593,Battery replacement,3,5
+J1594,Brake inspection,4,6
+J1595,Engine diagnostic scan,3,6
+J1596,Wheel alignment,3,5
+J1597,Transmission inspection,2,7
+J1598,Check engine light diagnosis,3,5
+J1599,Brake inspection,2,6
+J1600,Brake pad replacement,3,8
+J1601,Tire replacement,3,6
+J1602,Suspension noise diagnosis,3,5
+J1603,Oil change,1,6
+J1604,Tire replacement,3,3
+J1605,Tire replacement,1,6
+J1606,Brake pad replacement,2,5
+J1607,Engine diagnostic scan,4,6
+J1608,Spark plug replacement,2,5
+J1609,Brake inspection,2,4
+J1610,Transmission inspection,2,5
+J1611,Tire pressure sensor reset,4,3
+J1612,Engine diagnostic scan,1,4
+J1613,Coolant system service,1,6
+J1614,ABS warning light diagnosis,2,4
+J1615,Brake inspection,3,6
+J1616,Check engine light diagnosis,2,7
+J1617,Coolant system service,4,6
+J1618,Coolant system service,4,7
+J1619,Oil change,2,4
+J1620,Engine diagnostic scan,3,3
+J1621,ABS warning light diagnosis,2,4
+J1622,Tire replacement,3,4
+J1623,Brake pad replacement,2,3
+J1624,ABS warning light diagnosis,3,6
+J1625,Wheel alignment,3,4
+J1626,Tire replacement,2,4
+J1627,Tire pressure sensor reset,1,4
+J1628,Engine diagnostic scan,3,4
+J1629,ABS warning light diagnosis,4,6
+J1630,ABS warning light diagnosis,2,4
+J1631,Battery replacement,3,2
+J1632,Transmission inspection,2,6
+J1633,Transmission inspection,3,3
+J1634,Battery replacement,3,5
+J1635,Oil change,2,4
+J1636,Brake pad replacement,3,5
+J1637,Check engine light diagnosis,3,4
+J1638,Brake pad replacement,3,4
+J1639,Wheel alignment,2,5
+J1640,Oil change,3,6
+J1641,ABS warning light diagnosis,3,2
+J1642,Engine diagnostic scan,2,5
+J1643,Transmission inspection,1,4
+J1644,Wheel alignment,1,3
+J1645,Oil change,2,8
+J1646,Wheel alignment,1,4
+J1647,Oil change,2,7
+J1648,Suspension noise diagnosis,3,6
+J1649,Spark plug replacement,4,5
+J1650,Wheel alignment,4,6
+J1651,Alternator inspection,3,2
+J1652,Spark plug replacement,3,6
+J1653,Oil change,2,5
+J1654,Engine diagnostic scan,3,6
+J1655,ABS warning light diagnosis,4,5
+J1656,Coolant system service,3,6
+J1657,Check engine light diagnosis,3,6
+J1658,Engine diagnostic scan,2,2
+J1659,Wheel alignment,4,6
+J1660,Battery replacement,4,5
+J1661,Tire pressure sensor reset,3,4
+J1662,Spark plug replacement,2,5
+J1663,Brake inspection,3,5
+J1664,Spark plug replacement,2,5
+J1665,Spark plug replacement,4,4
+J1666,Tire pressure sensor reset,2,4
+J1667,ABS warning light diagnosis,3,7
+J1668,Coolant system service,3,4
+J1669,Tire pressure sensor reset,1,3
+J1670,Check engine light diagnosis,2,6
+J1671,Alternator inspection,3,6
+J1672,Brake pad replacement,2,6
+J1673,ABS warning light diagnosis,3,5
+J1674,Check engine light diagnosis,4,6
+J1675,Tire replacement,3,5
+J1676,Tire pressure sensor reset,4,6
+J1677,Wheel alignment,2,4
+J1678,Transmission inspection,3,5
+J1679,Check engine light diagnosis,3,7
+J1680,ABS warning light diagnosis,2,5
+J1681,Alternator inspection,3,6
+J1682,Brake pad replacement,2,4
+J1683,ABS warning light diagnosis,4,6
+J1684,Brake inspection,1,7
+J1685,Alternator inspection,3,6
+J1686,Coolant system service,4,6
+J1687,Brake inspection,3,4
+J1688,Tire pressure sensor reset,1,5
+J1689,Oil change,2,7
+J1690,Brake pad replacement,1,5
+J1691,Brake pad replacement,3,7
+J1692,Battery replacement,2,7
+J1693,Battery replacement,2,4
+J1694,Tire replacement,2,4
+J1695,Spark plug replacement,2,5
+J1696,ABS warning light diagnosis,4,6
+J1697,Oil change,2,6
+J1698,Brake inspection,3,6
+J1699,Battery replacement,2,4
+J1700,Engine diagnostic scan,3,4
+J1701,Oil change,1,7
+J1702,Alternator inspection,3,3
+J1703,Battery replacement,2,6
+J1704,Tire replacement,3,5
+J1705,Suspension noise diagnosis,1,8
+J1706,Oil change,3,3
+J1707,Check engine light diagnosis,4,3
+J1708,Oil change,2,4
+J1709,Tire pressure sensor reset,2,4
+J1710,Check engine light diagnosis,2,7
+J1711,Tire replacement,2,3
+J1712,Wheel alignment,3,4
+J1713,Battery replacement,1,4
+J1714,Suspension noise diagnosis,2,6
+J1715,Brake inspection,1,6
+J1716,Brake pad replacement,1,5
+J1717,Brake pad replacement,2,3
+J1718,Spark plug replacement,3,5
+J1719,Wheel alignment,3,3
+J1720,Suspension noise diagnosis,2,5
+J1721,ABS warning light diagnosis,2,5
+J1722,Transmission inspection,4,5
+J1723,Tire pressure sensor reset,2,2
+J1724,Battery replacement,2,4
+J1725,ABS warning light diagnosis,4,2
+J1726,Spark plug replacement,2,5
+J1727,Oil change,3,3
+J1728,Brake inspection,3,4
+J1729,Spark plug replacement,2,6
+J1730,Tire replacement,1,5
+J1731,Transmission inspection,1,3
+J1732,Suspension noise diagnosis,3,4
+J1733,Tire replacement,2,4
+J1734,Brake inspection,2,7
+J1735,Transmission inspection,4,8
+J1736,Brake pad replacement,3,6
+J1737,Alternator inspection,4,5
+J1738,Brake pad replacement,1,7
+J1739,Check engine light diagnosis,1,6
+J1740,Suspension noise diagnosis,1,4
+J1741,Alternator inspection,1,6
+J1742,ABS warning light diagnosis,4,5
+J1743,Engine diagnostic scan,3,9
+J1744,Engine diagnostic scan,2,6
+J1745,Brake pad replacement,3,1
+J1746,Battery replacement,4,5
+J1747,Tire replacement,1,5
+J1748,Tire pressure sensor reset,2,8
+J1749,Battery replacement,2,6
+J1750,Engine diagnostic scan,4,7
+J1751,Transmission inspection,4,6
+J1752,Wheel alignment,3,3
+J1753,ABS warning light diagnosis,2,3
+J1754,Battery replacement,4,5
+J1755,Tire replacement,3,5
+J1756,Brake pad replacement,2,6
+J1757,Brake inspection,3,4
+J1758,Check engine light diagnosis,2,4
+J1759,Coolant system service,3,7
+J1760,Coolant system service,4,5
+J1761,Alternator inspection,3,3
+J1762,Tire replacement,3,3
+J1763,Coolant system service,2,3
+J1764,Check engine light diagnosis,2,3
+J1765,Battery replacement,3,5
+J1766,Alternator inspection,1,7
+J1767,Transmission inspection,2,7
+J1768,Brake pad replacement,2,7
+J1769,Transmission inspection,2,5
+J1770,Suspension noise diagnosis,1,6
+J1771,Battery replacement,3,3
+J1772,Alternator inspection,3,5
+J1773,Oil change,2,6
+J1774,Coolant system service,2,5
+J1775,ABS warning light diagnosis,2,6
+J1776,ABS warning light diagnosis,3,5
+J1777,Battery replacement,2,8
+J1778,Oil change,3,3
+J1779,Check engine light diagnosis,2,5
+J1780,Engine diagnostic scan,2,4
+J1781,Suspension noise diagnosis,3,5
+J1782,Battery replacement,2,7
+J1783,Wheel alignment,2,5
+J1784,Tire pressure sensor reset,1,5
+J1785,Brake pad replacement,2,3
+J1786,Spark plug replacement,1,6
+J1787,Engine diagnostic scan,4,4
+J1788,Battery replacement,2,7
+J1789,Transmission inspection,2,6
+J1790,Alternator inspection,1,4
+J1791,Brake inspection,2,2
+J1792,ABS warning light diagnosis,4,5
+J1793,Transmission inspection,2,5
+J1794,Oil change,2,7
+J1795,Check engine light diagnosis,3,6
+J1796,Brake inspection,3,5
+J1797,Tire replacement,2,7
+J1798,Engine diagnostic scan,3,6
+J1799,Check engine light diagnosis,2,4
+J1800,Suspension noise diagnosis,4,5
+J1801,Oil change,1,6
+J1802,Wheel alignment,3,5
+J1803,Tire pressure sensor reset,3,9
+J1804,Engine diagnostic scan,3,6
+J1805,Brake inspection,2,6
+J1806,Wheel alignment,1,4
+J1807,Spark plug replacement,2,3
+J1808,Transmission inspection,1,5
+J1809,Check engine light diagnosis,3,4
+J1810,Coolant system service,2,5
+J1811,Alternator inspection,2,4
+J1812,Brake inspection,2,6
+J1813,Wheel alignment,3,5
+J1814,Engine diagnostic scan,2,7
+J1815,Brake inspection,2,3
+J1816,Brake pad replacement,1,6
+J1817,Transmission inspection,2,5
+J1818,Oil change,1,4
+J1819,Check engine light diagnosis,1,4
+J1820,Tire replacement,4,9
+J1821,Transmission inspection,1,6
+J1822,Brake pad replacement,2,6
+J1823,Tire pressure sensor reset,1,6
+J1824,Alternator inspection,2,3
+J1825,Brake inspection,4,6
+J1826,Battery replacement,3,5
+J1827,Alternator inspection,3,6
+J1828,Spark plug replacement,2,5
+J1829,Wheel alignment,4,5
+J1830,Check engine light diagnosis,1,4
+J1831,Spark plug replacement,4,3
+J1832,Alternator inspection,4,5
+J1833,Suspension noise diagnosis,2,4
+J1834,Battery replacement,2,8
+J1835,Oil change,1,5
+J1836,Tire pressure sensor reset,3,6
+J1837,Suspension noise diagnosis,3,7
+J1838,Brake inspection,1,10
+J1839,Check engine light diagnosis,4,3
+J1840,ABS warning light diagnosis,4,4
+J1841,Transmission inspection,2,3
+J1842,Tire pressure sensor reset,3,6
+J1843,Brake inspection,4,6
+J1844,Brake pad replacement,3,9
+J1845,ABS warning light diagnosis,2,8
+J1846,Engine diagnostic scan,3,7
+J1847,Coolant system service,4,6
+J1848,Transmission inspection,1,6
+J1849,Tire replacement,2,4
+J1850,Wheel alignment,4,6
+J1851,Spark plug replacement,1,5
+J1852,Tire replacement,1,6
+J1853,Tire pressure sensor reset,2,6
+J1854,Oil change,2,7
+J1855,Alternator inspection,1,4
+J1856,Check engine light diagnosis,4,4
+J1857,Brake inspection,4,5
+J1858,Oil change,3,4
+J1859,Check engine light diagnosis,2,7
+J1860,Tire pressure sensor reset,3,7
+J1861,Check engine light diagnosis,4,5
+J1862,Brake inspection,1,6
+J1863,Engine diagnostic scan,2,5
+J1864,Engine diagnostic scan,2,4
+J1865,Spark plug replacement,4,6
+J1866,Wheel alignment,4,6
+J1867,Brake pad replacement,4,3
+J1868,Tire replacement,4,6
+J1869,Brake pad replacement,3,2
+J1870,Coolant system service,3,3
+J1871,Tire replacement,3,3
+J1872,Alternator inspection,2,7
+J1873,Tire replacement,1,3
+J1874,Tire replacement,4,5
+J1875,Oil change,2,6
+J1876,Battery replacement,4,5
+J1877,Spark plug replacement,3,7
+J1878,Brake inspection,2,3
+J1879,Brake inspection,3,7
+J1880,Transmission inspection,3,4
+J1881,Tire pressure sensor reset,2,6
+J1882,Transmission inspection,3,4
+J1883,Tire pressure sensor reset,2,4
+J1884,Brake inspection,2,6
+J1885,Transmission inspection,1,5
+J1886,Tire pressure sensor reset,4,6
+J1887,Alternator inspection,4,3
+J1888,Engine diagnostic scan,1,7
+J1889,Wheel alignment,2,3
+J1890,Engine diagnostic scan,3,5
+J1891,Brake pad replacement,4,5
+J1892,Coolant system service,3,5
+J1893,Brake inspection,3,7
+J1894,Suspension noise diagnosis,3,6
+J1895,Oil change,3,6
+J1896,Wheel alignment,3,6
+J1897,Check engine light diagnosis,2,6
+J1898,Engine diagnostic scan,3,4
+J1899,Tire replacement,4,6
+J1900,Engine diagnostic scan,4,5
+J1901,Brake inspection,2,5
+J1902,Check engine light diagnosis,2,4
+J1903,Tire pressure sensor reset,2,6
+J1904,Coolant system service,2,4
+J1905,Transmission inspection,2,6
+J1906,Engine diagnostic scan,1,8
+J1907,Oil change,1,6
+J1908,Check engine light diagnosis,4,8
+J1909,Brake pad replacement,3,5
+J1910,Tire pressure sensor reset,3,4
+J1911,Tire pressure sensor reset,3,1
+J1912,Tire pressure sensor reset,1,7
+J1913,Spark plug replacement,3,5
+J1914,Suspension noise diagnosis,2,6
+J1915,Check engine light diagnosis,2,5
+J1916,Brake inspection,2,5
+J1917,ABS warning light diagnosis,3,5
+J1918,Transmission inspection,4,4
+J1919,Suspension noise diagnosis,1,4
+J1920,Check engine light diagnosis,4,4
+J1921,Tire pressure sensor reset,3,7
+J1922,ABS warning light diagnosis,2,5
+J1923,Coolant system service,3,6
+J1924,Tire pressure sensor reset,3,5
+J1925,Suspension noise diagnosis,2,7
+J1926,Wheel alignment,2,5
+J1927,Check engine light diagnosis,2,6
+J1928,Suspension noise diagnosis,3,5
+J1929,Transmission inspection,3,4
+J1930,Engine diagnostic scan,3,7
+J1931,Spark plug replacement,2,7
+J1932,Alternator inspection,4,7
+J1933,Alternator inspection,2,5
+J1934,Brake pad replacement,1,5
+J1935,Tire pressure sensor reset,2,5
+J1936,Tire pressure sensor reset,4,5
+J1937,Wheel alignment,3,3
+J1938,Tire pressure sensor reset,2,6
+J1939,Tire replacement,3,5
+J1940,Battery replacement,2,6
+J1941,Transmission inspection,2,6
+J1942,Suspension noise diagnosis,1,7
+J1943,Wheel alignment,3,7
+J1944,Suspension noise diagnosis,1,4
+J1945,Brake inspection,3,4
+J1946,Transmission inspection,3,1
+J1947,Coolant system service,2,5
+J1948,Alternator inspection,4,8
+J1949,Check engine light diagnosis,2,5
+J1950,Brake pad replacement,2,4
+J1951,Brake pad replacement,1,6
+J1952,Oil change,4,5
+J1953,Transmission inspection,2,5
+J1954,Oil change,2,8
+J1955,Suspension noise diagnosis,3,7
+J1956,Wheel alignment,2,7
+J1957,Tire pressure sensor reset,1,4
+J1958,Transmission inspection,1,5
+J1959,Coolant system service,3,9
+J1960,Check engine light diagnosis,4,6
+J1961,Check engine light diagnosis,2,7
+J1962,Transmission inspection,2,7
+J1963,Tire pressure sensor reset,4,5
+J1964,Spark plug replacement,2,5
+J1965,Tire pressure sensor reset,3,5
+J1966,Oil change,3,4
+J1967,Tire pressure sensor reset,3,7
+J1968,ABS warning light diagnosis,2,5
+J1969,Coolant system service,2,5
+J1970,Tire replacement,2,5
+J1971,Brake pad replacement,3,3
+J1972,Transmission inspection,3,6
+J1973,Coolant system service,2,7
+J1974,Engine diagnostic scan,1,7
+J1975,Engine diagnostic scan,2,4
+J1976,Spark plug replacement,3,4
+J1977,Coolant system service,3,4
+J1978,Tire replacement,3,8
+J1979,ABS warning light diagnosis,4,7
+J1980,Suspension noise diagnosis,2,2
+J1981,Suspension noise diagnosis,2,5
+J1982,ABS warning light diagnosis,3,4
+J1983,ABS warning light diagnosis,2,8
+J1984,Suspension noise diagnosis,4,6
+J1985,Tire pressure sensor reset,3,5
+J1986,Wheel alignment,2,3
+J1987,Transmission inspection,4,5
+J1988,Suspension noise diagnosis,3,8
+J1989,Alternator inspection,3,3
+J1990,Brake inspection,3,4
+J1991,Wheel alignment,4,3
+J1992,Brake inspection,1,5
+J1993,Brake inspection,2,3
+J1994,Tire pressure sensor reset,3,6
+J1995,Wheel alignment,4,6
+J1996,Brake pad replacement,2,8
+J1997,Wheel alignment,1,6
+J1998,Brake inspection,3,5
+J1999,Tire replacement,1,5
+J2000,ABS warning light diagnosis,3,7
+J2001,ABS warning light diagnosis,1,3
+J2002,Coolant system service,2,4
+J2003,Transmission inspection,2,6
+J2004,Spark plug replacement,1,3
+J2005,Tire replacement,1,7
+J2006,Wheel alignment,2,7
+J2007,Tire pressure sensor reset,3,5
+J2008,Spark plug replacement,4,6
+J2009,Engine diagnostic scan,2,7
+J2010,Wheel alignment,3,5
+J2011,Battery replacement,1,2
+J2012,Transmission inspection,2,6
+J2013,Coolant system service,3,6
+J2014,Battery replacement,3,4
+J2015,Alternator inspection,2,9
+J2016,Alternator inspection,1,7
+J2017,Brake inspection,3,4
+J2018,Oil change,3,5
+J2019,Tire pressure sensor reset,2,5
+J2020,Brake inspection,3,4
+J2021,Alternator inspection,2,4
+J2022,Tire replacement,1,3
+J2023,Spark plug replacement,3,4
+J2024,Coolant system service,2,6
+J2025,Spark plug replacement,1,6
+J2026,Battery replacement,1,4
+J2027,Brake inspection,3,4
+J2028,Oil change,2,5
+J2029,Oil change,2,4
+J2030,Coolant system service,1,4
+J2031,Oil change,2,7
+J2032,Spark plug replacement,4,4
+J2033,Battery replacement,3,4
+J2034,Engine diagnostic scan,1,5
+J2035,Wheel alignment,1,1
+J2036,Spark plug replacement,3,4
+J2037,Oil change,4,7
+J2038,Spark plug replacement,3,5
+J2039,Suspension noise diagnosis,1,4
+J2040,Alternator inspection,2,4
+J2041,Brake inspection,2,2
+J2042,Suspension noise diagnosis,1,3
+J2043,Coolant system service,3,5
+J2044,Suspension noise diagnosis,4,4
+J2045,Suspension noise diagnosis,2,5
+J2046,Oil change,1,4
+J2047,Check engine light diagnosis,3,4
+J2048,Wheel alignment,3,5
+J2049,Oil change,3,5
+J2050,Coolant system service,3,4
+J2051,Coolant system service,2,6
+J2052,Battery replacement,1,3
+J2053,Brake pad replacement,3,4
+J2054,Spark plug replacement,1,8
+J2055,Brake inspection,2,4
+J2056,Spark plug replacement,3,5
+J2057,Check engine light diagnosis,3,5
+J2058,Suspension noise diagnosis,1,6
+J2059,ABS warning light diagnosis,3,6
+J2060,ABS warning light diagnosis,2,4
+J2061,Alternator inspection,2,5
+J2062,Suspension noise diagnosis,3,5
+J2063,Transmission inspection,1,5
+J2064,Brake inspection,2,7
+J2065,Spark plug replacement,3,7
+J2066,Oil change,2,3
+J2067,Wheel alignment,2,7
+J2068,Engine diagnostic scan,3,5
+J2069,Brake pad replacement,2,7
+J2070,Alternator inspection,2,7
+J2071,Spark plug replacement,2,3
+J2072,Suspension noise diagnosis,3,4
+J2073,Check engine light diagnosis,3,6
+J2074,Coolant system service,4,7
+J2075,Brake pad replacement,2,7
+J2076,Battery replacement,2,4
+J2077,Brake pad replacement,3,3
+J2078,Engine diagnostic scan,4,4
+J2079,Brake pad replacement,4,1
+J2080,Spark plug replacement,2,5
+J2081,Wheel alignment,2,5
+J2082,Spark plug replacement,3,4
+J2083,Transmission inspection,2,5
+J2084,Tire replacement,2,5
+J2085,Spark plug replacement,3,5
+J2086,Tire pressure sensor reset,2,5
+J2087,Suspension noise diagnosis,1,5
+J2088,Check engine light diagnosis,3,4
+J2089,Suspension noise diagnosis,3,7
+J2090,Coolant system service,1,4
+J2091,Brake pad replacement,2,5
+J2092,Tire replacement,3,2
+J2093,Check engine light diagnosis,1,4
+J2094,Spark plug replacement,1,3
+J2095,Check engine light diagnosis,3,8
+J2096,ABS warning light diagnosis,2,6
+J2097,Check engine light diagnosis,2,3
+J2098,Check engine light diagnosis,4,4
+J2099,Wheel alignment,2,6
+J2100,Tire pressure sensor reset,2,4
+J2101,Alternator inspection,3,4
+J2102,Check engine light diagnosis,2,6
+J2103,Tire pressure sensor reset,2,9
+J2104,Alternator inspection,2,4
+J2105,Oil change,3,6
+J2106,Tire pressure sensor reset,3,5
+J2107,Brake inspection,1,4
+J2108,Tire pressure sensor reset,3,5
+J2109,Oil change,4,7
+J2110,Spark plug replacement,4,6
+J2111,Oil change,3,7
+J2112,Suspension noise diagnosis,3,5
+J2113,Brake inspection,1,5
+J2114,Wheel alignment,2,5
+J2115,Brake pad replacement,2,3
+J2116,Alternator inspection,3,6
+J2117,Check engine light diagnosis,2,3
+J2118,Brake inspection,2,5
+J2119,Oil change,3,5
+J2120,Alternator inspection,1,6
+J2121,Spark plug replacement,3,3
+J2122,Tire pressure sensor reset,1,6
+J2123,Battery replacement,3,5
+J2124,Tire pressure sensor reset,2,7
+J2125,Transmission inspection,2,6
+J2126,Brake inspection,2,3
+J2127,Brake pad replacement,3,6
+J2128,Spark plug replacement,4,5
+J2129,Engine diagnostic scan,3,4
+J2130,Brake inspection,3,7
+J2131,Engine diagnostic scan,2,6
+J2132,Transmission inspection,2,5
+J2133,Tire replacement,3,6
+J2134,Tire replacement,1,7
+J2135,ABS warning light diagnosis,2,7
+J2136,Alternator inspection,2,7
+J2137,Check engine light diagnosis,3,5
+J2138,Coolant system service,3,3
+J2139,Suspension noise diagnosis,4,7
+J2140,Check engine light diagnosis,1,8
+J2141,Engine diagnostic scan,1,2
+J2142,Spark plug replacement,2,2
+J2143,Check engine light diagnosis,2,4
+J2144,Transmission inspection,4,5
+J2145,Alternator inspection,2,6
+J2146,Tire replacement,2,6
+J2147,Engine diagnostic scan,2,4
+J2148,Battery replacement,3,4
+J2149,Oil change,2,4
+J2150,Wheel alignment,3,5
+J2151,Brake inspection,2,7
+J2152,Check engine light diagnosis,1,2
+J2153,Check engine light diagnosis,3,2
+J2154,Tire pressure sensor reset,4,6
+J2155,Transmission inspection,3,6
+J2156,Battery replacement,3,4
+J2157,Check engine light diagnosis,2,3
+J2158,Spark plug replacement,2,7
+J2159,Brake pad replacement,4,5
+J2160,Engine diagnostic scan,4,4
+J2161,ABS warning light diagnosis,1,4
+J2162,Suspension noise diagnosis,4,6
+J2163,ABS warning light diagnosis,3,5
+J2164,ABS warning light diagnosis,2,5
+J2165,Oil change,3,4
+J2166,Coolant system service,2,5
+J2167,Check engine light diagnosis,1,4
+J2168,Tire pressure sensor reset,1,3
+J2169,Coolant system service,3,6
+J2170,Check engine light diagnosis,3,4
+J2171,Alternator inspection,2,4
+J2172,Battery replacement,2,4
+J2173,Suspension noise diagnosis,2,2
+J2174,Wheel alignment,1,5
+J2175,Suspension noise diagnosis,2,5
+J2176,Tire pressure sensor reset,3,3
+J2177,Check engine light diagnosis,4,3
+J2178,ABS warning light diagnosis,4,4
+J2179,Suspension noise diagnosis,4,6
+J2180,Check engine light diagnosis,3,5
+J2181,Brake pad replacement,1,4
+J2182,Suspension noise diagnosis,2,1
+J2183,Alternator inspection,2,5
+J2184,Alternator inspection,2,2
+J2185,Tire replacement,4,7
+J2186,Spark plug replacement,3,10
+J2187,Battery replacement,3,4
+J2188,Tire replacement,1,7
+J2189,Tire pressure sensor reset,2,6
+J2190,Oil change,3,6
+J2191,Transmission inspection,2,5
+J2192,Tire replacement,4,2
+J2193,Brake pad replacement,2,7
+J2194,Suspension noise diagnosis,2,5
+J2195,Coolant system service,2,7
+J2196,Engine diagnostic scan,4,5
+J2197,Tire pressure sensor reset,2,4
+J2198,Tire replacement,3,6
+J2199,ABS warning light diagnosis,1,2
+J2200,Coolant system service,1,5
+J2201,Transmission inspection,1,3
+J2202,Tire pressure sensor reset,1,3
+J2203,Coolant system service,3,5
+J2204,Engine diagnostic scan,1,5
+J2205,Check engine light diagnosis,2,6
+J2206,Tire replacement,4,8
+J2207,Check engine light diagnosis,3,7
+J2208,Check engine light diagnosis,4,5
+J2209,Suspension noise diagnosis,1,3
+J2210,Brake pad replacement,4,3
+J2211,ABS warning light diagnosis,2,5
+J2212,Transmission inspection,4,4
+J2213,Oil change,4,2
+J2214,Tire pressure sensor reset,3,6
+J2215,Check engine light diagnosis,4,4
+J2216,Engine diagnostic scan,2,6
+J2217,Tire replacement,1,3
+J2218,Transmission inspection,3,5
+J2219,Wheel alignment,4,4
+J2220,Battery replacement,4,6
+J2221,Wheel alignment,1,3
+J2222,Brake inspection,2,7
+J2223,Tire pressure sensor reset,3,5
+J2224,Coolant system service,1,5
+J2225,Transmission inspection,2,6
+J2226,Transmission inspection,2,6
+J2227,Engine diagnostic scan,1,5
+J2228,Spark plug replacement,4,5
+J2229,Brake pad replacement,4,6
+J2230,Battery replacement,3,4
+J2231,Alternator inspection,2,5
+J2232,Coolant system service,2,5
+J2233,Battery replacement,2,5
+J2234,Spark plug replacement,2,2
+J2235,Check engine light diagnosis,3,6
+J2236,Brake inspection,3,6
+J2237,Check engine light diagnosis,2,4
+J2238,Alternator inspection,3,3
+J2239,Tire replacement,3,5
+J2240,Spark plug replacement,1,6
+J2241,Battery replacement,3,4
+J2242,Tire pressure sensor reset,3,7
+J2243,Check engine light diagnosis,2,5
+J2244,Transmission inspection,1,3
+J2245,Suspension noise diagnosis,1,4
+J2246,Suspension noise diagnosis,2,5
+J2247,Brake inspection,2,5
+J2248,Engine diagnostic scan,2,3
+J2249,Engine diagnostic scan,4,8
+J2250,Engine diagnostic scan,4,6
+J2251,Coolant system service,4,5
+J2252,Check engine light diagnosis,3,6
+J2253,Engine diagnostic scan,4,4
+J2254,Spark plug replacement,3,2
+J2255,Spark plug replacement,3,4
+J2256,Tire replacement,2,6
+J2257,ABS warning light diagnosis,3,10
+J2258,Tire pressure sensor reset,3,5
+J2259,Tire pressure sensor reset,4,5
+J2260,ABS warning light diagnosis,4,3
+J2261,Oil change,2,5
+J2262,Coolant system service,3,4
+J2263,Transmission inspection,1,7
+J2264,Alternator inspection,4,7
+J2265,Suspension noise diagnosis,2,8
+J2266,Check engine light diagnosis,3,7
+J2267,Tire replacement,3,6
+J2268,Brake inspection,3,3
+J2269,Alternator inspection,2,4
+J2270,ABS warning light diagnosis,2,7
+J2271,Spark plug replacement,4,5
+J2272,Engine diagnostic scan,3,3
+J2273,Brake pad replacement,2,7
+J2274,Engine diagnostic scan,3,7
+J2275,Oil change,2,5
+J2276,Spark plug replacement,2,4
+J2277,Wheel alignment,3,5
+J2278,Brake pad replacement,2,6
+J2279,Suspension noise diagnosis,2,4
+J2280,Transmission inspection,4,6
+J2281,Engine diagnostic scan,1,7
+J2282,Engine diagnostic scan,1,5
+J2283,Tire replacement,4,4
+J2284,Brake pad replacement,3,4
+J2285,ABS warning light diagnosis,2,5
+J2286,Check engine light diagnosis,1,5
+J2287,Spark plug replacement,4,7
+J2288,Suspension noise diagnosis,4,5
+J2289,Transmission inspection,1,4
+J2290,Coolant system service,2,4
+J2291,Tire replacement,2,6
+J2292,Check engine light diagnosis,4,7
+J2293,Coolant system service,2,4
+J2294,Transmission inspection,3,5
+J2295,Check engine light diagnosis,4,6
+J2296,Spark plug replacement,3,4
+J2297,Tire replacement,2,5
+J2298,ABS warning light diagnosis,2,6
+J2299,Brake pad replacement,2,5
+J2300,Coolant system service,1,6
+J2301,Battery replacement,3,5
+J2302,ABS warning light diagnosis,3,5
+J2303,Suspension noise diagnosis,1,4
+J2304,Brake inspection,1,5
+J2305,Transmission inspection,3,6
+J2306,ABS warning light diagnosis,4,6
+J2307,Engine diagnostic scan,4,6
+J2308,Spark plug replacement,2,8
+J2309,Alternator inspection,4,5
+J2310,Wheel alignment,4,5
+J2311,Brake inspection,1,5
+J2312,Brake pad replacement,3,4
+J2313,Spark plug replacement,4,7
+J2314,Brake pad replacement,2,7
+J2315,Suspension noise diagnosis,1,5
+J2316,Oil change,3,6
+J2317,Tire replacement,1,3
+J2318,Transmission inspection,2,5
+J2319,Coolant system service,1,1
+J2320,Oil change,1,6
+J2321,Brake pad replacement,1,6
+J2322,Oil change,1,4
+J2323,Oil change,3,6
+J2324,Battery replacement,3,5
+J2325,Transmission inspection,4,7
+J2326,Check engine light diagnosis,2,5
+J2327,Wheel alignment,3,3
+J2328,Spark plug replacement,1,7
+J2329,Engine diagnostic scan,3,4
+J2330,Alternator inspection,4,7
+J2331,Battery replacement,3,4
+J2332,Wheel alignment,2,5
+J2333,Oil change,2,5
+J2334,Brake pad replacement,3,4
+J2335,Coolant system service,3,6
+J2336,Spark plug replacement,4,4
+J2337,Check engine light diagnosis,3,4
+J2338,Wheel alignment,4,2
+J2339,Brake inspection,4,8
+J2340,Transmission inspection,1,5
+J2341,Spark plug replacement,3,6
+J2342,Spark plug replacement,3,6
+J2343,Battery replacement,3,3
+J2344,Tire pressure sensor reset,2,5
+J2345,Check engine light diagnosis,1,5
+J2346,Tire pressure sensor reset,1,5
+J2347,Tire replacement,3,6
+J2348,Alternator inspection,1,6
+J2349,Tire replacement,3,5
+J2350,Engine diagnostic scan,3,6
+J2351,Alternator inspection,1,6
+J2352,Coolant system service,3,7
+J2353,Alternator inspection,3,3
+J2354,Oil change,2,6
+J2355,Engine diagnostic scan,3,6
+J2356,Brake pad replacement,1,6
+J2357,Check engine light diagnosis,2,5
+J2358,Tire pressure sensor reset,4,6
+J2359,Transmission inspection,3,6
+J2360,Brake pad replacement,4,5
+J2361,Engine diagnostic scan,3,5
+J2362,Spark plug replacement,1,4
+J2363,Suspension noise diagnosis,1,7
+J2364,Coolant system service,1,5
+J2365,Wheel alignment,3,4
+J2366,Brake pad replacement,2,4
+J2367,Suspension noise diagnosis,2,6
+J2368,Suspension noise diagnosis,4,6
+J2369,Battery replacement,2,6
+J2370,Brake pad replacement,2,7
+J2371,Coolant system service,1,7
+J2372,ABS warning light diagnosis,2,6
+J2373,Wheel alignment,3,5
+J2374,Battery replacement,4,4
+J2375,Wheel alignment,1,1
+J2376,ABS warning light diagnosis,2,6
+J2377,Alternator inspection,4,2
+J2378,Transmission inspection,1,3
+J2379,Brake inspection,3,7
+J2380,Check engine light diagnosis,1,7
+J2381,Tire replacement,4,3
+J2382,Transmission inspection,2,4
+J2383,Brake inspection,3,3
+J2384,Tire pressure sensor reset,2,9
+J2385,Spark plug replacement,2,4
+J2386,Battery replacement,2,3
+J2387,Suspension noise diagnosis,2,4
+J2388,Suspension noise diagnosis,3,7
+J2389,Alternator inspection,2,2
+J2390,Battery replacement,4,6
+J2391,Spark plug replacement,1,4
+J2392,ABS warning light diagnosis,2,6
+J2393,Engine diagnostic scan,1,6
+J2394,Check engine light diagnosis,3,7
+J2395,Transmission inspection,2,8
+J2396,Check engine light diagnosis,3,3
+J2397,Coolant system service,2,4
+J2398,Brake inspection,4,4
+J2399,Check engine light diagnosis,1,6
+J2400,Spark plug replacement,3,4
+J2401,Suspension noise diagnosis,2,5
+J2402,Check engine light diagnosis,3,7
+J2403,Tire pressure sensor reset,4,8
+J2404,Tire pressure sensor reset,2,7
+J2405,Oil change,3,8
+J2406,ABS warning light diagnosis,3,6
+J2407,Alternator inspection,1,6
+J2408,Spark plug replacement,2,7
+J2409,Oil change,3,7
+J2410,ABS warning light diagnosis,3,4
+J2411,Coolant system service,2,5
+J2412,Battery replacement,2,5
+J2413,Check engine light diagnosis,1,5
+J2414,Alternator inspection,4,6
+J2415,Battery replacement,3,6
+J2416,Brake inspection,2,5
+J2417,Oil change,3,6
+J2418,ABS warning light diagnosis,2,4
+J2419,Check engine light diagnosis,3,3
+J2420,Brake pad replacement,2,3
+J2421,Tire pressure sensor reset,2,5
+J2422,Oil change,3,4
+J2423,Coolant system service,1,4
+J2424,Suspension noise diagnosis,2,6
+J2425,Transmission inspection,3,4
+J2426,Coolant system service,3,5
+J2427,Alternator inspection,3,6
+J2428,Brake pad replacement,1,8
+J2429,Coolant system service,4,5
+J2430,Transmission inspection,2,3
+J2431,Coolant system service,2,3
+J2432,Spark plug replacement,2,4
+J2433,Suspension noise diagnosis,2,4
+J2434,Wheel alignment,2,4
+J2435,Spark plug replacement,1,6
+J2436,Wheel alignment,2,5
+J2437,Battery replacement,1,3
+J2438,Tire pressure sensor reset,3,5
+J2439,Brake pad replacement,3,3
+J2440,Engine diagnostic scan,1,5
+J2441,Wheel alignment,2,7
+J2442,Brake inspection,4,6
+J2443,Transmission inspection,2,5
+J2444,Transmission inspection,1,6
+J2445,Check engine light diagnosis,4,7
+J2446,Alternator inspection,3,2
+J2447,Battery replacement,3,7
+J2448,Wheel alignment,1,9
+J2449,Wheel alignment,3,3
+J2450,Check engine light diagnosis,2,7
+J2451,ABS warning light diagnosis,2,5
+J2452,Spark plug replacement,3,4
+J2453,Brake pad replacement,2,3
+J2454,Spark plug replacement,1,5
+J2455,Tire replacement,2,3
+J2456,Check engine light diagnosis,3,6
+J2457,Spark plug replacement,3,3
+J2458,Oil change,3,4
+J2459,Brake inspection,3,8
+J2460,Check engine light diagnosis,1,5
+J2461,Brake pad replacement,2,5
+J2462,Alternator inspection,2,3
+J2463,Wheel alignment,4,7
+J2464,Spark plug replacement,4,3
+J2465,Brake pad replacement,2,5
+J2466,Tire replacement,2,6
+J2467,Suspension noise diagnosis,2,6
+J2468,Oil change,2,3
+J2469,Engine diagnostic scan,4,5
+J2470,Coolant system service,4,7
+J2471,Tire pressure sensor reset,2,7
+J2472,ABS warning light diagnosis,1,6
+J2473,Tire pressure sensor reset,3,4
+J2474,Coolant system service,3,6
+J2475,Oil change,3,2
+J2476,Spark plug replacement,3,6
+J2477,Check engine light diagnosis,4,4
+J2478,Transmission inspection,2,5
+J2479,Suspension noise diagnosis,2,4
+J2480,Brake pad replacement,3,7
+J2481,Wheel alignment,1,5
+J2482,Suspension noise diagnosis,2,2
+J2483,Brake pad replacement,2,5
+J2484,Brake inspection,3,6
+J2485,Wheel alignment,4,4
+J2486,Transmission inspection,2,3
+J2487,ABS warning light diagnosis,3,10
+J2488,Suspension noise diagnosis,1,6
+J2489,Check engine light diagnosis,4,3
+J2490,Spark plug replacement,2,7
+J2491,Transmission inspection,3,5
+J2492,Suspension noise diagnosis,4,6
+J2493,Oil change,3,5
+J2494,Check engine light diagnosis,2,4
+J2495,Spark plug replacement,1,5
+J2496,Wheel alignment,1,7
+J2497,Transmission inspection,3,4
+J2498,Tire pressure sensor reset,1,7
+J2499,Wheel alignment,1,4
+J2500,Brake pad replacement,3,7
+J2501,Tire replacement,4,5
+J2502,Brake pad replacement,4,5
+J2503,Wheel alignment,3,3
+J2504,Brake inspection,2,5
+J2505,Coolant system service,1,8
+J2506,Spark plug replacement,2,5
+J2507,Suspension noise diagnosis,4,6
+J2508,Transmission inspection,3,5
+J2509,Tire replacement,3,8
+J2510,Brake pad replacement,2,6
+J2511,Engine diagnostic scan,3,8
+J2512,Tire pressure sensor reset,3,6
+J2513,Brake pad replacement,2,3
+J2514,Check engine light diagnosis,4,3
+J2515,Brake pad replacement,4,6
+J2516,Suspension noise diagnosis,2,5
+J2517,Brake inspection,2,8
+J2518,Oil change,3,1
+J2519,Wheel alignment,3,5
+J2520,Tire replacement,3,6
+J2521,Brake inspection,3,5
+J2522,Tire replacement,3,4
+J2523,Engine diagnostic scan,3,7
+J2524,Oil change,1,5
+J2525,Suspension noise diagnosis,4,6
+J2526,Brake pad replacement,3,6
+J2527,ABS warning light diagnosis,3,3
+J2528,Brake pad replacement,4,4
+J2529,Spark plug replacement,3,7
+J2530,Transmission inspection,2,4
+J2531,Tire pressure sensor reset,3,5
+J2532,Alternator inspection,3,7
+J2533,Transmission inspection,2,5
+J2534,Battery replacement,2,5
+J2535,Check engine light diagnosis,2,5
+J2536,Tire pressure sensor reset,3,7
+J2537,ABS warning light diagnosis,2,5
+J2538,Battery replacement,3,4
+J2539,Transmission inspection,1,5
+J2540,Tire pressure sensor reset,4,7
+J2541,Oil change,2,3
+J2542,Oil change,4,5
+J2543,Spark plug replacement,4,6
+J2544,ABS warning light diagnosis,1,6
+J2545,Battery replacement,2,8
+J2546,ABS warning light diagnosis,1,4
+J2547,ABS warning light diagnosis,2,4
+J2548,ABS warning light diagnosis,2,2
+J2549,Brake pad replacement,4,7
+J2550,Wheel alignment,2,6
+J2551,Tire replacement,3,4
+J2552,Wheel alignment,3,4
+J2553,Brake pad replacement,4,3
+J2554,Brake inspection,3,5
+J2555,Engine diagnostic scan,4,6
+J2556,Suspension noise diagnosis,3,3
+J2557,Coolant system service,2,6
+J2558,Brake inspection,3,6
+J2559,Battery replacement,2,8
+J2560,Alternator inspection,3,8
+J2561,Suspension noise diagnosis,3,7
+J2562,Wheel alignment,1,5
+J2563,Suspension noise diagnosis,4,3
+J2564,Suspension noise diagnosis,3,4
+J2565,Brake pad replacement,1,5
+J2566,Tire pressure sensor reset,1,4
+J2567,Oil change,2,4
+J2568,Tire replacement,3,4
+J2569,Battery replacement,1,5
+J2570,Wheel alignment,1,8
+J2571,Suspension noise diagnosis,2,4
+J2572,Suspension noise diagnosis,4,4
+J2573,Brake pad replacement,2,8
+J2574,Suspension noise diagnosis,2,3
+J2575,Brake inspection,3,7
+J2576,Coolant system service,3,3
+J2577,Tire pressure sensor reset,4,5
+J2578,Transmission inspection,2,4
+J2579,Battery replacement,4,5
+J2580,Check engine light diagnosis,1,2
+J2581,Transmission inspection,1,5
+J2582,Coolant system service,2,5
+J2583,Transmission inspection,2,3
+J2584,Engine diagnostic scan,3,5
+J2585,Oil change,2,3
+J2586,ABS warning light diagnosis,1,5
+J2587,Check engine light diagnosis,2,5
+J2588,Brake inspection,1,5
+J2589,Coolant system service,2,3
+J2590,Spark plug replacement,1,4
+J2591,Suspension noise diagnosis,4,3
+J2592,Tire replacement,2,8
+J2593,Engine diagnostic scan,1,4
+J2594,Alternator inspection,2,6
+J2595,Coolant system service,2,5
+J2596,Engine diagnostic scan,4,5
+J2597,Alternator inspection,3,4
+J2598,Spark plug replacement,2,3
+J2599,Transmission inspection,2,6
+J2600,Check engine light diagnosis,3,5
+J2601,ABS warning light diagnosis,2,5
+J2602,Engine diagnostic scan,2,4
+J2603,Alternator inspection,3,3
+J2604,Suspension noise diagnosis,1,4
+J2605,Engine diagnostic scan,4,5
+J2606,Suspension noise diagnosis,4,4
+J2607,Tire replacement,4,5
+J2608,Coolant system service,2,4
+J2609,Tire pressure sensor reset,1,6
+J2610,Wheel alignment,3,4
+J2611,Oil change,2,3
+J2612,Brake inspection,3,6
+J2613,Battery replacement,4,6
+J2614,Check engine light diagnosis,4,2
+J2615,Battery replacement,2,5
+J2616,Brake inspection,4,6
+J2617,Brake inspection,2,5
+J2618,Suspension noise diagnosis,3,8
+J2619,Wheel alignment,2,5
+J2620,Brake inspection,3,2
+J2621,Transmission inspection,1,2
+J2622,Tire replacement,2,3
+J2623,Transmission inspection,3,7
+J2624,Brake pad replacement,4,7
+J2625,Oil change,3,4
+J2626,Spark plug replacement,3,6
+J2627,Tire replacement,2,8
+J2628,Spark plug replacement,3,4
+J2629,ABS warning light diagnosis,3,4
+J2630,Engine diagnostic scan,4,7
+J2631,Wheel alignment,4,5
+J2632,Engine diagnostic scan,2,5
+J2633,Tire pressure sensor reset,4,9
+J2634,Alternator inspection,1,4
+J2635,Engine diagnostic scan,2,1
+J2636,Battery replacement,4,6
+J2637,Brake inspection,4,6
+J2638,Oil change,3,6
+J2639,Spark plug replacement,1,2
+J2640,Suspension noise diagnosis,2,4
+J2641,Suspension noise diagnosis,4,6
+J2642,Brake pad replacement,4,5
+J2643,Engine diagnostic scan,2,6
+J2644,Suspension noise diagnosis,1,4
+J2645,ABS warning light diagnosis,3,4
+J2646,Suspension noise diagnosis,4,4
+J2647,Brake inspection,1,7
+J2648,Suspension noise diagnosis,3,7
+J2649,ABS warning light diagnosis,3,6
+J2650,Tire replacement,2,6
+J2651,Wheel alignment,1,7
+J2652,Tire replacement,3,7
+J2653,Battery replacement,3,3
+J2654,Suspension noise diagnosis,4,6
+J2655,Alternator inspection,3,5
+J2656,Battery replacement,3,7
+J2657,Brake inspection,2,4
+J2658,Battery replacement,3,4
+J2659,Tire pressure sensor reset,3,6
+J2660,Check engine light diagnosis,1,5
+J2661,Transmission inspection,2,4
+J2662,Suspension noise diagnosis,2,3
+J2663,Battery replacement,3,5
+J2664,Engine diagnostic scan,4,2
+J2665,Coolant system service,3,3
+J2666,Check engine light diagnosis,3,5
+J2667,ABS warning light diagnosis,2,7
+J2668,Coolant system service,3,4
+J2669,Coolant system service,2,4
+J2670,Oil change,3,6
+J2671,Wheel alignment,4,6
+J2672,Oil change,2,6
+J2673,Wheel alignment,3,6
+J2674,Battery replacement,2,5
+J2675,Suspension noise diagnosis,2,4
+J2676,Tire replacement,1,5
+J2677,ABS warning light diagnosis,3,2
+J2678,Coolant system service,2,4
+J2679,Brake pad replacement,3,7
+J2680,Transmission inspection,2,4
+J2681,Transmission inspection,4,7
+J2682,Wheel alignment,3,2
+J2683,Tire replacement,2,4
+J2684,Alternator inspection,1,6
+J2685,Tire replacement,3,4
+J2686,Transmission inspection,1,2
+J2687,Oil change,2,3
+J2688,Wheel alignment,3,7
+J2689,Tire pressure sensor reset,4,4
+J2690,Oil change,3,5
+J2691,Check engine light diagnosis,1,4
+J2692,Battery replacement,3,5
+J2693,Check engine light diagnosis,4,7
+J2694,Wheel alignment,1,6
+J2695,Tire replacement,2,4
+J2696,Coolant system service,3,5
+J2697,Tire pressure sensor reset,4,6
+J2698,Wheel alignment,1,6
+J2699,Brake inspection,1,5
+J2700,ABS warning light diagnosis,3,3
+J2701,Battery replacement,1,7
+J2702,Tire replacement,2,3
+J2703,Tire pressure sensor reset,2,4
+J2704,Engine diagnostic scan,2,7
+J2705,Brake inspection,1,6
+J2706,Oil change,2,3
+J2707,Brake pad replacement,1,6
+J2708,Spark plug replacement,3,3
+J2709,Coolant system service,2,6
+J2710,Transmission inspection,2,5
+J2711,Brake pad replacement,2,3
+J2712,Tire replacement,3,9
+J2713,ABS warning light diagnosis,3,6
+J2714,Transmission inspection,2,7
+J2715,Oil change,3,4
+J2716,Battery replacement,3,4
+J2717,Battery replacement,3,6
+J2718,Check engine light diagnosis,4,4
+J2719,Spark plug replacement,3,4
+J2720,Battery replacement,3,6
+J2721,Brake inspection,4,2
+J2722,Battery replacement,2,7
+J2723,Check engine light diagnosis,2,4
+J2724,Tire replacement,4,3
+J2725,Brake pad replacement,3,5
+J2726,ABS warning light diagnosis,1,6
+J2727,Coolant system service,3,6
+J2728,Brake pad replacement,1,6
+J2729,Battery replacement,3,5
+J2730,ABS warning light diagnosis,3,3
+J2731,Battery replacement,3,3
+J2732,Brake inspection,2,5
+J2733,ABS warning light diagnosis,3,6
+J2734,Brake inspection,3,7
+J2735,Suspension noise diagnosis,1,5
+J2736,Brake pad replacement,2,5
+J2737,Alternator inspection,3,6
+J2738,Coolant system service,3,6
+J2739,Suspension noise diagnosis,3,4
+J2740,Tire pressure sensor reset,4,6
+J2741,Suspension noise diagnosis,4,5
+J2742,Battery replacement,1,3
+J2743,Brake pad replacement,3,7
+J2744,Oil change,4,4
+J2745,Alternator inspection,3,5
+J2746,Check engine light diagnosis,3,3
+J2747,Suspension noise diagnosis,4,8
+J2748,Wheel alignment,3,5
+J2749,Battery replacement,3,5
+J2750,Check engine light diagnosis,2,4
+J2751,Spark plug replacement,3,8
+J2752,Transmission inspection,4,3
+J2753,Brake pad replacement,4,3
+J2754,Suspension noise diagnosis,3,5
+J2755,Tire pressure sensor reset,3,6
+J2756,Oil change,2,4
+J2757,Alternator inspection,1,5
+J2758,Tire pressure sensor reset,3,5
+J2759,Spark plug replacement,4,5
+J2760,Transmission inspection,2,7
+J2761,Tire pressure sensor reset,2,3
+J2762,Coolant system service,3,6
+J2763,Wheel alignment,4,4
+J2764,Tire pressure sensor reset,3,3
+J2765,Oil change,2,7
+J2766,Spark plug replacement,1,2
+J2767,Battery replacement,3,6
+J2768,Engine diagnostic scan,3,3
+J2769,Brake inspection,2,3
+J2770,Alternator inspection,2,6
+J2771,Alternator inspection,2,5
+J2772,ABS warning light diagnosis,3,4
+J2773,Engine diagnostic scan,1,5
+J2774,Engine diagnostic scan,2,3
+J2775,Wheel alignment,4,6
+J2776,Suspension noise diagnosis,3,8
+J2777,Alternator inspection,3,8
+J2778,Spark plug replacement,3,7
+J2779,Transmission inspection,3,1
+J2780,Engine diagnostic scan,3,5
+J2781,Brake inspection,3,4
+J2782,Suspension noise diagnosis,4,4
+J2783,Spark plug replacement,3,4
+J2784,Spark plug replacement,2,3
+J2785,Wheel alignment,1,3
+J2786,Check engine light diagnosis,1,4
+J2787,Battery replacement,2,5
+J2788,Check engine light diagnosis,3,3
+J2789,Engine diagnostic scan,3,7
+J2790,Check engine light diagnosis,2,4
+J2791,Tire pressure sensor reset,4,4
+J2792,Tire pressure sensor reset,2,8
+J2793,Oil change,4,6
+J2794,Tire replacement,3,7
+J2795,Oil change,2,2
+J2796,Engine diagnostic scan,2,4
+J2797,ABS warning light diagnosis,2,4
+J2798,Check engine light diagnosis,3,6
+J2799,Suspension noise diagnosis,1,6
+J2800,Brake pad replacement,2,6
+J2801,Check engine light diagnosis,1,5
+J2802,Coolant system service,2,3
+J2803,Suspension noise diagnosis,2,7
+J2804,Tire pressure sensor reset,4,4
+J2805,Engine diagnostic scan,1,5
+J2806,Engine diagnostic scan,3,6
+J2807,ABS warning light diagnosis,3,4
+J2808,Brake inspection,2,4
+J2809,Suspension noise diagnosis,4,4
+J2810,Spark plug replacement,3,1
+J2811,Coolant system service,3,5
+J2812,Transmission inspection,4,4
+J2813,Check engine light diagnosis,2,4
+J2814,Engine diagnostic scan,2,4
+J2815,Wheel alignment,3,3
+J2816,ABS warning light diagnosis,3,5
+J2817,Tire pressure sensor reset,2,4
+J2818,Suspension noise diagnosis,3,7
+J2819,ABS warning light diagnosis,2,8
+J2820,Brake inspection,2,5
+J2821,Brake inspection,2,5
+J2822,Check engine light diagnosis,3,4
+J2823,Suspension noise diagnosis,3,6
+J2824,Suspension noise diagnosis,1,5
+J2825,Battery replacement,1,3
+J2826,Suspension noise diagnosis,2,5
+J2827,ABS warning light diagnosis,1,5
+J2828,Battery replacement,3,7
+J2829,Check engine light diagnosis,4,5
+J2830,Brake inspection,3,3
+J2831,Spark plug replacement,3,5
+J2832,Transmission inspection,2,6
+J2833,Engine diagnostic scan,4,3
+J2834,Brake inspection,1,3
+J2835,Wheel alignment,1,5
+J2836,Transmission inspection,2,2
+J2837,Suspension noise diagnosis,3,5
+J2838,ABS warning light diagnosis,2,8
+J2839,Check engine light diagnosis,2,4
+J2840,Check engine light diagnosis,3,5
+J2841,Battery replacement,4,8
+J2842,Tire pressure sensor reset,4,6
+J2843,Alternator inspection,1,6
+J2844,Battery replacement,2,7
+J2845,Tire pressure sensor reset,2,4
+J2846,Spark plug replacement,3,4
+J2847,Battery replacement,2,5
+J2848,Check engine light diagnosis,4,5
+J2849,Check engine light diagnosis,2,5
+J2850,Spark plug replacement,3,6
+J2851,Tire pressure sensor reset,3,6
+J2852,Oil change,1,4
+J2853,Transmission inspection,3,2
+J2854,Tire pressure sensor reset,3,4
+J2855,Transmission inspection,3,4
+J2856,Check engine light diagnosis,2,5
+J2857,Transmission inspection,2,4
+J2858,Battery replacement,3,5
+J2859,Spark plug replacement,4,3
+J2860,Wheel alignment,2,5
+J2861,Check engine light diagnosis,2,8
+J2862,Brake pad replacement,3,5
+J2863,Battery replacement,4,6
+J2864,Spark plug replacement,2,6
+J2865,Brake pad replacement,2,4
+J2866,Battery replacement,1,4
+J2867,Tire replacement,3,8
+J2868,Alternator inspection,2,5
+J2869,Transmission inspection,1,4
+J2870,Wheel alignment,1,5
+J2871,Tire pressure sensor reset,1,4
+J2872,Oil change,3,6
+J2873,Brake pad replacement,3,2
+J2874,Alternator inspection,3,5
+J2875,ABS warning light diagnosis,2,3
+J2876,Brake inspection,3,4
+J2877,ABS warning light diagnosis,3,7
+J2878,Suspension noise diagnosis,2,5
+J2879,Brake inspection,3,6
+J2880,Wheel alignment,2,5
+J2881,Check engine light diagnosis,2,6
+J2882,Transmission inspection,1,6
+J2883,Transmission inspection,2,7
+J2884,Wheel alignment,3,2
+J2885,Battery replacement,1,7
+J2886,Alternator inspection,1,4
+J2887,Suspension noise diagnosis,2,2
+J2888,Coolant system service,2,5
+J2889,Tire pressure sensor reset,3,9
+J2890,ABS warning light diagnosis,2,5
+J2891,Wheel alignment,1,3
+J2892,Coolant system service,3,5
+J2893,Brake inspection,4,7
+J2894,Spark plug replacement,4,8
+J2895,Oil change,4,5
+J2896,Wheel alignment,4,6
+J2897,Oil change,4,7
+J2898,Wheel alignment,2,5
+J2899,Battery replacement,1,3
+J2900,Brake inspection,4,7
+J2901,Wheel alignment,1,5
+J2902,Suspension noise diagnosis,3,4
+J2903,Tire pressure sensor reset,3,6
+J2904,Check engine light diagnosis,1,4
+J2905,Brake inspection,3,5
+J2906,Brake inspection,1,6
+J2907,Brake inspection,2,6
+J2908,Alternator inspection,4,5
+J2909,Alternator inspection,3,4
+J2910,Transmission inspection,2,5
+J2911,ABS warning light diagnosis,3,5
+J2912,Engine diagnostic scan,2,4
+J2913,Brake inspection,2,7
+J2914,Coolant system service,4,4
+J2915,Battery replacement,2,8
+J2916,Tire pressure sensor reset,2,2
+J2917,ABS warning light diagnosis,2,5
+J2918,Battery replacement,4,4
+J2919,Transmission inspection,1,4
+J2920,Check engine light diagnosis,3,6
+J2921,Tire replacement,4,3
+J2922,Spark plug replacement,3,3
+J2923,Check engine light diagnosis,4,4
+J2924,Tire replacement,3,4
+J2925,Suspension noise diagnosis,3,5
+J2926,Tire replacement,3,3
+J2927,Alternator inspection,3,4
+J2928,Wheel alignment,3,5
+J2929,Tire replacement,4,3
+J2930,Spark plug replacement,3,4
+J2931,Tire replacement,3,6
+J2932,Check engine light diagnosis,2,5
+J2933,Suspension noise diagnosis,3,5
+J2934,Coolant system service,2,3
+J2935,Oil change,2,7
+J2936,Coolant system service,2,6
+J2937,Oil change,3,7
+J2938,Coolant system service,4,3
+J2939,ABS warning light diagnosis,1,4
+J2940,ABS warning light diagnosis,1,8
+J2941,Wheel alignment,3,2
+J2942,Check engine light diagnosis,3,4
+J2943,Brake inspection,3,5
+J2944,Oil change,1,7
+J2945,Brake pad replacement,2,7
+J2946,Brake inspection,4,5
+J2947,Battery replacement,3,1
+J2948,Brake pad replacement,3,7
+J2949,Alternator inspection,3,4
+J2950,Engine diagnostic scan,3,4
+J2951,Tire pressure sensor reset,2,4
+J2952,Tire replacement,3,6
+J2953,Tire pressure sensor reset,4,6
+J2954,Spark plug replacement,2,2
+J2955,ABS warning light diagnosis,2,6
+J2956,Engine diagnostic scan,3,5
+J2957,Brake pad replacement,4,4
+J2958,Wheel alignment,4,7
+J2959,Alternator inspection,1,5
+J2960,Brake inspection,2,7
+J2961,Brake pad replacement,1,6
+J2962,Suspension noise diagnosis,1,5
+J2963,Tire pressure sensor reset,4,4
+J2964,Battery replacement,4,5
+J2965,Tire replacement,2,2
+J2966,Coolant system service,3,6
+J2967,Wheel alignment,2,7
+J2968,Coolant system service,1,4
+J2969,Brake pad replacement,3,6
+J2970,Alternator inspection,3,5
+J2971,Spark plug replacement,4,5
+J2972,Brake pad replacement,2,5
+J2973,Wheel alignment,3,4
+J2974,Oil change,4,7
+J2975,Battery replacement,1,6
+J2976,Tire replacement,1,4
+J2977,Spark plug replacement,2,5
+J2978,Coolant system service,2,5
+J2979,Suspension noise diagnosis,1,5
+J2980,Brake pad replacement,1,6
+J2981,Check engine light diagnosis,2,5
+J2982,Wheel alignment,3,5
+J2983,Brake inspection,2,7
+J2984,Wheel alignment,4,4
+J2985,Battery replacement,3,8
+J2986,Suspension noise diagnosis,2,8
+J2987,Brake pad replacement,3,5
+J2988,Tire replacement,3,3
+J2989,Tire replacement,1,7
+J2990,Brake inspection,1,3
+J2991,Suspension noise diagnosis,3,5
+J2992,ABS warning light diagnosis,2,3
+J2993,Engine diagnostic scan,1,4
+J2994,Check engine light diagnosis,3,5
+J2995,Brake inspection,2,6
+J2996,Check engine light diagnosis,3,2
+J2997,Oil change,4,6
+J2998,Oil change,2,3
+J2999,Battery replacement,2,4
+J3000,ABS warning light diagnosis,4,5
+J3001,Wheel alignment,1,7
+J3002,Transmission inspection,2,4
+J3003,Brake inspection,2,4
+J3004,Wheel alignment,1,6
+J3005,Check engine light diagnosis,1,3
+J3006,Alternator inspection,2,5
+J3007,Battery replacement,1,4
+J3008,Suspension noise diagnosis,2,6
+J3009,Brake pad replacement,3,4
+J3010,Battery replacement,3,3
+J3011,Tire pressure sensor reset,1,5
+J3012,Tire replacement,1,3
+J3013,Wheel alignment,2,6
+J3014,Battery replacement,2,5
+J3015,Tire pressure sensor reset,2,5
+J3016,ABS warning light diagnosis,3,8
+J3017,Battery replacement,4,5
+J3018,Brake inspection,3,6
+J3019,Transmission inspection,2,6
+J3020,Oil change,2,3
+J3021,Tire pressure sensor reset,2,4
+J3022,Wheel alignment,2,4
+J3023,Oil change,3,2
+J3024,Transmission inspection,2,4
+J3025,Spark plug replacement,3,3
+J3026,Oil change,4,3
+J3027,Coolant system service,3,6
+J3028,Spark plug replacement,4,6
+J3029,Check engine light diagnosis,3,7
+J3030,Alternator inspection,2,5
+J3031,Spark plug replacement,1,6
+J3032,Brake inspection,2,9
+J3033,ABS warning light diagnosis,2,2
+J3034,Transmission inspection,1,2
+J3035,Battery replacement,1,6
+J3036,Spark plug replacement,3,2
+J3037,Tire replacement,2,1
+J3038,Check engine light diagnosis,4,4
+J3039,Oil change,3,5
+J3040,Suspension noise diagnosis,3,5
+J3041,Oil change,3,4
+J3042,Brake pad replacement,3,6
+J3043,Check engine light diagnosis,2,7
+J3044,Coolant system service,3,4
+J3045,Battery replacement,2,6
+J3046,Oil change,3,7
+J3047,Battery replacement,2,3
+J3048,Coolant system service,2,3
+J3049,Check engine light diagnosis,1,7
+J3050,Suspension noise diagnosis,2,3
+J3051,Brake inspection,3,7
+J3052,Check engine light diagnosis,2,5
+J3053,Engine diagnostic scan,2,5
+J3054,Brake pad replacement,3,4
+J3055,Transmission inspection,2,6
+J3056,Suspension noise diagnosis,2,5
+J3057,Brake inspection,2,5
+J3058,Wheel alignment,1,4
+J3059,Tire pressure sensor reset,2,4
+J3060,Coolant system service,3,6
+J3061,Check engine light diagnosis,3,4
+J3062,Engine diagnostic scan,2,6
+J3063,Wheel alignment,4,6
+J3064,Battery replacement,3,2
+J3065,Battery replacement,3,7
+J3066,Check engine light diagnosis,3,8
+J3067,Transmission inspection,3,5
+J3068,Engine diagnostic scan,2,7
+J3069,Wheel alignment,1,4
+J3070,Wheel alignment,3,6
+J3071,Brake inspection,2,9
+J3072,Wheel alignment,3,6
+J3073,Wheel alignment,1,6
+J3074,Tire pressure sensor reset,2,3
+J3075,Brake inspection,2,5
+J3076,Transmission inspection,1,2
+J3077,Tire replacement,3,5
+J3078,Tire pressure sensor reset,3,4
+J3079,Oil change,2,7
+J3080,Oil change,2,7
+J3081,Alternator inspection,2,4
+J3082,Spark plug replacement,2,8
+J3083,Oil change,1,4
+J3084,Coolant system service,3,4
+J3085,Oil change,2,4
+J3086,Wheel alignment,2,2
+J3087,Engine diagnostic scan,2,6
+J3088,Transmission inspection,1,5
+J3089,ABS warning light diagnosis,2,6
+J3090,Wheel alignment,1,8
+J3091,Battery replacement,3,5
+J3092,Suspension noise diagnosis,2,3
+J3093,Tire replacement,2,4
+J3094,Tire replacement,1,7
+J3095,Check engine light diagnosis,3,6
+J3096,Oil change,4,6
+J3097,Tire replacement,4,5
+J3098,ABS warning light diagnosis,1,6
+J3099,Wheel alignment,3,5
+J3100,Suspension noise diagnosis,4,3
+J3101,Oil change,1,3
+J3102,Brake pad replacement,1,6
+J3103,Check engine light diagnosis,3,4
+J3104,Coolant system service,1,5
+J3105,Oil change,2,4
+J3106,Alternator inspection,3,7
+J3107,Battery replacement,1,7
+J3108,Brake pad replacement,2,6
+J3109,Suspension noise diagnosis,2,4
+J3110,Tire replacement,1,4
+J3111,Spark plug replacement,2,5
+J3112,Suspension noise diagnosis,2,6
+J3113,Suspension noise diagnosis,3,4
+J3114,Oil change,2,6
+J3115,Suspension noise diagnosis,2,3
+J3116,Engine diagnostic scan,3,5
+J3117,Tire replacement,2,8
+J3118,Tire pressure sensor reset,3,5
+J3119,Check engine light diagnosis,3,4
+J3120,ABS warning light diagnosis,3,6
+J3121,Brake inspection,2,7
+J3122,Alternator inspection,3,4
+J3123,Brake pad replacement,1,5
+J3124,Coolant system service,4,7
+J3125,Transmission inspection,3,7
+J3126,Transmission inspection,1,6
+J3127,Engine diagnostic scan,1,4
+J3128,Engine diagnostic scan,3,5
+J3129,Wheel alignment,2,5
+J3130,Tire pressure sensor reset,2,4
+J3131,Brake pad replacement,2,6
+J3132,Tire pressure sensor reset,1,3
+J3133,ABS warning light diagnosis,4,4
+J3134,Alternator inspection,3,6
+J3135,Wheel alignment,3,4
+J3136,Spark plug replacement,3,7
+J3137,Check engine light diagnosis,3,1
+J3138,Coolant system service,3,5
+J3139,Engine diagnostic scan,4,4
+J3140,Brake inspection,3,5
+J3141,Brake pad replacement,1,2
+J3142,Brake pad replacement,3,6
+J3143,Wheel alignment,3,4
+J3144,Battery replacement,1,5
+J3145,Oil change,3,7
+J3146,Transmission inspection,3,5
+J3147,Battery replacement,1,4
+J3148,Spark plug replacement,2,3
+J3149,Tire pressure sensor reset,4,8
+J3150,Alternator inspection,4,2
+J3151,Brake pad replacement,3,5
+J3152,ABS warning light diagnosis,4,3
+J3153,Tire replacement,2,6
+J3154,Coolant system service,2,4
+J3155,Spark plug replacement,4,7
+J3156,Spark plug replacement,2,5
+J3157,Battery replacement,3,5
+J3158,Tire pressure sensor reset,3,3
+J3159,Tire pressure sensor reset,3,6
+J3160,Oil change,4,4
+J3161,Spark plug replacement,4,5
+J3162,Battery replacement,1,7
+J3163,Coolant system service,2,7
+J3164,Transmission inspection,2,4
+J3165,Wheel alignment,2,5
+J3166,Oil change,2,3
+J3167,Transmission inspection,4,4
+J3168,Brake pad replacement,1,5
+J3169,Brake pad replacement,4,3
+J3170,Coolant system service,3,5
+J3171,Oil change,4,7
+J3172,Brake pad replacement,4,7
+J3173,Brake pad replacement,3,3
+J3174,Tire replacement,2,7
+J3175,Suspension noise diagnosis,1,5
+J3176,Check engine light diagnosis,2,4
+J3177,ABS warning light diagnosis,4,4
+J3178,Coolant system service,2,6
+J3179,ABS warning light diagnosis,3,7
+J3180,Suspension noise diagnosis,3,5
+J3181,Alternator inspection,2,4
+J3182,Transmission inspection,2,3
+J3183,Wheel alignment,3,6
+J3184,Oil change,3,6
+J3185,Battery replacement,3,5
+J3186,Tire pressure sensor reset,3,5
+J3187,Transmission inspection,4,4
+J3188,Alternator inspection,2,8
+J3189,ABS warning light diagnosis,3,5
+J3190,Wheel alignment,3,6
+J3191,Spark plug replacement,1,9
+J3192,Check engine light diagnosis,2,5
+J3193,Spark plug replacement,3,6
+J3194,Alternator inspection,3,2
+J3195,Alternator inspection,2,7
+J3196,Check engine light diagnosis,3,8
+J3197,Battery replacement,1,4
+J3198,Alternator inspection,3,4
+J3199,Oil change,4,6
+J3200,ABS warning light diagnosis,2,5
+J3201,Wheel alignment,1,3
+J3202,Transmission inspection,1,6
+J3203,Check engine light diagnosis,3,7
+J3204,Suspension noise diagnosis,4,6
+J3205,Engine diagnostic scan,2,4
+J3206,Oil change,2,9
+J3207,ABS warning light diagnosis,2,7
+J3208,Brake pad replacement,3,6
+J3209,Suspension noise diagnosis,2,5
+J3210,Brake inspection,4,5
+J3211,Coolant system service,2,4
+J3212,Engine diagnostic scan,4,5
+J3213,Transmission inspection,4,5
+J3214,Transmission inspection,1,5
+J3215,Spark plug replacement,4,6
+J3216,ABS warning light diagnosis,1,4
+J3217,Brake pad replacement,4,5
+J3218,Brake pad replacement,2,6
+J3219,Transmission inspection,4,5
+J3220,Tire replacement,1,5
+J3221,Tire replacement,1,3
+J3222,Suspension noise diagnosis,2,3
+J3223,Tire pressure sensor reset,1,4
+J3224,Transmission inspection,2,5
+J3225,Transmission inspection,2,5
+J3226,Tire replacement,2,3
+J3227,Suspension noise diagnosis,2,6
+J3228,Engine diagnostic scan,4,6
+J3229,Check engine light diagnosis,2,4
+J3230,Coolant system service,2,6
+J3231,Brake pad replacement,4,3
+J3232,Battery replacement,4,3
+J3233,Check engine light diagnosis,3,4
+J3234,ABS warning light diagnosis,3,7
+J3235,Coolant system service,2,5
+J3236,Suspension noise diagnosis,1,4
+J3237,Tire replacement,2,4
+J3238,Battery replacement,2,5
+J3239,Alternator inspection,2,4
+J3240,Alternator inspection,3,6
+J3241,Tire pressure sensor reset,4,6
+J3242,ABS warning light diagnosis,2,7
+J3243,ABS warning light diagnosis,3,6
+J3244,Spark plug replacement,3,5
+J3245,ABS warning light diagnosis,4,7
+J3246,Transmission inspection,2,3
+J3247,Alternator inspection,3,4
+J3248,Tire pressure sensor reset,2,6
+J3249,Alternator inspection,3,5
+J3250,Engine diagnostic scan,3,5
+J3251,Spark plug replacement,3,4
+J3252,Coolant system service,1,8
+J3253,Engine diagnostic scan,3,4
+J3254,Suspension noise diagnosis,3,6
+J3255,Brake inspection,1,5
+J3256,Tire pressure sensor reset,3,5
+J3257,Brake pad replacement,2,6
+J3258,Spark plug replacement,4,6
+J3259,Battery replacement,4,6
+J3260,Brake inspection,1,6
+J3261,Spark plug replacement,1,8
+J3262,Check engine light diagnosis,3,6
+J3263,Oil change,2,8
+J3264,Wheel alignment,2,6
+J3265,Check engine light diagnosis,1,4
+J3266,Brake pad replacement,4,7
+J3267,Brake inspection,1,4
+J3268,Oil change,1,1
+J3269,Oil change,3,3
+J3270,ABS warning light diagnosis,4,5
+J3271,Brake pad replacement,4,5
+J3272,Tire replacement,3,6
+J3273,Tire pressure sensor reset,2,3
+J3274,Engine diagnostic scan,2,4
+J3275,Suspension noise diagnosis,2,3
+J3276,Spark plug replacement,4,4
+J3277,Battery replacement,3,3
+J3278,Wheel alignment,1,4
+J3279,Spark plug replacement,1,3
+J3280,Alternator inspection,2,3
+J3281,Check engine light diagnosis,2,6
+J3282,Brake pad replacement,4,4
+J3283,Transmission inspection,2,2
+J3284,Alternator inspection,3,4
+J3285,Transmission inspection,4,3
+J3286,Oil change,2,3
+J3287,Tire pressure sensor reset,2,4
+J3288,Engine diagnostic scan,2,5
+J3289,Engine diagnostic scan,2,6
+J3290,Alternator inspection,3,6
+J3291,Brake pad replacement,3,3
+J3292,ABS warning light diagnosis,1,5
+J3293,Engine diagnostic scan,3,6
+J3294,Spark plug replacement,3,5
+J3295,Suspension noise diagnosis,2,7
+J3296,ABS warning light diagnosis,2,5
+J3297,Wheel alignment,1,5
+J3298,Wheel alignment,4,7
+J3299,Battery replacement,1,4
+J3300,Spark plug replacement,3,6
+J3301,Transmission inspection,3,6
+J3302,Oil change,1,3
+J3303,Coolant system service,3,5
+J3304,Transmission inspection,3,6
+J3305,Coolant system service,1,6
+J3306,Coolant system service,2,3
+J3307,Brake pad replacement,3,8
+J3308,Wheel alignment,1,5
+J3309,Tire pressure sensor reset,2,6
+J3310,Tire replacement,3,6
+J3311,Wheel alignment,1,4
+J3312,Suspension noise diagnosis,3,5
+J3313,Suspension noise diagnosis,2,5
+J3314,Transmission inspection,4,5
+J3315,Transmission inspection,3,7
+J3316,Wheel alignment,2,4
+J3317,Spark plug replacement,2,7
+J3318,Brake pad replacement,4,7
+J3319,Alternator inspection,4,4
+J3320,Brake inspection,3,5
+J3321,Check engine light diagnosis,1,3
+J3322,Transmission inspection,3,4
+J3323,Engine diagnostic scan,2,7
+J3324,Alternator inspection,1,5
+J3325,Tire pressure sensor reset,3,8
+J3326,Suspension noise diagnosis,3,7
+J3327,Tire replacement,3,7
+J3328,Oil change,3,6
+J3329,Oil change,4,3
+J3330,Spark plug replacement,1,4
+J3331,Suspension noise diagnosis,1,5
+J3332,Brake pad replacement,2,5
+J3333,Tire pressure sensor reset,2,8
+J3334,Check engine light diagnosis,2,5
+J3335,Alternator inspection,3,5
+J3336,Brake pad replacement,3,9
+J3337,Spark plug replacement,3,6
+J3338,ABS warning light diagnosis,3,6
+J3339,Tire replacement,4,3
+J3340,Brake pad replacement,1,5
+J3341,Brake pad replacement,3,4
+J3342,Wheel alignment,4,5
+J3343,Tire pressure sensor reset,1,4
+J3344,Transmission inspection,2,8
+J3345,Brake inspection,1,5
+J3346,Suspension noise diagnosis,3,2
+J3347,Coolant system service,2,4
+J3348,Brake pad replacement,2,7
+J3349,Spark plug replacement,4,3
+J3350,Battery replacement,3,3
+J3351,Suspension noise diagnosis,2,6
+J3352,Engine diagnostic scan,2,4
+J3353,Tire replacement,4,4
+J3354,Brake pad replacement,3,5
+J3355,Suspension noise diagnosis,2,3
+J3356,Brake inspection,2,2
+J3357,Engine diagnostic scan,2,4
+J3358,Brake pad replacement,3,5
+J3359,Suspension noise diagnosis,4,8
+J3360,Oil change,3,5
+J3361,Brake pad replacement,1,4
+J3362,Oil change,4,5
+J3363,Alternator inspection,2,6
+J3364,Alternator inspection,2,3
+J3365,Engine diagnostic scan,2,3
+J3366,Spark plug replacement,2,4
+J3367,Brake inspection,3,3
+J3368,Coolant system service,3,5
+J3369,Check engine light diagnosis,3,3
+J3370,Tire pressure sensor reset,1,6
+J3371,Alternator inspection,2,2
+J3372,Alternator inspection,4,4
+J3373,Coolant system service,2,5
+J3374,Brake pad replacement,3,5
+J3375,Alternator inspection,2,5
+J3376,ABS warning light diagnosis,1,6
+J3377,Brake pad replacement,2,3
+J3378,Alternator inspection,4,4
+J3379,Check engine light diagnosis,2,4
+J3380,ABS warning light diagnosis,1,5
+J3381,Coolant system service,4,3
+J3382,Wheel alignment,3,5
+J3383,ABS warning light diagnosis,2,5
+J3384,Tire replacement,3,4
+J3385,Suspension noise diagnosis,4,6
+J3386,Tire pressure sensor reset,3,7
+J3387,Coolant system service,4,5
+J3388,Alternator inspection,2,8
+J3389,Oil change,4,5
+J3390,ABS warning light diagnosis,2,4
+J3391,Spark plug replacement,2,5
+J3392,Brake pad replacement,1,4
+J3393,Brake inspection,2,7
+J3394,Brake pad replacement,2,5
+J3395,Tire pressure sensor reset,4,2
+J3396,Engine diagnostic scan,2,4
+J3397,Coolant system service,2,7
+J3398,Oil change,2,7
+J3399,Alternator inspection,2,5
+J3400,Engine diagnostic scan,2,4
+J3401,Alternator inspection,2,6
+J3402,Battery replacement,4,4
+J3403,Brake inspection,3,5
+J3404,Oil change,3,6
+J3405,Coolant system service,3,4
+J3406,Suspension noise diagnosis,2,3
+J3407,Brake inspection,3,6
+J3408,Brake inspection,1,6
+J3409,Engine diagnostic scan,3,7
+J3410,Coolant system service,2,7
+J3411,Transmission inspection,4,3
+J3412,Oil change,1,5
+J3413,Suspension noise diagnosis,1,4
+J3414,Spark plug replacement,4,7
+J3415,Spark plug replacement,1,6
+J3416,Suspension noise diagnosis,3,4
+J3417,Brake pad replacement,1,3
+J3418,Spark plug replacement,3,5
+J3419,Wheel alignment,1,5
+J3420,Alternator inspection,1,3
+J3421,ABS warning light diagnosis,2,5
+J3422,Tire pressure sensor reset,2,6
+J3423,Oil change,2,6
+J3424,Brake inspection,1,5
+J3425,Alternator inspection,2,5
+J3426,Battery replacement,4,6
+J3427,Alternator inspection,3,4
+J3428,Check engine light diagnosis,3,4
+J3429,Brake pad replacement,1,5
+J3430,Transmission inspection,2,7
+J3431,Coolant system service,4,3
+J3432,Check engine light diagnosis,2,8
+J3433,Oil change,3,4
+J3434,Spark plug replacement,2,5
+J3435,Oil change,2,6
+J3436,Brake inspection,3,5
+J3437,Engine diagnostic scan,1,6
+J3438,Brake inspection,2,4
+J3439,Wheel alignment,1,6
+J3440,Suspension noise diagnosis,3,7
+J3441,Suspension noise diagnosis,3,6
+J3442,Transmission inspection,4,4
+J3443,Tire replacement,2,4
+J3444,Wheel alignment,2,6
+J3445,Battery replacement,3,3
+J3446,Transmission inspection,3,5
+J3447,Suspension noise diagnosis,3,3
+J3448,Brake inspection,2,5
+J3449,Tire pressure sensor reset,4,6
+J3450,Wheel alignment,2,5
+J3451,Battery replacement,4,4
+J3452,Battery replacement,2,5
+J3453,Oil change,2,8
+J3454,Engine diagnostic scan,2,5
+J3455,Wheel alignment,1,5
+J3456,Suspension noise diagnosis,3,6
+J3457,Wheel alignment,3,6
+J3458,Brake pad replacement,1,9
+J3459,Tire replacement,3,5
+J3460,Tire replacement,2,8
+J3461,Alternator inspection,3,3
+J3462,Spark plug replacement,2,5
+J3463,Battery replacement,3,1
+J3464,Tire pressure sensor reset,2,7
+J3465,Engine diagnostic scan,3,5
+J3466,Tire pressure sensor reset,2,5
+J3467,Transmission inspection,2,4
+J3468,Wheel alignment,3,6
+J3469,Coolant system service,3,2
+J3470,Tire pressure sensor reset,4,6
+J3471,Brake pad replacement,3,7
+J3472,Transmission inspection,3,3
+J3473,Check engine light diagnosis,1,5
+J3474,Brake pad replacement,4,7
+J3475,Brake inspection,3,9
+J3476,Check engine light diagnosis,3,4
+J3477,Oil change,3,6
+J3478,Brake pad replacement,3,2
+J3479,Check engine light diagnosis,4,5
+J3480,Coolant system service,2,4
+J3481,Alternator inspection,4,6
+J3482,Transmission inspection,3,7
+J3483,Tire pressure sensor reset,4,4
+J3484,Brake inspection,3,1
+J3485,Brake pad replacement,1,4
+J3486,Wheel alignment,2,6
+J3487,Wheel alignment,4,5
+J3488,Suspension noise diagnosis,2,7
+J3489,Brake pad replacement,1,6
+J3490,Battery replacement,3,4
+J3491,Brake pad replacement,3,3
+J3492,Brake inspection,3,3
+J3493,Tire pressure sensor reset,3,2
+J3494,Coolant system service,4,5
+J3495,Check engine light diagnosis,3,3
+J3496,Brake inspection,4,8
+J3497,Suspension noise diagnosis,2,4
+J3498,ABS warning light diagnosis,2,2
+J3499,Suspension noise diagnosis,4,5
+J3500,Battery replacement,3,6
+J3501,Battery replacement,4,4
+J3502,Tire pressure sensor reset,2,7
+J3503,Check engine light diagnosis,2,5
+J3504,Brake pad replacement,1,6
+J3505,Tire pressure sensor reset,2,6
+J3506,Battery replacement,4,3
+J3507,Tire replacement,2,7
+J3508,ABS warning light diagnosis,2,7
+J3509,Oil change,2,5
+J3510,Wheel alignment,4,9
+J3511,Tire pressure sensor reset,2,3
+J3512,Check engine light diagnosis,4,5
+J3513,Suspension noise diagnosis,4,4
+J3514,Tire replacement,2,6
+J3515,Suspension noise diagnosis,1,5
+J3516,Coolant system service,1,8
+J3517,Oil change,3,7
+J3518,Transmission inspection,4,5
+J3519,Alternator inspection,1,6
+J3520,Check engine light diagnosis,3,6
+J3521,Tire replacement,3,5
+J3522,Brake pad replacement,1,7
+J3523,Coolant system service,3,5
+J3524,Brake pad replacement,4,3
+J3525,ABS warning light diagnosis,2,5
+J3526,Oil change,3,5
+J3527,Spark plug replacement,3,8
+J3528,Engine diagnostic scan,4,5
+J3529,ABS warning light diagnosis,3,2
+J3530,Check engine light diagnosis,4,5
+J3531,ABS warning light diagnosis,4,3
+J3532,Oil change,2,6
+J3533,Oil change,2,5
+J3534,ABS warning light diagnosis,3,5
+J3535,Spark plug replacement,2,2
+J3536,Brake inspection,2,3
+J3537,Brake inspection,2,4
+J3538,Battery replacement,1,5
+J3539,Alternator inspection,3,8
+J3540,Battery replacement,2,4
+J3541,Tire pressure sensor reset,2,2
+J3542,Battery replacement,3,5
+J3543,Coolant system service,4,6
+J3544,Oil change,3,7
+J3545,Tire replacement,4,4
+J3546,Transmission inspection,2,2
+J3547,Tire replacement,4,4
+J3548,Oil change,2,6
+J3549,Spark plug replacement,2,6
+J3550,Engine diagnostic scan,1,4
+J3551,Check engine light diagnosis,1,7
+J3552,Brake pad replacement,3,6
+J3553,Spark plug replacement,2,5
+J3554,Battery replacement,1,6
+J3555,Check engine light diagnosis,1,3
+J3556,Battery replacement,1,5
+J3557,Spark plug replacement,3,3
+J3558,Transmission inspection,2,1
+J3559,Brake inspection,2,6
+J3560,Brake pad replacement,3,5
+J3561,ABS warning light diagnosis,1,6
+J3562,Coolant system service,2,2
+J3563,Tire pressure sensor reset,2,8
+J3564,Alternator inspection,2,5
+J3565,Check engine light diagnosis,4,7
+J3566,Battery replacement,2,4
+J3567,Brake pad replacement,2,5
+J3568,ABS warning light diagnosis,1,2
+J3569,Alternator inspection,4,3
+J3570,Tire pressure sensor reset,2,5
+J3571,Alternator inspection,4,4
+J3572,Tire pressure sensor reset,4,2
+J3573,Wheel alignment,3,5
+J3574,Coolant system service,3,3
+J3575,Engine diagnostic scan,1,6
+J3576,Spark plug replacement,1,5
+J3577,Brake inspection,2,6
+J3578,Coolant system service,2,8
+J3579,Check engine light diagnosis,4,6
+J3580,Suspension noise diagnosis,3,5
+J3581,Tire pressure sensor reset,3,5
+J3582,Tire replacement,1,5
+J3583,Suspension noise diagnosis,2,5
+J3584,Battery replacement,2,3
+J3585,Tire pressure sensor reset,3,4
+J3586,Coolant system service,3,5
+J3587,Brake pad replacement,3,5
+J3588,Coolant system service,2,7
+J3589,Check engine light diagnosis,1,4
+J3590,Spark plug replacement,3,6
+J3591,Tire replacement,3,5
+J3592,Tire replacement,3,7
+J3593,ABS warning light diagnosis,3,7
+J3594,Suspension noise diagnosis,3,4
+J3595,Brake inspection,1,4
+J3596,Transmission inspection,3,5
+J3597,Spark plug replacement,3,4
+J3598,Spark plug replacement,2,4
+J3599,Brake pad replacement,3,6
+J3600,Tire replacement,3,7
+J3601,Transmission inspection,1,5
+J3602,Alternator inspection,2,5
+J3603,Suspension noise diagnosis,4,4
+J3604,Spark plug replacement,1,5
+J3605,ABS warning light diagnosis,2,5
+J3606,Alternator inspection,4,5
+J3607,Engine diagnostic scan,2,2
+J3608,Coolant system service,2,7
+J3609,Battery replacement,1,5
+J3610,Tire replacement,2,8
+J3611,Engine diagnostic scan,1,4
+J3612,Spark plug replacement,3,8
+J3613,Suspension noise diagnosis,1,6
+J3614,Brake inspection,3,6
+J3615,Brake inspection,1,5
+J3616,Engine diagnostic scan,3,4
+J3617,Alternator inspection,2,5
+J3618,Transmission inspection,2,4
+J3619,Brake inspection,4,5
+J3620,Wheel alignment,3,5
+J3621,Battery replacement,2,7
+J3622,Wheel alignment,2,6
+J3623,Brake inspection,2,5
+J3624,Tire replacement,1,4
+J3625,Suspension noise diagnosis,2,4
+J3626,Engine diagnostic scan,2,2
+J3627,Coolant system service,3,7
+J3628,Wheel alignment,3,5
+J3629,Engine diagnostic scan,3,4
+J3630,Tire pressure sensor reset,2,4
+J3631,Brake pad replacement,3,6
+J3632,Wheel alignment,2,4
+J3633,Brake pad replacement,2,4
+J3634,Check engine light diagnosis,1,5
+J3635,Oil change,1,5
+J3636,Suspension noise diagnosis,4,7
+J3637,Tire pressure sensor reset,4,4
+J3638,Wheel alignment,2,6
+J3639,Oil change,2,7
+J3640,Tire pressure sensor reset,2,5
+J3641,Engine diagnostic scan,4,5
+J3642,Wheel alignment,2,6
+J3643,Suspension noise diagnosis,1,5
+J3644,ABS warning light diagnosis,3,3
+J3645,ABS warning light diagnosis,2,6
+J3646,Engine diagnostic scan,2,6
+J3647,Engine diagnostic scan,4,3
+J3648,Engine diagnostic scan,1,4
+J3649,Battery replacement,3,5
+J3650,Wheel alignment,3,8
+J3651,Brake pad replacement,3,5
+J3652,Brake pad replacement,3,5
+J3653,Transmission inspection,4,5
+J3654,Engine diagnostic scan,1,7
+J3655,Tire replacement,3,4
+J3656,Brake inspection,3,4
+J3657,Tire replacement,2,5
+J3658,Alternator inspection,2,3
+J3659,Spark plug replacement,4,6
+J3660,Tire replacement,2,6
+J3661,ABS warning light diagnosis,4,8
+J3662,Battery replacement,4,6
+J3663,Spark plug replacement,4,6
+J3664,Oil change,4,7
+J3665,Check engine light diagnosis,2,4
+J3666,Tire replacement,3,5
+J3667,Brake pad replacement,1,5
+J3668,Coolant system service,4,5
+J3669,ABS warning light diagnosis,3,5
+J3670,Tire pressure sensor reset,1,6
+J3671,Wheel alignment,2,3
+J3672,Check engine light diagnosis,3,3
+J3673,Tire pressure sensor reset,3,2
+J3674,Engine diagnostic scan,3,3
+J3675,Battery replacement,3,4
+J3676,Oil change,1,6
+J3677,Coolant system service,4,7
+J3678,Battery replacement,4,6
+J3679,Tire pressure sensor reset,3,2
+J3680,Suspension noise diagnosis,2,4
+J3681,Spark plug replacement,1,4
+J3682,Battery replacement,3,7
+J3683,Tire pressure sensor reset,1,6
+J3684,Battery replacement,3,6
+J3685,Check engine light diagnosis,2,3
+J3686,Check engine light diagnosis,4,5
+J3687,Oil change,2,2
+J3688,Transmission inspection,3,7
+J3689,Spark plug replacement,3,5
+J3690,Brake inspection,2,6
+J3691,Coolant system service,3,6
+J3692,Check engine light diagnosis,3,3
+J3693,Engine diagnostic scan,3,2
+J3694,Alternator inspection,2,7
+J3695,Battery replacement,1,4
+J3696,Oil change,3,5
+J3697,Engine diagnostic scan,2,4
+J3698,Suspension noise diagnosis,2,3
+J3699,Tire pressure sensor reset,2,6
+J3700,Brake inspection,3,3
+J3701,Battery replacement,3,5
+J3702,Oil change,1,5
+J3703,Transmission inspection,4,6
+J3704,Alternator inspection,2,7
+J3705,Tire pressure sensor reset,4,5
+J3706,Wheel alignment,2,7
+J3707,Check engine light diagnosis,2,4
+J3708,Check engine light diagnosis,2,1
+J3709,Tire replacement,2,6
+J3710,Tire pressure sensor reset,1,5
+J3711,Engine diagnostic scan,3,7
+J3712,Tire replacement,2,3
+J3713,ABS warning light diagnosis,3,6
+J3714,Brake inspection,1,6
+J3715,Check engine light diagnosis,2,5
+J3716,Coolant system service,2,3
+J3717,Brake pad replacement,2,4
+J3718,Check engine light diagnosis,3,7
+J3719,Tire replacement,2,4
+J3720,Tire replacement,3,7
+J3721,Coolant system service,1,6
+J3722,Tire pressure sensor reset,1,7
+J3723,Engine diagnostic scan,4,5
+J3724,Check engine light diagnosis,3,7
+J3725,Suspension noise diagnosis,4,6
+J3726,Brake inspection,3,6
+J3727,Suspension noise diagnosis,1,3
+J3728,Wheel alignment,4,7
+J3729,Wheel alignment,2,6
+J3730,Alternator inspection,3,6
+J3731,Tire pressure sensor reset,4,5
+J3732,Brake pad replacement,2,6
+J3733,Engine diagnostic scan,4,5
+J3734,Check engine light diagnosis,4,5
+J3735,ABS warning light diagnosis,2,7
+J3736,Battery replacement,2,6
+J3737,Transmission inspection,3,5
+J3738,Tire replacement,2,3
+J3739,Check engine light diagnosis,3,3
+J3740,Tire replacement,3,3
+J3741,ABS warning light diagnosis,2,4
+J3742,Battery replacement,1,4
+J3743,Brake pad replacement,2,3
+J3744,Alternator inspection,2,6
+J3745,Transmission inspection,4,6
+J3746,ABS warning light diagnosis,3,5
+J3747,Engine diagnostic scan,1,5
+J3748,Battery replacement,2,7
+J3749,Battery replacement,3,6
+J3750,Brake pad replacement,1,6
+J3751,Coolant system service,1,8
+J3752,Engine diagnostic scan,2,8
+J3753,Battery replacement,3,5
+J3754,Oil change,1,6
+J3755,Wheel alignment,2,5
+J3756,Alternator inspection,3,6
+J3757,Engine diagnostic scan,4,7
+J3758,Transmission inspection,3,5
+J3759,Suspension noise diagnosis,4,4
+J3760,Alternator inspection,2,5
+J3761,Transmission inspection,2,3
+J3762,Tire pressure sensor reset,2,3
+J3763,Brake pad replacement,3,4
+J3764,Alternator inspection,3,7
+J3765,Tire replacement,1,5
+J3766,Oil change,3,5
+J3767,Transmission inspection,1,5
+J3768,Brake pad replacement,3,4
+J3769,Tire pressure sensor reset,2,6
+J3770,Coolant system service,1,6
+J3771,Transmission inspection,4,3
+J3772,Wheel alignment,3,7
+J3773,Oil change,2,7
+J3774,Brake inspection,3,8
+J3775,Alternator inspection,3,2
+J3776,Engine diagnostic scan,3,3
+J3777,Check engine light diagnosis,2,6
+J3778,Coolant system service,1,4
+J3779,Alternator inspection,3,5
+J3780,Brake inspection,4,4
+J3781,Tire replacement,1,6
+J3782,ABS warning light diagnosis,3,4
+J3783,Tire replacement,2,6
+J3784,Alternator inspection,1,7
+J3785,Battery replacement,4,7
+J3786,Suspension noise diagnosis,3,6
+J3787,Oil change,4,5
+J3788,ABS warning light diagnosis,2,5
+J3789,Battery replacement,3,4
+J3790,ABS warning light diagnosis,3,5
+J3791,Check engine light diagnosis,3,4
+J3792,Suspension noise diagnosis,2,5
+J3793,Brake pad replacement,4,6
+J3794,Oil change,4,8
+J3795,Tire pressure sensor reset,3,5
+J3796,Coolant system service,2,4
+J3797,Alternator inspection,2,5
+J3798,Battery replacement,4,6
+J3799,Brake inspection,1,6
+J3800,Transmission inspection,4,8
+J3801,Wheel alignment,1,3
+J3802,Oil change,2,5
+J3803,Battery replacement,2,7
+J3804,Brake inspection,4,6
+J3805,Engine diagnostic scan,4,6
+J3806,Check engine light diagnosis,2,7
+J3807,Suspension noise diagnosis,2,5
+J3808,ABS warning light diagnosis,2,6
+J3809,Brake inspection,4,4
+J3810,Transmission inspection,3,3
+J3811,Transmission inspection,2,4
+J3812,Battery replacement,2,6
+J3813,Alternator inspection,3,6
+J3814,Brake pad replacement,4,5
+J3815,Oil change,2,6
+J3816,Alternator inspection,3,6
+J3817,Suspension noise diagnosis,3,4
+J3818,Brake inspection,4,5
+J3819,Check engine light diagnosis,2,5
+J3820,Coolant system service,2,8
+J3821,Spark plug replacement,3,5
+J3822,Tire replacement,3,5
+J3823,Tire pressure sensor reset,2,8
+J3824,Transmission inspection,2,5
+J3825,Tire pressure sensor reset,4,4
+J3826,Spark plug replacement,2,5
+J3827,Suspension noise diagnosis,2,6
+J3828,ABS warning light diagnosis,3,6
+J3829,Battery replacement,2,6
+J3830,ABS warning light diagnosis,4,7
+J3831,Transmission inspection,3,7
+J3832,Brake pad replacement,1,5
+J3833,Battery replacement,1,6
+J3834,Battery replacement,4,5
+J3835,Brake pad replacement,3,8
+J3836,Oil change,1,6
+J3837,Spark plug replacement,4,2
+J3838,Coolant system service,3,8
+J3839,Oil change,3,4
+J3840,Battery replacement,1,1
+J3841,Oil change,4,4
+J3842,Alternator inspection,3,7
+J3843,Alternator inspection,2,7
+J3844,Transmission inspection,3,3
+J3845,Brake pad replacement,2,7
+J3846,Brake inspection,1,8
+J3847,Coolant system service,3,6
+J3848,Alternator inspection,1,3
+J3849,Battery replacement,2,4
+J3850,Brake pad replacement,1,4
+J3851,Brake inspection,2,6
+J3852,Battery replacement,2,3
+J3853,ABS warning light diagnosis,3,6
+J3854,Spark plug replacement,2,5
+J3855,Oil change,1,6
+J3856,Wheel alignment,1,4
+J3857,Engine diagnostic scan,3,6
+J3858,ABS warning light diagnosis,2,5
+J3859,ABS warning light diagnosis,3,6
+J3860,Battery replacement,1,6
+J3861,Brake inspection,4,5
+J3862,Battery replacement,3,3
+J3863,Check engine light diagnosis,4,6
+J3864,Brake inspection,2,4
+J3865,Oil change,1,4
+J3866,Oil change,2,6
+J3867,Coolant system service,2,4
+J3868,Tire replacement,4,5
+J3869,Wheel alignment,2,3
+J3870,ABS warning light diagnosis,3,5
+J3871,Suspension noise diagnosis,2,5
+J3872,Engine diagnostic scan,1,5
+J3873,Oil change,1,7
+J3874,Wheel alignment,1,5
+J3875,Engine diagnostic scan,3,4
+J3876,Oil change,3,3
+J3877,Engine diagnostic scan,4,5
+J3878,Coolant system service,4,5
+J3879,Engine diagnostic scan,3,5
+J3880,Oil change,4,7
+J3881,Suspension noise diagnosis,3,5
+J3882,Engine diagnostic scan,3,5
+J3883,Check engine light diagnosis,1,5
+J3884,Brake pad replacement,4,5
+J3885,ABS warning light diagnosis,4,5
+J3886,Battery replacement,1,4
+J3887,Spark plug replacement,3,8
+J3888,Check engine light diagnosis,2,5
+J3889,Wheel alignment,1,3
+J3890,Coolant system service,2,7
+J3891,Spark plug replacement,2,3
+J3892,Wheel alignment,2,8
+J3893,Brake pad replacement,3,5
+J3894,Oil change,3,6
+J3895,Brake inspection,2,7
+J3896,Tire pressure sensor reset,3,5
+J3897,Brake inspection,2,6
+J3898,Brake pad replacement,3,6
+J3899,Suspension noise diagnosis,2,4
+J3900,Oil change,3,4
+J3901,Battery replacement,3,9
+J3902,Tire pressure sensor reset,3,6
+J3903,Spark plug replacement,3,6
+J3904,Check engine light diagnosis,4,4
+J3905,ABS warning light diagnosis,4,5
+J3906,ABS warning light diagnosis,2,3
+J3907,Coolant system service,3,6
+J3908,Battery replacement,3,3
+J3909,Suspension noise diagnosis,2,3
+J3910,Spark plug replacement,2,5
+J3911,Battery replacement,3,1
+J3912,Tire pressure sensor reset,2,5
+J3913,Spark plug replacement,3,4
+J3914,Wheel alignment,2,6
+J3915,Wheel alignment,2,6
+J3916,Coolant system service,2,4
+J3917,Engine diagnostic scan,4,7
+J3918,Alternator inspection,2,6
+J3919,Spark plug replacement,2,7
+J3920,Coolant system service,4,7
+J3921,Tire replacement,3,8
+J3922,Alternator inspection,4,6
+J3923,Battery replacement,3,5
+J3924,Check engine light diagnosis,2,4
+J3925,Alternator inspection,2,4
+J3926,Transmission inspection,2,5
+J3927,Brake inspection,3,5
+J3928,ABS warning light diagnosis,3,4
+J3929,Check engine light diagnosis,2,3
+J3930,Brake pad replacement,2,5
+J3931,Battery replacement,4,4
+J3932,Brake inspection,2,4
+J3933,Alternator inspection,1,4
+J3934,Brake pad replacement,4,3
+J3935,Brake pad replacement,4,3
+J3936,Tire replacement,2,3
+J3937,Brake pad replacement,2,4
+J3938,Engine diagnostic scan,3,4
+J3939,Tire replacement,2,7
+J3940,Oil change,3,3
+J3941,Tire replacement,3,5
+J3942,Brake pad replacement,3,4
+J3943,Engine diagnostic scan,4,5
+J3944,Battery replacement,3,6
+J3945,ABS warning light diagnosis,1,3
+J3946,Transmission inspection,2,7
+J3947,Transmission inspection,2,6
+J3948,Oil change,1,5
+J3949,Brake pad replacement,2,6
+J3950,Tire replacement,4,5
+J3951,Brake inspection,3,6
+J3952,Tire replacement,3,4
+J3953,Wheel alignment,3,4
+J3954,Coolant system service,2,4
+J3955,Engine diagnostic scan,3,6
+J3956,Oil change,2,5
+J3957,Wheel alignment,1,5
+J3958,Suspension noise diagnosis,3,4
+J3959,Coolant system service,1,5
+J3960,Coolant system service,2,6
+J3961,Spark plug replacement,3,7
+J3962,Tire replacement,1,6
+J3963,Wheel alignment,3,6
+J3964,Brake pad replacement,4,3
+J3965,Brake pad replacement,2,2
+J3966,Transmission inspection,2,6
+J3967,Suspension noise diagnosis,4,5
+J3968,Alternator inspection,3,6
+J3969,Transmission inspection,2,4
+J3970,Alternator inspection,2,8
+J3971,Spark plug replacement,3,4
+J3972,ABS warning light diagnosis,1,5
+J3973,Tire replacement,4,5
+J3974,Oil change,3,6
+J3975,Suspension noise diagnosis,2,6
+J3976,Brake pad replacement,2,6
+J3977,Spark plug replacement,3,4
+J3978,Wheel alignment,2,3
+J3979,Transmission inspection,1,4
+J3980,Alternator inspection,3,8
+J3981,Oil change,2,5
+J3982,Check engine light diagnosis,2,2
+J3983,Tire replacement,4,4
+J3984,Wheel alignment,2,9
+J3985,Spark plug replacement,3,6
+J3986,ABS warning light diagnosis,1,8
+J3987,Battery replacement,4,6
+J3988,Coolant system service,2,6
+J3989,Brake inspection,4,5
+J3990,Battery replacement,2,3
+J3991,Check engine light diagnosis,3,3
+J3992,Brake pad replacement,4,6
+J3993,Tire pressure sensor reset,1,5
+J3994,ABS warning light diagnosis,3,6
+J3995,Wheel alignment,3,6
+J3996,Tire pressure sensor reset,4,5
+J3997,Oil change,2,8
+J3998,Transmission inspection,1,6
+J3999,Tire replacement,4,5
+J4000,Coolant system service,1,3
+J4001,Spark plug replacement,3,4
+J4002,Brake inspection,2,2
+J4003,Oil change,1,3
+J4004,Spark plug replacement,3,6
+J4005,Engine diagnostic scan,2,6
+J4006,Brake inspection,2,5
+J4007,Coolant system service,2,7
+J4008,ABS warning light diagnosis,1,3
+J4009,Alternator inspection,2,5
+J4010,ABS warning light diagnosis,2,4
+J4011,Tire replacement,2,7
+J4012,Brake pad replacement,4,3
+J4013,Suspension noise diagnosis,2,3
+J4014,Tire replacement,1,6
+J4015,Tire pressure sensor reset,2,4
+J4016,Engine diagnostic scan,1,4
+J4017,Engine diagnostic scan,2,6
+J4018,ABS warning light diagnosis,1,4
+J4019,Engine diagnostic scan,1,5
+J4020,Battery replacement,4,5
+J4021,Brake inspection,3,4
+J4022,ABS warning light diagnosis,1,3
+J4023,Transmission inspection,1,7
+J4024,Brake inspection,3,5
+J4025,Spark plug replacement,3,7
+J4026,Tire pressure sensor reset,3,4
+J4027,Battery replacement,3,6
+J4028,Suspension noise diagnosis,2,6
+J4029,Spark plug replacement,3,7
+J4030,Alternator inspection,3,2
+J4031,Brake pad replacement,3,5
+J4032,Oil change,4,3
+J4033,Suspension noise diagnosis,3,5
+J4034,ABS warning light diagnosis,3,5
+J4035,Tire pressure sensor reset,2,3
+J4036,Wheel alignment,3,4
+J4037,Oil change,2,6
+J4038,Brake inspection,3,6
+J4039,Coolant system service,4,5
+J4040,Tire pressure sensor reset,2,3
+J4041,Brake inspection,1,5
+J4042,Brake inspection,2,5
+J4043,Brake inspection,1,6
+J4044,Oil change,1,4
+J4045,Coolant system service,2,7
+J4046,Check engine light diagnosis,2,6
+J4047,ABS warning light diagnosis,3,3
+J4048,Suspension noise diagnosis,3,8
+J4049,ABS warning light diagnosis,4,5
+J4050,Check engine light diagnosis,2,6
+J4051,Spark plug replacement,1,4
+J4052,Oil change,4,5
+J4053,Engine diagnostic scan,4,4
+J4054,ABS warning light diagnosis,2,4
+J4055,Spark plug replacement,3,6
+J4056,Spark plug replacement,2,3
+J4057,Transmission inspection,3,5
+J4058,Brake inspection,1,6
+J4059,Spark plug replacement,2,6
+J4060,ABS warning light diagnosis,2,3
+J4061,Wheel alignment,3,4
+J4062,Brake pad replacement,2,3
+J4063,Tire pressure sensor reset,2,7
+J4064,Spark plug replacement,4,3
+J4065,Brake pad replacement,3,9
+J4066,Brake inspection,1,8
+J4067,Battery replacement,3,9
+J4068,Transmission inspection,4,4
+J4069,Engine diagnostic scan,3,3
+J4070,Check engine light diagnosis,4,7
+J4071,Brake inspection,1,3
+J4072,Tire pressure sensor reset,1,7
+J4073,Spark plug replacement,4,7
+J4074,Wheel alignment,2,5
+J4075,Oil change,2,4
+J4076,Alternator inspection,4,5
+J4077,Check engine light diagnosis,3,4
+J4078,Suspension noise diagnosis,3,5
+J4079,Check engine light diagnosis,2,5
+J4080,Alternator inspection,4,5
+J4081,Engine diagnostic scan,4,4
+J4082,Spark plug replacement,3,2
+J4083,Engine diagnostic scan,2,6
+J4084,Battery replacement,3,5
+J4085,Brake pad replacement,2,3
+J4086,Tire pressure sensor reset,2,4
+J4087,Battery replacement,4,3
+J4088,Tire replacement,3,8
+J4089,Wheel alignment,2,8
+J4090,Brake inspection,3,2
+J4091,Check engine light diagnosis,4,3
+J4092,Tire replacement,4,5
+J4093,Wheel alignment,2,3
+J4094,Spark plug replacement,3,6
+J4095,Coolant system service,1,6
+J4096,Engine diagnostic scan,3,4
+J4097,Alternator inspection,2,5
+J4098,Check engine light diagnosis,1,6
+J4099,Suspension noise diagnosis,3,4
+J4100,Battery replacement,2,4
+J4101,Engine diagnostic scan,3,5
+J4102,Check engine light diagnosis,3,6
+J4103,Oil change,3,6
+J4104,Brake inspection,1,5
+J4105,Transmission inspection,3,6
+J4106,Alternator inspection,2,5
+J4107,Suspension noise diagnosis,2,7
+J4108,Oil change,3,6
+J4109,Brake inspection,1,6
+J4110,Tire replacement,2,5
+J4111,Oil change,2,5
+J4112,Tire replacement,1,3
+J4113,Coolant system service,3,6
+J4114,Engine diagnostic scan,4,5
+J4115,Suspension noise diagnosis,1,6
+J4116,Wheel alignment,2,6
+J4117,Spark plug replacement,4,2
+J4118,Battery replacement,3,7
+J4119,Battery replacement,3,6
+J4120,Check engine light diagnosis,3,5
+J4121,Spark plug replacement,4,6
+J4122,Wheel alignment,3,1
+J4123,Tire replacement,2,8
+J4124,Alternator inspection,4,7
+J4125,Brake pad replacement,3,5
+J4126,Engine diagnostic scan,1,4
+J4127,Tire pressure sensor reset,3,6
+J4128,Engine diagnostic scan,3,8
+J4129,Tire replacement,2,6
+J4130,Wheel alignment,3,3
+J4131,ABS warning light diagnosis,2,5
+J4132,Check engine light diagnosis,2,7
+J4133,Check engine light diagnosis,4,5
+J4134,Transmission inspection,1,4
+J4135,Brake pad replacement,2,4
+J4136,Spark plug replacement,1,6
+J4137,Brake inspection,3,6
+J4138,Brake inspection,3,3
+J4139,Tire replacement,2,3
+J4140,Check engine light diagnosis,2,4
+J4141,Spark plug replacement,2,4
+J4142,Wheel alignment,4,5
+J4143,Check engine light diagnosis,1,4
+J4144,Alternator inspection,3,2
+J4145,Engine diagnostic scan,3,3
+J4146,Tire pressure sensor reset,2,4
+J4147,Transmission inspection,3,2
+J4148,Suspension noise diagnosis,1,5
+J4149,Coolant system service,2,4
+J4150,Check engine light diagnosis,2,5
+J4151,Oil change,2,7
+J4152,Spark plug replacement,1,6
+J4153,Brake inspection,3,5
+J4154,Tire replacement,1,5
+J4155,Spark plug replacement,3,4
+J4156,Oil change,3,7
+J4157,Suspension noise diagnosis,3,3
+J4158,Battery replacement,1,5
+J4159,Transmission inspection,2,6
+J4160,Brake inspection,2,6
+J4161,Battery replacement,3,5
+J4162,Coolant system service,2,5
+J4163,Wheel alignment,1,3
+J4164,Battery replacement,2,4
+J4165,Check engine light diagnosis,3,6
+J4166,Coolant system service,1,3
+J4167,Wheel alignment,2,6
+J4168,Alternator inspection,1,5
+J4169,Wheel alignment,1,5
+J4170,ABS warning light diagnosis,1,2
+J4171,Suspension noise diagnosis,4,5
+J4172,Suspension noise diagnosis,4,5
+J4173,Battery replacement,3,4
+J4174,Spark plug replacement,2,6
+J4175,Engine diagnostic scan,3,7
+J4176,Check engine light diagnosis,2,4
+J4177,Tire replacement,3,5
+J4178,Tire pressure sensor reset,1,5
+J4179,Wheel alignment,2,2
+J4180,Check engine light diagnosis,2,4
+J4181,Oil change,3,6
+J4182,Brake inspection,3,5
+J4183,Wheel alignment,3,4
+J4184,Suspension noise diagnosis,4,5
+J4185,Wheel alignment,3,7
+J4186,Brake pad replacement,2,6
+J4187,Transmission inspection,2,2
+J4188,Brake inspection,1,5
+J4189,Alternator inspection,4,4
+J4190,Alternator inspection,4,4
+J4191,Spark plug replacement,4,7
+J4192,Engine diagnostic scan,2,4
+J4193,Battery replacement,3,5
+J4194,Battery replacement,4,6
+J4195,Battery replacement,3,6
+J4196,Engine diagnostic scan,1,3
+J4197,ABS warning light diagnosis,3,3
+J4198,Suspension noise diagnosis,2,3
+J4199,Alternator inspection,3,6
+J4200,Coolant system service,2,7
+J4201,Battery replacement,3,5
+J4202,Wheel alignment,2,6
+J4203,Coolant system service,2,5
+J4204,Wheel alignment,4,7
+J4205,Transmission inspection,3,3
+J4206,Spark plug replacement,1,6
+J4207,Spark plug replacement,2,7
+J4208,Brake pad replacement,4,6
+J4209,Wheel alignment,1,7
+J4210,Battery replacement,2,5
+J4211,Wheel alignment,3,1
+J4212,Check engine light diagnosis,3,4
+J4213,Coolant system service,1,6
+J4214,Tire replacement,3,5
+J4215,Coolant system service,2,3
+J4216,ABS warning light diagnosis,2,6
+J4217,Wheel alignment,3,4
+J4218,Brake inspection,2,6
+J4219,Tire pressure sensor reset,3,4
+J4220,Tire pressure sensor reset,3,4
+J4221,Brake inspection,3,7
+J4222,Transmission inspection,2,4
+J4223,ABS warning light diagnosis,3,5
+J4224,Transmission inspection,3,3
+J4225,Spark plug replacement,2,4
+J4226,Suspension noise diagnosis,1,5
+J4227,Brake inspection,2,1
+J4228,Check engine light diagnosis,3,4
+J4229,Check engine light diagnosis,2,6
+J4230,Check engine light diagnosis,2,2
+J4231,Tire replacement,4,3
+J4232,Tire pressure sensor reset,4,7
+J4233,Alternator inspection,3,6
+J4234,Transmission inspection,3,3
+J4235,Coolant system service,4,6
+J4236,Wheel alignment,3,6
+J4237,Oil change,4,6
+J4238,Transmission inspection,2,7
+J4239,Oil change,1,6
+J4240,Spark plug replacement,2,6
+J4241,Tire replacement,2,6
+J4242,ABS warning light diagnosis,4,4
+J4243,Brake inspection,1,5
+J4244,Wheel alignment,2,6
+J4245,Brake pad replacement,2,4
+J4246,Alternator inspection,3,7
+J4247,Coolant system service,3,7
+J4248,Suspension noise diagnosis,3,3
+J4249,Engine diagnostic scan,4,5
+J4250,Tire pressure sensor reset,3,6
+J4251,Suspension noise diagnosis,3,3
+J4252,Alternator inspection,3,5
+J4253,Oil change,3,4
+J4254,Transmission inspection,2,3
+J4255,Suspension noise diagnosis,4,4
+J4256,Transmission inspection,1,6
+J4257,Suspension noise diagnosis,2,6
+J4258,Alternator inspection,3,5
+J4259,Alternator inspection,3,3
+J4260,Wheel alignment,1,5
+J4261,Brake inspection,4,4
+J4262,Wheel alignment,3,5
+J4263,Oil change,4,5
+J4264,Alternator inspection,4,5
+J4265,Battery replacement,1,2
+J4266,ABS warning light diagnosis,2,4
+J4267,Tire pressure sensor reset,3,7
+J4268,Battery replacement,3,5
+J4269,ABS warning light diagnosis,2,3
+J4270,Oil change,2,5
+J4271,ABS warning light diagnosis,2,3
+J4272,Battery replacement,1,6
+J4273,Suspension noise diagnosis,3,5
+J4274,Alternator inspection,3,6
+J4275,Tire replacement,2,5
+J4276,Brake inspection,2,6
+J4277,Suspension noise diagnosis,1,3
+J4278,Spark plug replacement,3,6
+J4279,Brake pad replacement,1,7
+J4280,Oil change,2,6
+J4281,Spark plug replacement,2,6
+J4282,Brake pad replacement,2,5
+J4283,Oil change,3,4
+J4284,Spark plug replacement,1,3
+J4285,Alternator inspection,2,6
+J4286,Brake pad replacement,2,5
+J4287,Engine diagnostic scan,2,4
+J4288,Tire replacement,3,8
+J4289,Battery replacement,3,7
+J4290,Tire replacement,2,6
+J4291,Wheel alignment,2,6
+J4292,Engine diagnostic scan,2,6
+J4293,Brake inspection,4,3
+J4294,Tire pressure sensor reset,3,4
+J4295,Suspension noise diagnosis,2,7
+J4296,Battery replacement,2,6
+J4297,ABS warning light diagnosis,2,2
+J4298,Engine diagnostic scan,3,5
+J4299,Check engine light diagnosis,2,3
+J4300,Coolant system service,3,4
+J4301,Brake pad replacement,3,3
+J4302,Coolant system service,3,6
+J4303,Engine diagnostic scan,1,4
+J4304,Oil change,4,5
+J4305,Engine diagnostic scan,2,5
+J4306,Coolant system service,1,7
+J4307,Tire replacement,2,8
+J4308,Tire pressure sensor reset,2,4
+J4309,Spark plug replacement,3,5
+J4310,Coolant system service,4,5
+J4311,Coolant system service,2,5
+J4312,Wheel alignment,2,3
+J4313,Tire replacement,1,5
+J4314,Suspension noise diagnosis,2,5
+J4315,Brake inspection,4,3
+J4316,Brake pad replacement,1,6
+J4317,Brake pad replacement,3,4
+J4318,Brake pad replacement,3,6
+J4319,Brake inspection,2,5
+J4320,Suspension noise diagnosis,2,6
+J4321,Engine diagnostic scan,4,3
+J4322,Wheel alignment,4,5
+J4323,Wheel alignment,4,6
+J4324,Transmission inspection,2,2
+J4325,Coolant system service,4,7
+J4326,Tire pressure sensor reset,2,5
+J4327,Wheel alignment,3,6
+J4328,Brake pad replacement,3,5
+J4329,ABS warning light diagnosis,2,4
+J4330,Engine diagnostic scan,3,4
+J4331,Brake pad replacement,2,5
+J4332,Check engine light diagnosis,2,3
+J4333,Brake inspection,4,4
+J4334,Alternator inspection,4,6
+J4335,Wheel alignment,4,2
+J4336,Oil change,1,3
+J4337,Wheel alignment,3,5
+J4338,Tire replacement,2,5
+J4339,Brake inspection,2,6
+J4340,Tire replacement,3,2
+J4341,Oil change,1,8
+J4342,Suspension noise diagnosis,3,6
+J4343,ABS warning light diagnosis,2,1
+J4344,Alternator inspection,3,6
+J4345,Brake inspection,3,3
+J4346,Check engine light diagnosis,3,4
+J4347,ABS warning light diagnosis,1,8
+J4348,Brake pad replacement,3,6
+J4349,ABS warning light diagnosis,4,5
+J4350,Check engine light diagnosis,3,7
+J4351,ABS warning light diagnosis,2,4
+J4352,Brake pad replacement,3,4
+J4353,Alternator inspection,2,4
+J4354,Wheel alignment,1,1
+J4355,Engine diagnostic scan,1,4
+J4356,ABS warning light diagnosis,3,4
+J4357,Battery replacement,1,4
+J4358,Brake inspection,2,4
+J4359,Engine diagnostic scan,4,6
+J4360,Battery replacement,4,5
+J4361,Spark plug replacement,2,4
+J4362,Check engine light diagnosis,3,6
+J4363,Oil change,4,6
+J4364,Transmission inspection,4,5
+J4365,Wheel alignment,1,2
+J4366,Brake pad replacement,1,6
+J4367,Brake inspection,3,5
+J4368,Check engine light diagnosis,3,2
+J4369,Coolant system service,4,6
+J4370,Oil change,4,6
+J4371,Suspension noise diagnosis,2,5
+J4372,Battery replacement,1,6
+J4373,Alternator inspection,4,5
+J4374,Spark plug replacement,1,5
+J4375,Check engine light diagnosis,3,5
+J4376,Transmission inspection,1,4
+J4377,Engine diagnostic scan,1,7
+J4378,Engine diagnostic scan,2,4
+J4379,Tire replacement,3,7
+J4380,Oil change,3,5
+J4381,Brake pad replacement,3,3
+J4382,Wheel alignment,3,5
+J4383,Wheel alignment,3,7
+J4384,Tire pressure sensor reset,4,4
+J4385,Brake inspection,2,5
+J4386,Suspension noise diagnosis,3,5
+J4387,Oil change,3,3
+J4388,Alternator inspection,3,5
+J4389,Tire replacement,4,6
+J4390,Suspension noise diagnosis,3,6
+J4391,ABS warning light diagnosis,4,3
+J4392,Tire replacement,3,7
+J4393,Check engine light diagnosis,2,8
+J4394,Tire pressure sensor reset,2,2
+J4395,Spark plug replacement,3,4
+J4396,ABS warning light diagnosis,2,6
+J4397,Transmission inspection,1,6
+J4398,Transmission inspection,4,8
+J4399,Oil change,1,3
+J4400,Brake pad replacement,3,5
+J4401,Wheel alignment,4,7
+J4402,Tire replacement,2,5
+J4403,Oil change,2,7
+J4404,Spark plug replacement,1,7
+J4405,Check engine light diagnosis,2,5
+J4406,Suspension noise diagnosis,2,6
+J4407,Brake inspection,2,4
+J4408,Tire replacement,3,3
+J4409,Spark plug replacement,1,5
+J4410,Tire pressure sensor reset,3,4
+J4411,Suspension noise diagnosis,2,3
+J4412,Suspension noise diagnosis,2,5
+J4413,Tire pressure sensor reset,2,3
+J4414,Brake inspection,2,4
+J4415,ABS warning light diagnosis,4,6
+J4416,Spark plug replacement,3,3
+J4417,Brake pad replacement,3,5
+J4418,ABS warning light diagnosis,3,6
+J4419,Tire pressure sensor reset,3,5
+J4420,Battery replacement,2,7
+J4421,Suspension noise diagnosis,2,6
+J4422,Alternator inspection,1,6
+J4423,Check engine light diagnosis,1,3
+J4424,Oil change,4,4
+J4425,Tire replacement,2,5
+J4426,Engine diagnostic scan,3,4
+J4427,Spark plug replacement,2,7
+J4428,Engine diagnostic scan,3,5
+J4429,Tire pressure sensor reset,2,5
+J4430,Alternator inspection,2,6
+J4431,Oil change,2,2
+J4432,Brake pad replacement,2,3
+J4433,Check engine light diagnosis,3,6
+J4434,Brake pad replacement,3,4
+J4435,Tire pressure sensor reset,1,6
+J4436,Spark plug replacement,2,6
+J4437,Spark plug replacement,1,3
+J4438,Alternator inspection,1,8
+J4439,Suspension noise diagnosis,2,6
+J4440,Oil change,1,5
+J4441,Battery replacement,2,4
+J4442,Check engine light diagnosis,3,4
+J4443,Oil change,3,5
+J4444,Brake pad replacement,3,4
+J4445,Alternator inspection,2,3
+J4446,Tire pressure sensor reset,1,3
+J4447,Brake inspection,1,6
+J4448,Check engine light diagnosis,3,6
+J4449,Check engine light diagnosis,2,5
+J4450,Alternator inspection,2,5
+J4451,Alternator inspection,4,4
+J4452,ABS warning light diagnosis,3,4
+J4453,Coolant system service,2,5
+J4454,Brake pad replacement,1,3
+J4455,Tire pressure sensor reset,2,6
+J4456,Spark plug replacement,2,4
+J4457,Spark plug replacement,3,6
+J4458,Tire replacement,3,6
+J4459,Wheel alignment,3,8
+J4460,Check engine light diagnosis,1,5
+J4461,Spark plug replacement,2,4
+J4462,Tire replacement,3,6
+J4463,ABS warning light diagnosis,3,5
+J4464,Engine diagnostic scan,3,4
+J4465,Spark plug replacement,1,6
+J4466,Spark plug replacement,2,5
+J4467,Spark plug replacement,3,5
+J4468,Transmission inspection,4,5
+J4469,Wheel alignment,3,5
+J4470,Check engine light diagnosis,4,3
+J4471,Spark plug replacement,4,5
+J4472,Transmission inspection,2,4
+J4473,Oil change,3,4
+J4474,Brake inspection,3,7
+J4475,Oil change,4,6
+J4476,Oil change,3,7
+J4477,Brake pad replacement,1,3
+J4478,Tire pressure sensor reset,2,6
+J4479,Tire pressure sensor reset,4,4
+J4480,Transmission inspection,3,3
+J4481,Coolant system service,3,7
+J4482,Tire replacement,4,6
+J4483,Transmission inspection,3,4
+J4484,Engine diagnostic scan,3,6
+J4485,Tire replacement,2,5
+J4486,Check engine light diagnosis,4,9
+J4487,Coolant system service,4,5
+J4488,Brake pad replacement,2,7
+J4489,Brake inspection,2,4
+J4490,Spark plug replacement,4,4
+J4491,Check engine light diagnosis,1,4
+J4492,Brake pad replacement,2,5
+J4493,Oil change,2,6
+J4494,ABS warning light diagnosis,2,5
+J4495,Transmission inspection,3,6
+J4496,Tire pressure sensor reset,3,5
+J4497,Coolant system service,3,6
+J4498,Coolant system service,2,6
+J4499,Spark plug replacement,3,6
+J4500,Tire pressure sensor reset,2,4
+J4501,Engine diagnostic scan,3,7
+J4502,Suspension noise diagnosis,2,5
+J4503,Alternator inspection,2,4
+J4504,Suspension noise diagnosis,1,5
+J4505,Spark plug replacement,2,5
+J4506,Oil change,2,5
+J4507,Check engine light diagnosis,1,4
+J4508,Battery replacement,1,5
+J4509,Wheel alignment,1,5
+J4510,Brake pad replacement,3,3
+J4511,Coolant system service,3,7
+J4512,Brake inspection,3,8
+J4513,Wheel alignment,4,2
+J4514,Coolant system service,2,5
+J4515,Wheel alignment,3,3
+J4516,Coolant system service,2,7
+J4517,Wheel alignment,1,5
+J4518,Tire pressure sensor reset,2,4
+J4519,Transmission inspection,2,6
+J4520,Spark plug replacement,4,6
+J4521,Wheel alignment,4,2
+J4522,Tire pressure sensor reset,1,6
+J4523,Suspension noise diagnosis,3,4
+J4524,Spark plug replacement,1,3
+J4525,Spark plug replacement,4,5
+J4526,Wheel alignment,2,5
+J4527,Spark plug replacement,2,3
+J4528,Oil change,3,4
+J4529,Engine diagnostic scan,4,7
+J4530,Tire replacement,4,6
+J4531,Tire pressure sensor reset,4,6
+J4532,Tire replacement,2,3
+J4533,Battery replacement,2,5
+J4534,Check engine light diagnosis,2,6
+J4535,Brake pad replacement,1,6
+J4536,Wheel alignment,4,3
+J4537,Wheel alignment,2,6
+J4538,Suspension noise diagnosis,3,4
+J4539,Suspension noise diagnosis,2,6
+J4540,Alternator inspection,2,3
+J4541,Check engine light diagnosis,3,6
+J4542,ABS warning light diagnosis,3,6
+J4543,ABS warning light diagnosis,2,8
+J4544,Tire pressure sensor reset,3,3
+J4545,Coolant system service,1,5
+J4546,Engine diagnostic scan,1,5
+J4547,Tire replacement,3,3
+J4548,Check engine light diagnosis,3,3
+J4549,Engine diagnostic scan,3,5
+J4550,Wheel alignment,1,5
+J4551,Oil change,3,6
+J4552,Spark plug replacement,2,6
+J4553,Oil change,2,6
+J4554,Wheel alignment,1,5
+J4555,Brake pad replacement,3,7
+J4556,Tire replacement,3,6
+J4557,Wheel alignment,2,6
+J4558,Transmission inspection,2,4
+J4559,Oil change,3,5
+J4560,Coolant system service,4,6
+J4561,Tire pressure sensor reset,1,4
+J4562,Suspension noise diagnosis,3,5
+J4563,Suspension noise diagnosis,2,5
+J4564,Transmission inspection,2,5
+J4565,Tire replacement,2,4
+J4566,Tire pressure sensor reset,3,5
+J4567,Tire pressure sensor reset,3,5
+J4568,Oil change,2,3
+J4569,Wheel alignment,2,8
+J4570,Brake pad replacement,2,5
+J4571,Tire replacement,1,4
+J4572,Brake inspection,4,2
+J4573,ABS warning light diagnosis,3,5
+J4574,Alternator inspection,4,3
+J4575,Wheel alignment,1,7
+J4576,Transmission inspection,2,5
+J4577,Brake pad replacement,2,6
+J4578,Coolant system service,1,6
+J4579,Coolant system service,3,2
+J4580,Spark plug replacement,2,7
+J4581,Brake pad replacement,1,6
+J4582,Battery replacement,4,5
+J4583,Battery replacement,2,4
+J4584,Brake pad replacement,3,5
+J4585,Brake inspection,2,5
+J4586,Wheel alignment,2,4
+J4587,Tire pressure sensor reset,2,4
+J4588,Suspension noise diagnosis,1,5
+J4589,Transmission inspection,2,4
+J4590,Brake inspection,3,6
+J4591,Brake inspection,1,5
+J4592,Oil change,4,8
+J4593,Suspension noise diagnosis,2,5
+J4594,Tire replacement,2,6
+J4595,Engine diagnostic scan,2,4
+J4596,Oil change,4,6
+J4597,Oil change,3,6
+J4598,Coolant system service,3,6
+J4599,Transmission inspection,4,3
+J4600,Oil change,3,5
+J4601,Spark plug replacement,1,5
+J4602,Engine diagnostic scan,4,6
+J4603,Oil change,1,4
+J4604,Tire pressure sensor reset,2,5
+J4605,Brake inspection,4,7
+J4606,Coolant system service,4,3
+J4607,Check engine light diagnosis,3,3
+J4608,ABS warning light diagnosis,2,4
+J4609,Spark plug replacement,2,4
+J4610,Wheel alignment,4,6
+J4611,Suspension noise diagnosis,2,6
+J4612,Battery replacement,1,6
+J4613,Tire replacement,2,4
+J4614,ABS warning light diagnosis,3,3
+J4615,Spark plug replacement,2,6
+J4616,Brake pad replacement,4,7
+J4617,Oil change,4,4
+J4618,Engine diagnostic scan,4,7
+J4619,Suspension noise diagnosis,3,5
+J4620,Spark plug replacement,1,5
+J4621,Transmission inspection,2,7
+J4622,Alternator inspection,4,4
+J4623,Battery replacement,2,6
+J4624,Engine diagnostic scan,3,5
+J4625,Spark plug replacement,3,5
+J4626,Tire replacement,1,4
+J4627,Transmission inspection,2,5
+J4628,Engine diagnostic scan,2,3
+J4629,Brake pad replacement,3,5
+J4630,Check engine light diagnosis,3,5
+J4631,ABS warning light diagnosis,1,6
+J4632,Transmission inspection,2,8
+J4633,Transmission inspection,3,7
+J4634,Tire pressure sensor reset,2,5
+J4635,Alternator inspection,2,5
+J4636,Brake pad replacement,1,3
+J4637,Coolant system service,1,2
+J4638,Battery replacement,1,4
+J4639,ABS warning light diagnosis,2,5
+J4640,Coolant system service,3,6
+J4641,Alternator inspection,3,5
+J4642,Oil change,2,4
+J4643,Tire replacement,1,7
+J4644,Brake inspection,3,5
+J4645,Oil change,2,5
+J4646,Alternator inspection,3,5
+J4647,ABS warning light diagnosis,2,6
+J4648,ABS warning light diagnosis,3,5
+J4649,Brake inspection,3,8
+J4650,Suspension noise diagnosis,4,5
+J4651,ABS warning light diagnosis,3,4
+J4652,Spark plug replacement,2,3
+J4653,Tire replacement,3,6
+J4654,Oil change,3,6
+J4655,Check engine light diagnosis,2,6
+J4656,Tire pressure sensor reset,3,3
+J4657,Alternator inspection,3,7
+J4658,Suspension noise diagnosis,3,4
+J4659,Tire replacement,3,7
+J4660,Tire replacement,3,4
+J4661,Brake inspection,2,4
+J4662,Engine diagnostic scan,3,6
+J4663,Transmission inspection,2,3
+J4664,Tire replacement,3,4
+J4665,Battery replacement,1,5
+J4666,Brake inspection,3,6
+J4667,Brake inspection,1,5
+J4668,Tire pressure sensor reset,2,5
+J4669,Engine diagnostic scan,4,4
+J4670,Tire pressure sensor reset,1,8
+J4671,Engine diagnostic scan,2,4
+J4672,Tire pressure sensor reset,3,6
+J4673,Transmission inspection,3,3
+J4674,Wheel alignment,2,7
+J4675,Alternator inspection,2,5
+J4676,Suspension noise diagnosis,1,6
+J4677,Tire pressure sensor reset,3,4
+J4678,Battery replacement,2,4
+J4679,Engine diagnostic scan,2,6
+J4680,Spark plug replacement,4,7
+J4681,Suspension noise diagnosis,3,3
+J4682,Wheel alignment,4,6
+J4683,Suspension noise diagnosis,2,5
+J4684,Transmission inspection,2,6
+J4685,Tire replacement,4,7
+J4686,ABS warning light diagnosis,2,3
+J4687,Wheel alignment,3,3
+J4688,Check engine light diagnosis,3,6
+J4689,Alternator inspection,2,4
+J4690,Brake pad replacement,4,5
+J4691,Spark plug replacement,2,5
+J4692,Oil change,4,6
+J4693,Brake inspection,4,7
+J4694,Alternator inspection,2,6
+J4695,Alternator inspection,2,8
+J4696,Tire replacement,4,6
+J4697,Battery replacement,4,2
+J4698,Spark plug replacement,3,6
+J4699,Coolant system service,3,5
+J4700,Wheel alignment,3,4
+J4701,Brake pad replacement,2,4
+J4702,Tire pressure sensor reset,4,4
+J4703,Suspension noise diagnosis,2,5
+J4704,Brake pad replacement,2,7
+J4705,ABS warning light diagnosis,2,3
+J4706,Check engine light diagnosis,2,6
+J4707,Brake inspection,1,3
+J4708,Tire pressure sensor reset,1,4
+J4709,Oil change,1,4
+J4710,Tire pressure sensor reset,4,6
+J4711,Tire replacement,4,6
+J4712,Check engine light diagnosis,1,3
+J4713,Tire replacement,4,6
+J4714,Check engine light diagnosis,3,4
+J4715,Tire pressure sensor reset,2,4
+J4716,Brake pad replacement,2,9
+J4717,Suspension noise diagnosis,4,7
+J4718,Wheel alignment,1,5
+J4719,Battery replacement,3,3
+J4720,Coolant system service,3,6
+J4721,ABS warning light diagnosis,1,5
+J4722,Wheel alignment,3,2
+J4723,Battery replacement,1,6
+J4724,Transmission inspection,2,8
+J4725,Alternator inspection,3,3
+J4726,Tire replacement,3,3
+J4727,Transmission inspection,3,6
+J4728,Alternator inspection,3,4
+J4729,ABS warning light diagnosis,3,7
+J4730,Tire replacement,3,6
+J4731,Oil change,1,6
+J4732,ABS warning light diagnosis,1,4
+J4733,Spark plug replacement,3,5
+J4734,Wheel alignment,2,6
+J4735,Coolant system service,3,3
+J4736,Tire pressure sensor reset,4,4
+J4737,Check engine light diagnosis,3,4
+J4738,Engine diagnostic scan,1,6
+J4739,Alternator inspection,1,4
+J4740,ABS warning light diagnosis,2,6
+J4741,ABS warning light diagnosis,3,5
+J4742,Suspension noise diagnosis,1,4
+J4743,Transmission inspection,3,5
+J4744,Alternator inspection,1,5
+J4745,Alternator inspection,4,4
+J4746,Brake inspection,4,8
+J4747,Engine diagnostic scan,1,5
+J4748,Spark plug replacement,3,7
+J4749,Oil change,2,6
+J4750,Oil change,1,5
+J4751,Wheel alignment,2,7
+J4752,Alternator inspection,2,6
+J4753,ABS warning light diagnosis,1,3
+J4754,Suspension noise diagnosis,1,7
+J4755,Brake pad replacement,3,6
+J4756,Tire pressure sensor reset,3,4
+J4757,Suspension noise diagnosis,3,5
+J4758,Battery replacement,2,3
+J4759,Check engine light diagnosis,3,5
+J4760,Brake pad replacement,4,4
+J4761,Tire pressure sensor reset,3,7
+J4762,Wheel alignment,3,6
+J4763,Tire replacement,2,6
+J4764,Tire pressure sensor reset,2,2
+J4765,Oil change,2,4
+J4766,Wheel alignment,3,5
+J4767,Tire replacement,3,6
+J4768,Oil change,2,7
+J4769,Tire replacement,2,7
+J4770,Check engine light diagnosis,3,2
+J4771,Coolant system service,4,1
+J4772,Oil change,2,5
+J4773,Brake inspection,3,5
+J4774,Suspension noise diagnosis,2,7
+J4775,Check engine light diagnosis,1,4
+J4776,ABS warning light diagnosis,3,4
+J4777,ABS warning light diagnosis,2,5
+J4778,Tire pressure sensor reset,2,4
+J4779,Spark plug replacement,4,5
+J4780,Battery replacement,2,5
+J4781,Alternator inspection,4,3
+J4782,Coolant system service,2,4
+J4783,Alternator inspection,4,5
+J4784,Suspension noise diagnosis,1,4
+J4785,Tire pressure sensor reset,1,5
+J4786,Suspension noise diagnosis,2,6
+J4787,Oil change,3,4
+J4788,Transmission inspection,1,6
+J4789,Suspension noise diagnosis,3,4
+J4790,Oil change,2,3
+J4791,Tire pressure sensor reset,3,5
+J4792,Check engine light diagnosis,4,4
+J4793,Brake inspection,2,3
+J4794,Transmission inspection,3,5
+J4795,Wheel alignment,2,6
+J4796,Tire pressure sensor reset,3,6
+J4797,Coolant system service,3,7
+J4798,Tire pressure sensor reset,2,5
+J4799,Tire pressure sensor reset,2,5
+J4800,Brake pad replacement,2,5
+J4801,Tire pressure sensor reset,2,5
+J4802,Engine diagnostic scan,3,4
+J4803,Tire replacement,1,5
+J4804,Brake inspection,3,5
+J4805,Suspension noise diagnosis,3,7
+J4806,Tire replacement,4,5
+J4807,Coolant system service,3,3
+J4808,ABS warning light diagnosis,3,5
+J4809,Check engine light diagnosis,3,6
+J4810,Coolant system service,3,5
+J4811,Suspension noise diagnosis,1,4
+J4812,Battery replacement,1,7
+J4813,ABS warning light diagnosis,4,5
+J4814,Tire replacement,4,5
+J4815,Suspension noise diagnosis,2,4
+J4816,Check engine light diagnosis,2,5
+J4817,Brake inspection,3,5
+J4818,Brake inspection,2,5
+J4819,Brake pad replacement,3,4
+J4820,ABS warning light diagnosis,4,6
+J4821,Coolant system service,3,7
+J4822,Tire pressure sensor reset,2,5
+J4823,Brake inspection,2,5
+J4824,Brake inspection,2,4
+J4825,Tire replacement,3,4
+J4826,Transmission inspection,3,8
+J4827,Tire replacement,2,6
+J4828,Engine diagnostic scan,1,5
+J4829,Tire pressure sensor reset,2,7
+J4830,Wheel alignment,2,2
+J4831,ABS warning light diagnosis,2,6
+J4832,Engine diagnostic scan,4,7
+J4833,Transmission inspection,3,5
+J4834,Transmission inspection,4,2
+J4835,Wheel alignment,1,5
+J4836,Coolant system service,2,9
+J4837,Transmission inspection,3,3
+J4838,Coolant system service,4,8
+J4839,ABS warning light diagnosis,1,6
+J4840,Suspension noise diagnosis,1,5
+J4841,Spark plug replacement,2,4
+J4842,Engine diagnostic scan,3,6
+J4843,Spark plug replacement,1,5
+J4844,Tire pressure sensor reset,1,5
+J4845,Wheel alignment,3,6
+J4846,Coolant system service,2,6
+J4847,Suspension noise diagnosis,3,6
+J4848,Coolant system service,2,7
+J4849,Engine diagnostic scan,2,4
+J4850,Coolant system service,2,6
+J4851,Brake pad replacement,1,4
+J4852,Battery replacement,2,5
+J4853,Oil change,2,4
+J4854,Oil change,1,4
+J4855,Battery replacement,1,5
+J4856,Check engine light diagnosis,2,4
+J4857,Wheel alignment,2,5
+J4858,Suspension noise diagnosis,2,5
+J4859,ABS warning light diagnosis,3,6
+J4860,Transmission inspection,2,6
+J4861,Brake pad replacement,2,4
+J4862,Tire pressure sensor reset,1,9
+J4863,Spark plug replacement,3,6
+J4864,Check engine light diagnosis,4,9
+J4865,Transmission inspection,1,4
+J4866,Engine diagnostic scan,2,5
+J4867,Alternator inspection,3,4
+J4868,Transmission inspection,3,2
+J4869,Tire pressure sensor reset,3,7
+J4870,Brake pad replacement,2,6
+J4871,Tire replacement,4,6
+J4872,Brake pad replacement,1,3
+J4873,Tire replacement,2,5
+J4874,Brake inspection,3,4
+J4875,Transmission inspection,4,5
+J4876,Spark plug replacement,2,3
+J4877,Oil change,3,4
+J4878,Check engine light diagnosis,3,5
+J4879,Check engine light diagnosis,1,6
+J4880,Oil change,3,6
+J4881,Oil change,4,4
+J4882,Brake pad replacement,3,5
+J4883,Spark plug replacement,4,7
+J4884,Alternator inspection,3,7
+J4885,Oil change,2,4
+J4886,Transmission inspection,1,8
+J4887,Coolant system service,2,6
+J4888,Tire replacement,3,9
+J4889,Engine diagnostic scan,2,6
+J4890,ABS warning light diagnosis,1,6
+J4891,Wheel alignment,3,4
+J4892,Brake pad replacement,3,4
+J4893,Spark plug replacement,2,6
+J4894,Tire replacement,3,6
+J4895,Spark plug replacement,1,6
+J4896,Transmission inspection,3,3
+J4897,Engine diagnostic scan,3,6
+J4898,Brake pad replacement,3,6
+J4899,Wheel alignment,2,7
+J4900,Tire replacement,2,8
+J4901,Transmission inspection,3,6
+J4902,Battery replacement,2,5
+J4903,ABS warning light diagnosis,3,5
+J4904,Wheel alignment,4,4
+J4905,Coolant system service,2,6
+J4906,Coolant system service,2,5
+J4907,Check engine light diagnosis,1,5
+J4908,ABS warning light diagnosis,2,7
+J4909,Check engine light diagnosis,4,4
+J4910,Check engine light diagnosis,4,2
+J4911,Coolant system service,2,5
+J4912,Coolant system service,2,7
+J4913,Transmission inspection,2,6
+J4914,Oil change,1,4
+J4915,Brake pad replacement,2,6
+J4916,Coolant system service,3,4
+J4917,Battery replacement,2,3
+J4918,Oil change,1,4
+J4919,Spark plug replacement,3,6
+J4920,ABS warning light diagnosis,2,4
+J4921,Brake inspection,3,6
+J4922,Transmission inspection,3,5
+J4923,Wheel alignment,3,6
+J4924,Suspension noise diagnosis,2,5
+J4925,Coolant system service,1,4
+J4926,Tire pressure sensor reset,1,7
+J4927,Coolant system service,3,4
+J4928,ABS warning light diagnosis,3,7
+J4929,Wheel alignment,2,5
+J4930,Brake pad replacement,2,4
+J4931,Alternator inspection,3,5
+J4932,Tire replacement,2,1
+J4933,Spark plug replacement,4,5
+J4934,Oil change,3,6
+J4935,Tire pressure sensor reset,4,7
+J4936,Alternator inspection,3,4
+J4937,Alternator inspection,2,6
+J4938,Check engine light diagnosis,3,6
+J4939,Wheel alignment,3,5
+J4940,Oil change,1,3
+J4941,Brake pad replacement,2,4
+J4942,Battery replacement,1,5
+J4943,Engine diagnostic scan,3,4
+J4944,Transmission inspection,4,5
+J4945,Alternator inspection,3,6
+J4946,Oil change,4,6
+J4947,Engine diagnostic scan,3,9
+J4948,Tire pressure sensor reset,2,5
+J4949,Suspension noise diagnosis,2,7
+J4950,Brake inspection,2,3
+J4951,Engine diagnostic scan,2,3
+J4952,Transmission inspection,4,4
+J4953,Suspension noise diagnosis,3,3
+J4954,Check engine light diagnosis,2,4
+J4955,Engine diagnostic scan,2,4
+J4956,Tire pressure sensor reset,3,4
+J4957,Suspension noise diagnosis,2,6
+J4958,Transmission inspection,2,6
+J4959,Spark plug replacement,3,4
+J4960,Tire replacement,3,3
+J4961,Spark plug replacement,3,5
+J4962,Check engine light diagnosis,2,8
+J4963,Check engine light diagnosis,3,3
+J4964,Coolant system service,3,3
+J4965,ABS warning light diagnosis,4,6
+J4966,Spark plug replacement,3,5
+J4967,Suspension noise diagnosis,4,6
+J4968,Suspension noise diagnosis,4,7
+J4969,Brake inspection,2,4
+J4970,Tire pressure sensor reset,2,5
+J4971,Tire replacement,3,6
+J4972,Tire pressure sensor reset,4,4
+J4973,Brake inspection,3,4
+J4974,Tire replacement,3,4
+J4975,Oil change,1,3
+J4976,Oil change,3,4
+J4977,Suspension noise diagnosis,4,4
+J4978,Tire replacement,1,2
+J4979,Alternator inspection,3,7
+J4980,Transmission inspection,3,4
+J4981,Brake pad replacement,3,4
+J4982,Alternator inspection,2,6
+J4983,Brake pad replacement,3,3
+J4984,Spark plug replacement,1,5
+J4985,Oil change,3,4
+J4986,Tire pressure sensor reset,4,5
+J4987,Check engine light diagnosis,3,1
+J4988,Transmission inspection,2,4
+J4989,Brake pad replacement,1,7
+J4990,Engine diagnostic scan,4,5
+J4991,Tire replacement,4,5
+J4992,Tire replacement,2,7
+J4993,Alternator inspection,3,5
+J4994,Brake inspection,2,6
+J4995,Spark plug replacement,2,5
+J4996,Alternator inspection,3,5
+J4997,Wheel alignment,4,5
+J4998,ABS warning light diagnosis,1,6
+J4999,ABS warning light diagnosis,2,6
+J5000,Tire replacement,2,5
