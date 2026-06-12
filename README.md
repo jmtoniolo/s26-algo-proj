@@ -39,7 +39,7 @@ Run an algorithm against a job list CSV:
 ```bash
 python main.py <algorithm> <input.csv>
 ```
-
+Jobs already marked `TRUE` in the CSV `scheduled` column are skipped on subsequent runs. Newly scheduled jobs are written back to the source CSV with `scheduled=TRUE` so the next run ignores them.
 `<algorithm>` is one of:
 
 | Algorithm | Description |
@@ -56,13 +56,14 @@ Example:
 python main.py priority job-list.csv
 ```
 
-For the `dp` algorithm, you can optionally specify available technician time:
+For any algorithm, specify the number of technicians available to constrain the schedule to the daily capacity.
+Each technician contributes 8 hours per day:
 
 ```bash
-python main.py dp job-list.csv --capacity 12
+python main.py dp job-list.csv --technicians 3
 ```
 
-If `--capacity` is omitted, the dynamic programming scheduler assumes enough time to include all jobs.
+If the technician count is omitted, algorithms schedule all unscheduled jobs in the chosen order and do not enforce a total daily capacity limit.
 
 Each run computes a `wait_time` for every job (the cumulative `repair_time_hours`
 of all jobs scheduled before it, assuming jobs run one at a time) and creates a
@@ -188,3 +189,4 @@ This writes the parameters as a `#`-prefixed comment line above the CSV header, 
 | `repair_type` | string | Type of repair |
 | `repair_time_hours` | int | Estimated time to complete |
 | `priority` | int | Job priority score |
+| `scheduled` | string | `TRUE` when the job has been scheduled; empty when unscheduled |
