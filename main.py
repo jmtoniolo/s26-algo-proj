@@ -25,29 +25,24 @@ def pack_into_technicians(
     scheduled: pd.DataFrame, technicians: int | None, daily_hours: int = 8
 ) -> tuple[pd.DataFrame, list[int]]:
     """
-    Pack jobs into each technician. Putting one job in each technician in round-robin order.
+    Pack jobs into technicians with lowest load first, which ensures that job you are
+    scheduling has the lowest possible wait time. 
     """
     scheduled = scheduled.copy()
     scheduled["assigned_technician"] = -1
     tech_loads = [0] * technicians # Hold the current hours a tech has scheduled for the day
-    
-    current_technician = 0 # Just an index for us to iterate with
-    for row in scheduled.itertuples(): # For each job
-        # If the current tech can fit it, assign it there
-        if tech_loads[current_technician] + row.repair_time_hours <= daily_hours:
-            tech_loads[current_technician] += row.repair_time_hours
-            scheduled.at[row.Index, "assigned_technician"] = current_technician
-            # Move to the next technician for the next job
-            current_technician = (current_technician + 1) % technicians 
-        else:
-            # Try to fit this job into any other technician
-            alt_tech = (current_technician + 1) % technicians
-            while (alt_tech != current_technician):
-                if tech_loads[alt_tech] + row.repair_time_hours <= daily_hours:
-                    tech_loads[alt_tech] += row.repair_time_hours
-                    scheduled.at[row.Index, "assigned_technician"] = alt_tech
-                    break
-                alt_tech = (alt_tech + 1) % technicians
+
+    for row in scheduled.itertuples(): # For each job, in schedule order
+        # Pick the least-loaded technician this job still fits in; that bin's
+        # current load is the wait time this job would experience there.
+        best_tech = None
+        for tech in range(technicians):
+            if tech_loads[tech] + row.repair_time_hours <= daily_hours:
+                if best_tech is None or tech_loads[tech] < tech_loads[best_tech]:
+                    best_tech = tech
+        if best_tech is not None:
+            tech_loads[best_tech] += row.repair_time_hours
+            scheduled.at[row.Index, "assigned_technician"] = best_tech
 
     # Keep only the jobs that actually landed on a technician; the rest stay unscheduled.
     assigned = scheduled[scheduled["assigned_technician"] != -1].copy()
