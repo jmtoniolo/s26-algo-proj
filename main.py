@@ -178,6 +178,7 @@ def main():
         help="Optional label inserted into the results dir name: results-<label>-YYYYMMDDHHMMSS",
     )
     args = parser.parse_args()
+    technicians = args.technicians
 
     jobs = read_data(args.input)
     schedule_fn = ALGORITHMS[args.algorithm]
@@ -199,8 +200,7 @@ def main():
         unscheduled = jobs_fit.iloc[0:0]
     else:
         ordered = schedule_fn(jobs_fit)
-        output, loads = pack_into_technicians(ordered, args.technicians)
-        args.technicians = len(loads)
+        output, loads = pack_into_technicians(ordered, technicians)
         scheduled_ids = set(output["job_id"])
         unscheduled = jobs_fit[~jobs_fit["job_id"].isin(scheduled_ids)]
     elapsed = time.perf_counter() - start
