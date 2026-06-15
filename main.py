@@ -188,10 +188,9 @@ def main():
 
     start = time.perf_counter()
     if args.algorithm == "dp":
-        # Optimal scheduling stays a single-queue knapsack and is not distributed.
+        # Optimal scheduling selects jobs via knapsack, then distributes across technicians.
         result = schedule_fn(jobs_fit, args.technicians)
-        output = result.assign(wait_time=compute_wait_times(result))
-        loads = None
+        output, loads = pack_into_technicians(result, args.technicians)
         unscheduled = jobs_fit.iloc[0:0]
     else:
         ordered = schedule_fn(jobs_fit)
