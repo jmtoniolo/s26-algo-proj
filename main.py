@@ -7,11 +7,6 @@ import pandas as pd
 from datagen import read_data
 
 
-def compute_wait_times(scheduled: pd.DataFrame) -> pd.Series:
-    """Cumulative repair time of all jobs scheduled before each job (single-server queue)."""
-    return scheduled["repair_time_hours"].cumsum() - scheduled["repair_time_hours"]
-
-
 def compute_wait_times_per_technician(assigned: pd.DataFrame) -> pd.Series:
     """A job's wait time is the total repair time of the earlier jobs on its technician."""
     if assigned.empty:
@@ -22,7 +17,7 @@ def compute_wait_times_per_technician(assigned: pd.DataFrame) -> pd.Series:
 
 
 def pack_into_technicians(
-    scheduled: pd.DataFrame, technicians: int | None, daily_hours: int = 8
+    scheduled: pd.DataFrame, technicians: int, daily_hours: int = 8
 ) -> tuple[pd.DataFrame, list[int]]:
     """
     Pack jobs into technicians with lowest load first, which ensures that job you are
@@ -80,8 +75,8 @@ def schedule_shortest_job_first(jobs: pd.DataFrame) -> pd.DataFrame:
     return jobs.sort_values("repair_time_hours", ascending=True, kind="mergesort")
 
 
-def schedule_greedy(jobs: pd.DataFrame) -> pd.DataFrame:
-    """Greedy scheduling: schedule jobs based on a combined score of priority and repair time."""
+def schedule_priority_over_repair_time(jobs: pd.DataFrame) -> pd.DataFrame:
+    """Schedule jobs based on a combined score of priority and repair time."""
     # Example scoring: higher priority and shorter repair time get higher scores
     jobs = jobs.copy()
     if(jobs["repair_time_hours"].min() <= 0):
@@ -92,66 +87,11 @@ def schedule_greedy(jobs: pd.DataFrame) -> pd.DataFrame:
     return jobs.sort_values("score", ascending=False, kind="mergesort").drop(columns="score")
 
 
-def schedule_optimal(jobs: pd.DataFrame, technicians: int | None = None) -> pd.DataFrame:
-    """Optimal scheduling via 0/1 knapsack dynamic programming.
-
-    Selects the subset of jobs that maximizes total priority score while
-    respecting available technician capacity per day.
-
-    Args:
-        technicians: Number of technicians available. Each technician has 8 hours per day.
-    """
-    jobs = jobs.reset_index(drop=True)
-    n = len(jobs)
-    if n == 0:
-        return jobs
-
-    weights = jobs["repair_time_hours"].astype(int).tolist()
-    values = jobs["priority"].astype(int).tolist()
-    total_time = sum(weights)
-
-    if technicians is None:
-        capacity = total_time
-    else:
-        if technicians <= 0:
-            return jobs.iloc[[]].reset_index(drop=True)
-        capacity = technicians * 8
-
-    capacity = min(capacity, total_time)
-
-    dp = [[0] * (capacity + 1) for _ in range(n + 1)]
-    take = [[False] * (capacity + 1) for _ in range(n + 1)]
-
-    for i in range(1, n + 1):
-        w = weights[i - 1]
-        v = values[i - 1]
-        for t in range(capacity + 1):
-            if w <= t:
-                if dp[i - 1][t - w] + v > dp[i - 1][t]:
-                    dp[i][t] = dp[i - 1][t - w] + v
-                    take[i][t] = True
-                else:
-                    dp[i][t] = dp[i - 1][t]
-            else:
-                dp[i][t] = dp[i - 1][t]
-
-    selected_indices = []
-    t = capacity
-    for i in range(n, 0, -1):
-        if take[i][t]:
-            selected_indices.append(i - 1)
-            t -= weights[i - 1]
-
-    selected_indices.reverse()
-    return jobs.iloc[selected_indices].reset_index(drop=True)
-
-
 ALGORITHMS = {
     "fifo": schedule_fifo,
     "priority": schedule_priority,
     "sjf": schedule_shortest_job_first,
-    "greedy": schedule_greedy,
-    "dp": schedule_optimal,
+    "pri-over-time": schedule_priority_over_repair_time
 }
 
 
@@ -173,7 +113,6 @@ def main():
         help="Optional label inserted into the results dir name: results-<label>-YYYYMMDDHHMMSS",
     )
     args = parser.parse_args()
-    technicians = args.technicians
 
     jobs = read_data(args.input)
     schedule_fn = ALGORITHMS[args.algorithm]
@@ -187,16 +126,10 @@ def main():
         )
 
     start = time.perf_counter()
-    if args.algorithm == "dp":
-        # Optimal scheduling selects jobs via knapsack, then distributes across technicians.
-        result = schedule_fn(jobs_fit, args.technicians)
-        output, loads = pack_into_technicians(result, args.technicians)
-        unscheduled = jobs_fit.iloc[0:0]
-    else:
-        ordered = schedule_fn(jobs_fit)
-        output, loads = pack_into_technicians(ordered, technicians)
-        scheduled_ids = set(output["job_id"])
-        unscheduled = jobs_fit[~jobs_fit["job_id"].isin(scheduled_ids)]
+    ordered = schedule_fn(jobs_fit)
+    output, loads = pack_into_technicians(ordered, args.technicians)
+    scheduled_ids = set(output["job_id"])
+    unscheduled = jobs_fit[~jobs_fit["job_id"].isin(scheduled_ids)]
     elapsed = time.perf_counter() - start
 
     now = datetime.now()
@@ -218,26 +151,26 @@ def main():
         f.write(f"Technicians: {args.technicians} ({args.technicians * 8}h total capacity at 8h/day)\n")
         f.write(f"Elapsed: {elapsed:.6f}s\n")
         f.write(f"Total scheduled hours: {total_time}h\n")
-        if loads is not None:
-            total_idle_hours = 0
-            technician_summaries = []
-            for technician_id in range(len(loads)):
-                used_hours = loads[technician_id]
-                idle_hours = 8 - used_hours
-                total_idle_hours += idle_hours
-                technician_summaries.append(f"#{technician_id}:{used_hours}h/{idle_hours}h")
-            f.write("Per-technician (used/idle of 8h): " + ", ".join(technician_summaries) + "\n")
-            f.write(f"Total idle technician hours: {total_idle_hours}h\n")
-            if not unscheduled.empty:
-                f.write(
-                    f"Unscheduled (did not fit in {technicians} technician-day(s)): "
-                    f"{len(unscheduled)} job(s)\n"
-                )
+        
+        total_idle_hours = 0
+        technician_summaries = []
+        for technician_id in range(len(loads)):
+            used_hours = loads[technician_id]
+            idle_hours = 8 - used_hours
+            total_idle_hours += idle_hours
+            technician_summaries.append(f"#{technician_id}:{used_hours}h/{idle_hours}h")
+        f.write("Per-technician (used/idle of 8h): " + ", ".join(technician_summaries) + "\n")
+        f.write(f"Total idle technician hours: {total_idle_hours}h\n")
+        if not unscheduled.empty:
+            f.write(
+                f"Unscheduled (did not fit in {args.technicians} technician-day(s)): "
+                f"{len(unscheduled)} job(s)\n"
+            )
         f.write(f"Average wait time: {avg_wait_time:.4f}h\n")
         f.write(f"Max wait time: {max_wait_time:.4f}h\n")
 
     if not unscheduled.empty:
-        print(f"{len(unscheduled)} job(s) could not be scheduled within {technicians} technician-day(s).")
+        print(f"{len(unscheduled)} job(s) could not be scheduled within {args.technicians} technician-day(s).")
 
     plt.figure()
     plt.plot(avg_wait_by_priority.index, avg_wait_by_priority.values, marker="o")
@@ -245,7 +178,7 @@ def main():
     plt.ylabel("Average wait time (hours)")
     plt.title(
         f"Priority vs. Average Wait Time ({args.algorithm})\n"
-        f"Avg wait: {avg_wait_time:.2f}h | Max wait: {max_wait_time:.2f}h | Technicians: {technicians}"
+        f"Avg wait: {avg_wait_time:.2f}h | Max wait: {max_wait_time:.2f}h | Technicians: {args.technicians}"
     )
     plt.grid(True)
     plt.ylim(0, max_wait_time if max_wait_time > 0 else 1)
